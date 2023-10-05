@@ -209,7 +209,7 @@ $bp-combine-picture: 620px;
     color: var(--pa-overline-color);
     position: relative;
   }
-  .downstep:before {
+  .high_drop:after {
     content: '';
     width: 2px;
     height: 18%;
@@ -217,16 +217,18 @@ $bp-combine-picture: 620px;
     position: absolute;
     display: block;
     top: 0px;
-    left: 0px;
+    right: 0px;
   }
 
-
-  .pitchoverline {
+  .high_drop,
+  .high {
     text-decoration: none !important;
     text-decoration-color: var(--pa-overline-color) !important;
     position: relative;
   }
-  .pitchoverline:after {
+
+  .high_drop:before,
+  .high:before {
     content: '';
     width: 100%;
     height: 2px;
@@ -238,7 +240,7 @@ $bp-combine-picture: 620px;
 
 
 
-  .nopron {
+  .devoiced {
     color: var(--pa-no-pron-color);
   }
   .nasal {
@@ -260,7 +262,7 @@ $bp-combine-picture: 620px;
     font-size: 15px;
   }
 
-  b .pitchoverline:after {
+  b .high:after {
     content: '';
     width: 100%;
     height: 1px;
