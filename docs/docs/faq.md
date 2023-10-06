@@ -235,8 +235,10 @@ move it to another deck, but if you delete it, then you will need to temporarily
 move the font files out of the media folder any time you run `Check Media`.
 
 If you don't have this card, then it is likely you installed JPMN before
-version 0.11.0.5. You can get the card by downloading the example cards PLACEHOLDER
-and importing them into Anki.
+version 0.11.0.5. You can get the card by going to the
+[releases](https://github.com/arbyste/jp-mining-note/releases/) page,
+downloading the example cards from the latest release, and importing them into
+Anki.
 
 If you accidentally removed the fonts,
 [redownload the fonts](https://github.com/arbyste/jp-mining-note/tree/master/media)
