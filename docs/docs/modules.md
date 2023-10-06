@@ -88,9 +88,9 @@ From here, all you have to do is edit the `main.js` and `main.html` to your liki
     `tools/make.py`.
     This interface allows you to define javascript within certain parts of a card,
     and restrict it to a certain subset of templates (sides and card types).
-    Please see [the aformentioned file](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/tools/make.py)
+    Please see [the aformentioned file](https://github.com/arbyste/jp-mining-note/blob/master/tools/make.py)
     to view the existing interface.
-    Likewise, see the [base javascript file](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/src/jp-mining-note/base.js)
+    Likewise, see the [base javascript file](https://github.com/arbyste/jp-mining-note/blob/master/src/jp-mining-note/base.js)
     (`src/jp-mining-note/base.js`)
     to view how the interface is used.
 

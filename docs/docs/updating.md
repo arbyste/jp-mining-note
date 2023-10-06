@@ -65,7 +65,7 @@ If your note is named differently, please rename it to `JP Mining Note`.
 
     ```bash
     # assuming you are at the root of the repo, i.e. after the following commands:
-    #  $ git clone https://github.com/Aquafina-water-bottle/jp-mining-note.git
+    #  $ git clone https://github.com/arbyste/jp-mining-note.git
     #  $ cd jp-mining-note
 
     # grabs the latest version of the master branch
@@ -92,7 +92,7 @@ If your note is named differently, please rename it to `JP Mining Note`.
 
     1. Get the latest version of the repository.
         The easiest way to do this is by heading to the
-        [main repository](https://github.com/Aquafina-water-bottle/jp-mining-note),
+        [main repository](https://github.com/arbyste/jp-mining-note),
         click on the green `Code` dropdown, and then download the zip by the `Download Zip` button.
         After that, unzip the directory.
 
@@ -316,7 +316,7 @@ If the options file isn't updated, then the note will simply use the default val
 However, if certain runtime options no longer work, you may have to update this file,
 as it is possible for the configuration file layout to have changed between versions.
 The most recent version of the options file can always be found
-[here](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/media/_jpmn-options.js).
+[here](https://github.com/arbyste/jp-mining-note/blob/master/media/_jpmn-options.js).
 if you want to update it.
 
 

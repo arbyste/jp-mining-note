@@ -95,7 +95,7 @@ that can help you figure out what the error is:
 
 
 If you can't manage to fix it, please reach out to me on [Discord](faq.md#discord-contact-info),
-or [submit an issue](https://github.com/Aquafina-water-bottle/jp-mining-note/issues)!
+or [submit an issue](https://github.com/arbyste/jp-mining-note/issues)!
 
 ---
 
@@ -219,7 +219,7 @@ This is a known bug, and unfortunately, this bug will **not be fixed**.
 
 If you want to use this tool, temporarily move the fonts outside of the media folder.
 If you accidentally removed the fonts,
-[redownload the fonts](https://github.com/Aquafina-water-bottle/jp-mining-note/tree/master/media)
+[redownload the fonts](https://github.com/arbyste/jp-mining-note/tree/master/media)
 and re-add them into the [media folder](faq.md#where-is-the-x-folder-in-anki) of your profile.
 
 This will not be fixed because to make debugging easier for the developer.

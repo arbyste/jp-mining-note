@@ -50,7 +50,7 @@ so that packages aren't installed into your global python environment.
 
 ```bash
 # on fresh installs
-git clone https://github.com/Aquafina-water-bottle/jp-mining-note.git
+git clone https://github.com/arbyste/jp-mining-note.git
 cd jp-mining-note
 
 # alternatively, if you already have the repository on your system:

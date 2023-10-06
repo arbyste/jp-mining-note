@@ -45,7 +45,7 @@ There are two ways of installing the note:
     === "Windows"
 
         ```bat
-        git clone "https://github.com/Aquafina-water-bottle/jp-mining-note.git"
+        git clone "https://github.com/arbyste/jp-mining-note.git"
         cd jp-mining-note
 
         :: Ensure you have Anki open, and with anki-connect running
@@ -57,7 +57,7 @@ There are two ways of installing the note:
     === "MacOS & Linux"
 
         ```bash
-        git clone "https://github.com/Aquafina-water-bottle/jp-mining-note.git"
+        git clone "https://github.com/arbyste/jp-mining-note.git"
         cd jp-mining-note
 
         # Ensure you have Anki open, and with anki-connect running
@@ -82,7 +82,7 @@ There are two ways of installing the note:
 
 
     1. Go to the
-        [releases page](https://github.com/Aquafina-water-bottle/jp-mining-note/releases)
+        [releases page](https://github.com/arbyste/jp-mining-note/releases)
         and download the cards from the latest release.
         You should download the `{version}-jpmn_example_cards.apkg` file.
     2. After you download the cards, import them by navigating to Anki by doing the following:
@@ -91,7 +91,7 @@ There are two ways of installing the note:
 
     3. By default, the custom fonts do not come with the `.apkg` file.
         To install these fonts, head over to this repository's
-        [media folder](https://github.com/Aquafina-water-bottle/jp-mining-note/tree/master/media)
+        [media folder](https://github.com/arbyste/jp-mining-note/tree/master/media)
         and download the 4 `.otf` files.
     4. Move the `.otf` files into the [media folder](faq.md#where-is-the-x-folder-in-anki){:target="_blank"}
         of your profile (`Anki2/PROFILENAME/collections.media`).
