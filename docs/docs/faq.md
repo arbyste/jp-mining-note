@@ -214,18 +214,34 @@ go to:
 
 ---
 
-## The `Tools` →  `Check Media` interface removes the font files.
-This is a known bug, and unfortunately, this bug will **not be fixed**.
+## What's the purpose of the `Preserve Fonts Utility Card`?
+The font files included with JPMN are stored in the [media folder](faq.md#where-is-the-x-folder-in-anki)
+of your profile, but they aren't used explicitely by any card. When running
+`Tools` →  `Check Media`, Anki thinks that the font files are unused, and deletes
+them.
 
-If you want to use this tool, temporarily move the fonts outside of the media folder.
+The usual way to resolve this is to add an underscore `_` to the start of the font
+names. This causes Anki to ignore the fonts when clearing the media folder.
+
+Unfortunately, this has the side effect of attatching the font files to any
+card that is exported, causing the resulting `.apkg` file to be around 20MB
+instead of 1MB. This makes debugging and support substantially harder, since
+large files can't be easily shared in places like Discord.
+
+The `Preserve Fonts Utility Card` is a workaround for this. This card explicitly
+lists the font files, so as long as it exists somewhere in your collection,
+`Check Media` will not delete the font files. Feel free to suspend the card or
+move it to another deck, but if you delete it, then you will need to temporarily
+move the font files out of the media folder any time you run `Check Media`.
+
+If you don't have this card, then it is likely you installed JPMN before
+version 0.11.0.5. You can get the card by downloading the example cards PLACEHOLDER
+and importing them into Anki.
+
 If you accidentally removed the fonts,
 [redownload the fonts](https://github.com/arbyste/jp-mining-note/tree/master/media)
-and re-add them into the [media folder](faq.md#where-is-the-x-folder-in-anki) of your profile.
+and re-add them into the  of your profile.
 
-This will not be fixed because to make debugging easier for the developer.
-When a user is asked to export a card, the exported file will not contain the font files,
-meaning that the result `.apkg` file will be about 1MB instead of some 20MB,
-allowing it to be shared easily on a place like Discord.
 
 ---
 
