@@ -69,6 +69,66 @@ class NoteChange:
 NOTE_CHANGES = [
 
     NoteChange(
+        version=Version(0, 11, 0, 5),
+        actions=[
+            action.SetField("AJTWordPitch", ""),
+            action.AJTPitchAccentConfigChange(
+                'Remove the "styles" section, and add "style": "none" to the "pitch_accent" section'),
+            action.NoteToUser(
+                description="This update clears all the data from your AJTWordPitch field. After\n"
+                "updating your AJTJapanese config file, you will need to bulk regenerate\n"
+                "values for this field.\n"
+                "See: https://arbyste.github.io/jp-mining-note/importing/#2-batch-generate-pitch-accents-and-sentence-furigana"
+            ),
+            action.NoteToUser(
+                description="If you have manually added values to the PAOverrideText field, then\n"
+                "the formatting will need to be changed, the old formatting style will\n"
+                "not work in this version.\n"
+                "See: https://arbyste.github.io/jp-mining-note/autopa/#pitch-accent-styling-details"
+            ),
+            ],
+        fields=[
+            "Key",
+            "Word",
+            "WordReading",
+            "PAOverride",
+            "PAOverrideText",
+            "AJTWordPitch",
+            "PrimaryDefinition",
+            "PrimaryDefinitionPicture",
+            "Sentence",
+            "SentenceReading",
+            "AltDisplay",
+            "AltDisplayPASentenceCard",
+            "AdditionalNotes",
+            "IsSentenceCard",
+            "IsClickCard",
+            "IsHoverCard",
+            "IsTargetedSentenceCard",
+            "PAShowInfo",
+            "PATestOnlyWord",
+            "PADoNotTest",
+            "PASeparateWordCard",
+            "PASeparateSentenceCard",
+            "SeparateClozeDeletionCard",
+            "Hint",
+            "HintNotHidden",
+            "Picture",
+            "WordAudio",
+            "SentenceAudio",
+            "PAGraphs",
+            "PAPositions",
+            "PASilence",
+            "WordReadingHiragana",
+            "FrequenciesStylized",
+            "FrequencySort",
+            "SecondaryDefinition",
+            "ExtraDefinitions",
+            "UtilityDictionaries",
+            "Comment",
+        ],
+        ),
+    NoteChange(
         version=Version(0, 11, 0, 0),
         actions=[
             action.AddField("WordReadingHiragana", 30 - 1),

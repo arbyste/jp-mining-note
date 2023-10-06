@@ -179,7 +179,7 @@ class AJTPitchAccentConfigChange(UserAction):
     def __post_init__(self):
         self.description = (
             f"Update the AJT Pitch Accent config: {self.additional_desc}.\n"
-            "See https://aquafina-water-bottle.github.io/jp-mining-note/setup/#ajt-pitch-accent"
+            "See https://arbyste.github.io/jp-mining-note/setupanki/#ajt-japanese"
         )
         self.edits_cards = False
         self.unique = False
