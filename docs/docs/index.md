@@ -14,6 +14,10 @@ hide:
     time or expertise to continue adding features to the note, but hopefully I can
     keep it functional.
 
+    Version 0.11.0.5 has been released alongside this fork. It resolves a bug that
+    prevented pitch accent information from being displayed correctly after a recent
+    AJTJapanese update. [Click here](updating.md) for instructions on updating.
+
     When Aquafina returns and resumes maintenance of the main project, I will close
     down this fork. The documentation for the original project can be found [here](https://aquafina-water-bottle.github.io/jp-mining-note/).
 
