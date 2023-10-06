@@ -1,5 +1,25 @@
 # jp-mining-note
 
+!!! Foreword
+
+    This project is a fork of the outstanding JP Mining Note project created by
+    Aquafina-Water-Bottle. Aquafina went silent a couple of months ago, and in
+    the meantime, bugs have started to creep into this project as other supporting
+    software has received updates.
+
+    The purpose of this fork is to provide bugfixes for the latest stable version
+    of JPMN, and potentially the unstable development version. I don't have the
+    time or expertise to continue adding features to the note, but hopefully I can
+    keep it functional.
+
+    Version 0.11.0.5 has been released alongside this fork. It resolves a bug that
+    prevented pitch accent information from being displayed correctly after a recent
+    AJTJapanese update. [Click here](updating.md) for instructions on updating.
+
+    When Aquafina returns and resumes maintenance of the main project, I will close
+    down this fork. The documentation for the original project can be found [here](https://aquafina-water-bottle.github.io/jp-mining-note/).
+
+
 **jp-mining-note** (JPMN) is an Anki card template for studying Japanese,
 designed to be visually appealing and simple to use without sacrificing functionality.
 Easily paired with most automatic card creation workflows,
@@ -73,7 +93,7 @@ Card creation:
 * No support for mobile. (Support for Ankidroid is planned for the future, but with no ETA.)
 
 # Get Started
-See the documentation [here](https://aquafina-water-bottle.github.io/jp-mining-note/).
+See the documentation [here](https://arbyste.github.io/jp-mining-note/).
 
 # Other Info
 Tested on Anki 2.1.54 (Qt6), Linux (Ubuntu) & Windows.
