@@ -42,11 +42,12 @@ def add_args(parser: argparse.ArgumentParser):
         help="uses the default options for when building for release",
     )
 
+    root_folder = get_root_folder()
     group.add_argument(
         "-f",
         "--build-folder",
         type=str,
-        default="build",
+        default=os.path.join(root_folder,"build"),
         help="output folder for the build process, and input folder for installation",
     )
 

@@ -421,27 +421,31 @@ const JPMNAutoPA = (() => {
       const temp2 = document.createElement("div");
       temp.innerHTML = ajtWord;
 
-      // removes pitch accent overline and downstep
+
+      // Need to remove all ajt spans except nasal and devoiced
+      const classesToRemove = ['high', 'low', 'high_drop', 'low_rise'];
+
       for (const x of temp.childNodes) {
-        if (x.nodeName === "SPAN" && x.classList.contains("pitchoverline")) {
-          for (const child of x.childNodes) {
-            temp2.appendChild(child.cloneNode(true));
+        if (x.nodeName === "SPAN") {
+          if (classesToRemove.some(className => x.classList.contains(className))) {
+            for (const child of x.childNodes) {
+              temp2.appendChild(child.cloneNode(true));
+            }
           }
-        } else if (x.nodeName === "SPAN" && x.classList.contains("downstep")) {
-          // skips
-        } else {
-          temp2.appendChild(x.cloneNode(true));
+          else {
+            temp2.appendChild(x.cloneNode(true));
+          }
         }
       }
 
       // combines the devoiced character into one mora, if it can
       // (e.g. 神出鬼没 (しんしゅつきぼつ) only has the 2nd (し) devoiced, instead of (しゅ)
-      // シ<span class="pitchoverline">ン<span class="nopron">シ</span>ュツキボツ</span>
-      if (ajtWord.includes("nopron")) {
+      // シ<span class="high">ン<span class="devoiced">シ</span>ュツキボツ</span>
+      if (ajtWord.includes("devoiced")) {
         // crazy regex replace
         temp2.innerHTML = temp2.innerHTML.replace(
-          /<span class="nopron">(.)<\/span>([ぁぃぅぇぉゃゅょゎァィゥェォャュョヮ])/g,
-          '<span class="nopron">$1$2<\/span>'
+          /<span class="devoiced">(.)<\/span>([ぁぃぅぇぉゃゅょゎァィゥェォャュョヮ])/g,
+          '<span class="devoiced">$1$2<\/span>'
         );
       }
 
@@ -454,7 +458,7 @@ const JPMNAutoPA = (() => {
           // (the nasal marker can't come by itself)
           result[result.length-1] = result[result.length-1] + x.outerHTML;
         } else {
-          // assumption: this is the nopron span
+          // assumption: this is the devoiced span
           result.push(x.outerHTML);
         }
       }
@@ -868,27 +872,27 @@ const JPMNAutoPA = (() => {
         return result[0];
       }
 
-      const startOverline = '<span class="pitchoverline">';
-      const stopOverline = `</span>`;
-      const downstep = '<span class="downstep"><span class="downstep-inner">ꜜ</span></span>';
+      const startHighDrop = '<span class="high_drop">';
+      const startHigh  = '<span class="high">';
+      const endSpan = '</span>';
 
       if (kifukuList.includes(pos)) {
         if (result.length < 2) {
           logger.warn("Cannot apply 起伏 on word with less than 2 moras.");
         } else if (result.length == 2) { // equivalent to pos == 1
-          result.splice(1, 0, stopOverline + downstep); // downstep after first mora
-          result.splice(0, 0, startOverline); // overline starting at the very beginning
+          result.splice(1, 0, endSpan); // downstep after first mora
+          result.splice(0, 0, startHighDrop); // overline starting at the very beginning
         } else { // equivalent to pos == #moras-1
-          result.splice(-1, 0, stopOverline + downstep); // insert right before last index
-          result.splice(1, 0, startOverline); // insert at index 1
+          result.splice(-1, 0, endSpan); // insert right before last index
+          result.splice(1, 0, startHighDrop); // insert at index 1
         }
       } else if (pos === 0) {
-        result.splice(1, 0, startOverline); // insert at index 1
-        result.push(stopOverline)
+        result.splice(1, 0, startHigh); // insert at index 1
+        result.push(endSpan)
       } else if (pos === 1) {
         // start overline starts at the very beginning
-        result.splice(pos, 0, stopOverline + downstep);
-        result.splice(0, 0, startOverline); // insert at the very beginning
+        result.splice(pos, 0, endSpan);
+        result.splice(0, 0, startHighDrop); // insert at the very beginning
       } else if (pos < 0) {
         logger.warn(`Pitch Accent position (${pos}) is negative.`);
       } else {
@@ -896,8 +900,8 @@ const JPMNAutoPA = (() => {
           logger.warn(`Pitch Accent position (${pos}) is greater than number of moras (${result.length}).`);
         }
         // start overline starts over the 2nd mora
-        result.splice(pos, 0, stopOverline + downstep);
-        result.splice(1, 0, startOverline); // insert at index 1
+        result.splice(pos, 0, endSpan);
+        result.splice(1, 0, startHighDrop); // insert at index 1
       }
 
       let resultHTML = result.join("");

@@ -353,6 +353,7 @@ config/config.py
 config/user_jpmn_opts.jsonc
 build/
 templates/scss/*.css
+extra/
 
 bin/
 lib64
