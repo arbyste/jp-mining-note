@@ -1005,10 +1005,9 @@ ruby rt {
   }
 
   /* cancels out extra colors */
-  .high:after, b .high:after {
-    background: var(--text-color--1);
-  }
-  .downstep:before, b .downstep:before {
+  .high_drop:after,
+  .high_drop:before,
+  .high:before {
     background: var(--text-color--1);
   }
 
@@ -1033,13 +1032,12 @@ ruby rt {
 
   .hover-tooltip__pitch-accent {
 
-    .high:after {
+    .high_drop:after,
+    .high_drop:before,
+    .high:before {
       filter: opacity(70%);
     }
 
-    .downstep:before {
-      filter: opacity(70%);
-    }
 
     //.devoiced, .nasal {
     //  filter: opacity(70%);
