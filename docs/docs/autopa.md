@@ -478,7 +478,7 @@ You very likely won't be doing this.
 
 * Example with all possible styles:
     ```html
-    チュ<span style="text-decoration:overline;" class="pitchoverline">ーカ<span class="nasal">°</span></span><span class="downstep"><span class="downstep-inner">ꜜ</span></span><span class="nopron">ク</span>セイ<b>・チュ<span style="text-decoration:overline;" class="pitchoverline">ーカ<span class="nasal">°</span><span class="nopron">ク</span></span><span class="downstep"><span class="downstep-inner">ꜜ</span></span>セイ</b>
+    チュ<span class="high_drop">ーカ<span class="nasal">°</span></span><span class="devoiced">ク</span>セイ<b>・ニ<span class="high">セモノ</span></b>
     ```
 
 
