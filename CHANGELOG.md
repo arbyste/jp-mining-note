@@ -20,6 +20,22 @@ by simply installing a new version of the .apkg package,
 and must use `./install.py --update`.
 
 
+## [0.11.0.5] - 2023-10-06
+#### Fixes
+- Updated the way pitch accent is styled to work with the latest version of AJTJapanese. Pronunciation is now styled with the following html span classes:
+    - `<span class="high">...</span>`: High pitch overline that doesn't drop
+    - `<span class="high_drop">...</span>`: High pitch overline that drops at the `</span>`
+    - `<span class="devoiced">...</span>`: Colors devoiced morae blue
+    - `<span class="nasal">..</span>`: Colors the nasal marker red
+
+- Added a utility card to the example cards that prevents the font files from being deleted, while not increasing the size of cards exported for debugging
+
+- Updated documentation
+
+- Minor changes to gitignore file, fixed the location of the build folder, and other minor dev tool tweaks
+
+
+
 ## [0.11.0.4] - 2023-04-10
 #### Fixes
 - Fixed the default config to now ignore two errors:
