@@ -476,6 +476,13 @@ You very likely won't be doing this.
     in this page, but the behavior is this way due to restrictions in the current
     CSS specification.
 
+* Note that AJT Japanese also outputs the following span classes, however
+    these are simply ignored by JPMN. You can include them if you want, but
+    they will have no effect on the styling:
+
+    * `<span class="low"></span>`
+    * `<span class="low_rise"></span>`
+
 * Example with all possible styles:
     ```html
     チュ<span class="high_drop">ーカ<span class="nasal">°</span></span><span class="devoiced">ク</span>セイ<b>・ニ<span class="high">セモノ</span></b>
