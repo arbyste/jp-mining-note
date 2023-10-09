@@ -1016,8 +1016,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#whats-the-purpose-of-the-preserve-fonts-utility-card" class="md-nav__link">
-    What's the purpose of the Preserve Fonts Utility Card?
+  <a href="#the-tools-check-media-interface-removes-the-font-files" class="md-nav__link">
+    The Tools →  Check Media interface removes the font files.
   </a>
   
 </li>
@@ -1313,8 +1313,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#whats-the-purpose-of-the-preserve-fonts-utility-card" class="md-nav__link">
-    What's the purpose of the Preserve Fonts Utility Card?
+  <a href="#the-tools-check-media-interface-removes-the-font-files" class="md-nav__link">
+    The Tools →  Check Media interface removes the font files.
   </a>
   
 </li>
@@ -1675,30 +1675,16 @@ go to:</p>
 →  <code>Audio</code> section <br>
 →  Toggle <code>Skip question when replaying answer</code></p>
 <hr />
-<h3 id="whats-the-purpose-of-the-preserve-fonts-utility-card">What's the purpose of the <code>Preserve Fonts Utility Card</code>?<a class="headerlink" href="#whats-the-purpose-of-the-preserve-fonts-utility-card" title="Permanent link">&para;</a></h3>
-<p>The font files included with JPMN are stored in the <a href="./#where-is-the-x-folder-in-anki">media folder</a>
-of your profile, but they aren't used explicitely by any card. When running
-<code>Tools</code> →  <code>Check Media</code>, Anki thinks that the font files are unused, and deletes
-them.</p>
-<p>The usual way to resolve this is to add an underscore <code>_</code> to the start of the font
-names. This causes Anki to ignore the fonts when clearing the media folder.</p>
-<p>Unfortunately, this has the side effect of attatching the font files to any
-card that is exported, causing the resulting <code>.apkg</code> file to be around 20MB
-instead of 1MB. This makes debugging and support substantially harder, since
-large files can't be easily shared in places like Discord.</p>
-<p>The <code>Preserve Fonts Utility Card</code> is a workaround for this. This card explicitly
-lists the font files, so as long as it exists somewhere in your collection,
-<code>Check Media</code> will not delete the font files. Feel free to suspend the card or
-move it to another deck, but if you delete it, then you will need to temporarily
-move the font files out of the media folder any time you run <code>Check Media</code>.</p>
-<p>If you don't have this card, then it is likely you installed JPMN before
-version 0.11.0.5. You can get the card by going to the
-<a href="https://github.com/arbyste/jp-mining-note/releases/">releases</a> page,
-downloading the example cards from the latest release, and importing them into
-Anki.</p>
-<p>If you accidentally removed the fonts,
-<a href="https://github.com/arbyste/jp-mining-note/tree/master/media">redownload the fonts</a>
-and re-add them into the  of your profile.</p>
+<h3 id="the-tools-check-media-interface-removes-the-font-files">The <code>Tools</code> →  <code>Check Media</code> interface removes the font files.<a class="headerlink" href="#the-tools-check-media-interface-removes-the-font-files" title="Permanent link">&para;</a></h3>
+<p>This is a known bug, and unfortunately, this bug will <strong>not be fixed</strong>.</p>
+<p>If you want to use this tool, temporarily move the fonts outside of the media folder.
+If you accidentally removed the fonts,
+<a href="https://github.com/Aquafina-water-bottle/jp-mining-note/tree/master/media">redownload the fonts</a>
+and re-add them into the <a href="./#where-is-the-x-folder-in-anki">media folder</a> of your profile.</p>
+<p>This will not be fixed because to make debugging easier for the developer.
+When a user is asked to export a card, the exported file will not contain the font files,
+meaning that the result <code>.apkg</code> file will be about 1MB instead of some 20MB,
+allowing it to be shared easily on a place like Discord.</p>
 <hr />
 <h3 id="this-card-template-loads-slower-than-other-card-templates">This card template loads slower than other card templates.<a class="headerlink" href="#this-card-template-loads-slower-than-other-card-templates" title="Permanent link">&para;</a></h3>
 <p>Usually, this is not very noticeable on faster computers.
@@ -2049,7 +2035,7 @@ within <a href="https://github.com/FooSoft/yomichan#frequently-asked-questions" 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 9, 2023</span>
       
     
   </small>
