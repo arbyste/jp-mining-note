@@ -28,8 +28,6 @@ and must use `./install.py --update`.
     - `<span class="devoiced">...</span>`: Colors devoiced morae blue
     - `<span class="nasal">..</span>`: Colors the nasal marker red
 
-- Added a utility card to the example cards that prevents the font files from being deleted, while not increasing the size of cards exported for debugging
-
 - Updated documentation
 
 - Minor changes to gitignore file, fixed the location of the build folder, and other minor dev tool tweaks

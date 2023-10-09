@@ -2432,18 +2432,19 @@ const JPMNAutoPA = (() => {
       // Need to remove all ajt spans except nasal and devoiced
       const classesToRemove = ['high', 'low', 'high_drop', 'low_rise'];
 
-      for (const x of temp.childNodes) {
-        if (x.nodeName === "SPAN") {
-          if (classesToRemove.some(className => x.classList.contains(className))) {
-            for (const child of x.childNodes) {
-              temp2.appendChild(child.cloneNode(true));
+        for (const x of temp.childNodes) {
+            if (
+                (x.nodeName === "SPAN") &&
+                (classesToRemove.some(className => x.classList.contains(className)))
+            ) {
+                for (const child of x.childNodes) {
+                    temp2.appendChild(child.cloneNode(true));
+                }
             }
-          }
-          else {
-            temp2.appendChild(x.cloneNode(true));
-          }
+            else {
+                temp2.appendChild(x.cloneNode(true));
+            }
         }
-      }
 
       // combines the devoiced character into one mora, if it can
       // (e.g. 神出鬼没 (しんしゅつきぼつ) only has the 2nd (し) devoiced, instead of (しゅ)
