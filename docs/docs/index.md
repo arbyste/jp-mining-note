@@ -9,10 +9,9 @@ hide:
     the meantime, bugs have started to creep into this project as other supporting
     software has received updates.
 
-    The purpose of this fork is to provide bugfixes for the latest stable version
-    of JPMN, and potentially the unstable development version. I don't have the
-    time or expertise to continue adding features to the note, but hopefully I can
-    keep it functional.
+    The purpose of this fork is to provide bugfixes for JPMN until Aquafina returns
+    to take over maintenance again. I don't have the time or expertise to
+    continue adding features to the note, but hopefully I can keep it functional.
 
     Version 0.11.0.5 has been released alongside this fork. It resolves a bug that
     prevented pitch accent information from being displayed correctly after a recent
