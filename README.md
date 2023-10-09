@@ -7,14 +7,13 @@ Aquafina-Water-Bottle. Aquafina went silent a couple of months ago, and in
 the meantime, bugs have started to creep into this project as other supporting
 software has received updates.
 
-The purpose of this fork is to provide bugfixes for the latest stable version
-of JPMN, and potentially the unstable development version. I don't have the
-time or expertise to continue adding features to the note, but hopefully I can
-keep it functional.
+The purpose of this fork is to provide bugfixes for JPMN until Aquafina returns
+to take over maintenance again. I don't have the time or expertise to continue
+adding features to the note, but hopefully I can keep it functional.
 
 Version 0.11.0.5 has been released alongside this fork. It resolves a bug that
 prevented pitch accent information from being displayed correctly after a recent
-AJTJapanese update. Instructions for updating can be found in the [documentation](https://arbyste.github.io/jp-mining-note/).
+AJT Japanese update. Instructions for updating can be found in the [documentation](https://arbyste.github.io/jp-mining-note/).
 
 When Aquafina returns and resumes maintenance of the main project, I will close
 down this fork. The documentation for the original project can be found [here](https://aquafina-water-bottle.github.io/jp-mining-note/).
