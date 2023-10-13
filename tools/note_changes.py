@@ -77,7 +77,8 @@ NOTE_CHANGES = [
             action.NoteToUser(
                 description="This update clears all the data from your AJTWordPitch field. After\n"
                 "updating your AJTJapanese config file, you will need to bulk regenerate\n"
-                "values for this field.\n"
+                "values for this field. Make sure you restart Anki after updating the AJTJapanese\n"
+                "config file, and before bulk regenerating the pitch accent data\n"
                 "See: https://arbyste.github.io/jp-mining-note/importing/#2-batch-generate-pitch-accents-and-sentence-furigana"
             ),
             action.NoteToUser(
