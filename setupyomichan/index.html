@@ -1207,36 +1207,26 @@
   <h1>Setup: Yomichan</h1>
 
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/FooSoft/yomichan">Yomichan</a>
-is the main program that will create the cards. You can download Yomichan as a Firefox extension
+<p><a href="https://github.com/themoeway/yomitan">Yomitan</a>
+is the main program that will create the cards. You can download Yomitan as a Firefox extension
 or under the Chrome web store.</p>
-<p>This section will go over the minimal Yomichan setup to work with this card type.</p>
-<p><strong>If you have never used Yomichan before</strong>, please see
+<p>This section will go over the minimal Yomitan setup to work with this card type.</p>
+<p><strong>If you have never used Yomitan before</strong>, please see
 <a href="https://learnjapanese.moe/yomichan/">this page</a> first to get it working.</p>
 <hr />
 <h2 id="preliminary-steps">Preliminary Steps<a class="headerlink" href="#preliminary-steps" title="Permanent link">&para;</a></h2>
-<p>If you have used Yomichan before, please make a
+<p>If you have used Yomitan before, please make a
 <a href="../faq/#how-do-i-backup-yomichan-settings" target="_blank">backup of your settings</a>
 (just in case).</p>
-<p>Additionally, if you downloaded Yomichan from a file, try updating that as well.
+<p>Additionally, if you downloaded Yomitan from a file, try updating that as well.
 Most users should have installed it from their browser's extension page, in which case
 nothing has to be done.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning for Firefox Users</p>
-<p>There appears to be an issue where the default version for Yomichan on Firefox
-is <a href="https://github.com/FooSoft/yomichan/issues/2295">three years old</a>.
-If you are using Firefox, ensure that your Yomichan version is indeed the latest version,
-by clicking on the Yomichan icon and clicking on the question mark.
-If it isn't, you will have to download it
-<a href="https://github.com/FooSoft/yomichan/releases/tag/22.10.23.0">manually</a>
-(use <code>a708116f79104891acbd-22.10.23.0.xpi</code>).</p>
-</div>
 <hr />
 <h2 id="yomichan-fields">Yomichan Fields<a class="headerlink" href="#yomichan-fields" title="Permanent link">&para;</a></h2>
-<p>To edit the fields that Yomichan will automatically fill out, do the following:</p>
+<p>To edit the fields that Yomitan will automatically fill out, do the following:</p>
 <p><div class="video-container"><video style="width: 100%; height: 100%" controls  ><source src="../assets/setupyomichan/yomichan_anki_format.mp4" type="video/mp4" /></video></div></p>
 <ol>
-<li>Navigate to Yomichan Settings.</li>
+<li>Navigate to Yomitan Settings.</li>
 <li>Go to the <code>Anki</code> section.</li>
 <li>Select <code>Anki card format...</code>.</li>
 <li>Set "Model" as <code>JP Mining Note</code>.</li>
@@ -1459,17 +1449,17 @@ the field in within the aforementioned <code>Anki card format...</code> section.
 <p>For example, if you want the card to be a sentence card by default,
 fill the <code>IsSentenceCard</code> field here.</p>
 </div>
-<p>The custom markers like <code>{jpmn-primary-definition}</code> is not provided by Yomichan by default.
+<p>The custom markers like <code>{jpmn-primary-definition}</code> is not provided by Yomitan by default.
 See the section below to make these markers usable.</p>
 <hr />
 <h2 id="yomichan-templates">Yomichan Templates<a class="headerlink" href="#yomichan-templates" title="Permanent link">&para;</a></h2>
-<p>Yomichan supports user inserted template code that allows the automatic
+<p>Yomitan supports user inserted template code that allows the automatic
 separation of bilingual and monolingual dictionary definitions, custom stylization, etc.
 This note type makes heavy use of these custom templates.</p>
 <p>To make the new markers usable, do the following:</p>
 <p><div class="video-container"><video style="width: 100%; height: 100%" controls  ><source src="../assets/setupyomichan/import_yomichan_templates.mp4" type="video/mp4" /></video></div></p>
 <ol>
-<li>Navigate to Yomichan Settings.</li>
+<li>Navigate to Yomitan Settings.</li>
 <li>Make sure that advanced settings are turned on (bottom left corner).</li>
 <li>Go to the <code>Anki</code> section</li>
 <li>Select <code>Configure Anki card templates...</code></li>
@@ -1482,14 +1472,14 @@ This note type makes heavy use of these custom templates.</p>
 add the following template code as follows:</p>
 <ol>
 <li>
-<p>Copy and paste the code below to the <strong>top</strong> of the default Yomichan template code:</p>
+<p>Copy and paste the code below to the <strong>top</strong> of the default Yomitan template code:</p>
 <details class="examplecode">
 <summary>Click here to show the template code to copy.</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>                                                                      <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span> <span class="na">===================</span><span class="o">=</span> <span class="nv">jp-mining-note</span> <span class="nv">handlebars</span> <span class="na">====================</span><span class="o">=</span> <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>                               <span class="nv">v1.0.1</span>                                 <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>                               <span class="nv">v1.0.2</span>                                 <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>                                                                      <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>       <span class="nv">https</span><span class="err">:</span><span class="nv">//aquafina-water-bottle.github.io/jp-mining-note/</span>        <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>              <span class="nv">https</span><span class="err">:</span><span class="nv">//arbyste.github.io/jp-mining-note/</span>               <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>       <span class="err">-------------------------------------------------------</span>        <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
@@ -1586,11 +1576,11 @@ add the following template code as follows:</p>
 </details>
 </li>
 <li>
-<p>Copy and paste the code below to the <strong>bottom</strong> of the default Yomichan template code:</p>
+<p>Copy and paste the code below to the <strong>bottom</strong> of the default Yomitan template code:</p>
 <details class="examplecode">
 <summary>Click here to show the template code to copy.</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span> <span class="na">=============</span><span class="o">=</span> <span class="nv">ORIGINAL</span> <span class="nv">YOMICHAN</span> <span class="nv">TEMPLATE</span> <span class="nv">CODE</span> <span class="nv">ABOVE</span> <span class="na">==============</span><span class="o">=</span> <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>                               <span class="nv">v1.0.1</span>                                 <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>                               <span class="nv">v1.0.2</span>                                 <span class="m">~</span><span class="cp">}}</span><span class="x"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cp">{{</span><span class="m m-Attribute">~!</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="na">=================</span><span class="o">=</span>
@@ -2953,7 +2943,7 @@ add the following template code as follows:</p>
 </ol>
 <hr />
 <h2 id="make-an-example-card">Make an example card!<a class="headerlink" href="#make-an-example-card" title="Permanent link">&para;</a></h2>
-<p>At this point, you should be able to make cards with Yomichan!</p>
+<p>At this point, you should be able to make cards with Yomitan!</p>
 <details class="example">
 <summary>Click here to show some example Japanese sentences.</summary>
 <p class="jp-quote-text">「や、いらっしゃい。ま、毒を食らわば皿までって言うしね。あ、違うか。乗り掛かった船？」</p>
@@ -2961,10 +2951,10 @@ add the following template code as follows:</p>
 <p class="jp-quote-text">「あの時逃げ出した私の罰…あの時の汚辱は今ここで、全部そそいでやるんだ…」</p>
 <p class="jp-quote-text">「貴方なんなんです？なにか、妙に銃口慣れしていますね…若者特有の空威張りという訳でもなさそうですし…」</p>
 </details>
-<p><a href="../assets/setupyomichan/add_card.gif"><img alt="adding a card with Yomichan" src="../assets/setupyomichan/add_card.gif" /></a></p>
-<p>Obviously, just Yomichan alone doesn't fill every field.
+<p><a href="../assets/setupyomichan/add_card.gif"><img alt="adding a card with Yomitan" src="../assets/setupyomichan/add_card.gif" /></a></p>
+<p>Obviously, just Yomitan alone doesn't fill every field.
 Notably, the picture and sentence audio is missing.</p>
-<p>Outside of that, there are some final settings you can adjust within the Yomichan templates
+<p>Outside of that, there are some final settings you can adjust within the Yomitan templates
 if the card doesn't look quite right.</p>
 <hr />
 <h2 id="yomichan-templates-options-summary">Yomichan Templates Options Summary<a class="headerlink" href="#yomichan-templates-options-summary" title="Permanent link">&para;</a></h2>
@@ -3023,14 +3013,14 @@ This simply shows how to make the cards on Android.</p>
 <p>If you wish to add cards on Android, use
 <a href="https://github.com/KamWithK/AnkiconnectAndroid">AnkiconnectAndroid</a>
 and follow the instructions on the AnkiconnectAndroid's README page.
-It might help to export a copy of Yomichan settings from your PC and import said settings on Android,
+It might help to export a copy of Yomitan settings from your PC and import said settings on Android,
 instead of re-doing all of the steps on Android.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Occasionally, importing your Yomichan settings from the PC may lead to
+<p>Occasionally, importing your Yomitan settings from the PC may lead to
 AnkiconnectAndroid not working.
 If AnkiconnectAndroid doesn't work after going through the entire README,
-try resetting your Yomichan settings on Android and starting from scratch.</p>
+try resetting your Yomitan settings on Android and starting from scratch.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3044,13 +3034,13 @@ for more info.</p>
 <p><br></p>
 <h3 id="kindle-setup">Kindle Setup<a class="headerlink" href="#kindle-setup" title="Permanent link">&para;</a></h3>
 <p>One can use something like <a href="https://github.com/xythh/ann2html">ann2html</a>
-to export a Yomichan-able HTML file based on the Kindle's vocabulary builder.
-This allows you to add the cards through Yomichan on the PC.</p>
+to export a Yomitan-able HTML file based on the Kindle's vocabulary builder.
+This allows you to add the cards through Yomitan on the PC.</p>
 <hr />
 <h2 id="enjoy-your-new-one-click-cards">Enjoy your new one-click cards!<a class="headerlink" href="#enjoy-your-new-one-click-cards" title="Permanent link">&para;</a></h2>
 <p>If you've made it this far, then congratulations!
-Most fields of the cards have been automatically filled out, just from Yomichan alone!</p>
-<p>This concludes the setup process for creating cards with Yomichan.</p>
+Most fields of the cards have been automatically filled out, just from Yomitan alone!</p>
+<p>This concludes the setup process for creating cards with Yomitan.</p>
 <p>From here, you likely fall under one of the two categories below:</p>
 <ol>
 <li>
@@ -3058,7 +3048,7 @@ Most fields of the cards have been automatically filled out, just from Yomichan 
 <p>If you're new to sentence mining, there are likely some things things
 that you would like to set up. These include:</p>
 <ol>
-<li>Getting the actual text to use Yomichan on.</li>
+<li>Getting the actual text to use Yomitan on.</li>
 <li>Getting the pictures and/or sentence audio from the media into the card.</li>
 </ol>
 <p>Head over to the <a href="../setupeverythingelse/">Setup: Everything Else</a> page to see exactly that.</p>
