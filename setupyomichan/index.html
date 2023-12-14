@@ -1669,7 +1669,7 @@ add the following template code as follows:</p>
 <a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="s2">{{#*inline &quot;</span><span class="err">_</span><span class="nv">jpmn-glossary-single-search</span><span class="s2">&quot;}}</span>
 <a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>
 <a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="s2">    {{~#scope~}}</span>
-<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="s2">        {{~#each glossary}}{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}{{#unless @last}} | {{/unless}}{{/each~}}</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="s2">        {{~#each glossary}}{{formatGlossary ../dictionary .}}{{#unless @last}} | {{/unless}}{{/each~}}</span>
 <a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="s2">    {{~/scope~}}</span>
 <a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>
 <a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="s2">{{/inline}}</span>
@@ -2297,12 +2297,12 @@ add the following template code as follows:</p>
 <a id="__codelineno-1-706" name="__codelineno-1-706" href="#__codelineno-1-706"></a><span class="s1">        )</span>
 <a id="__codelineno-1-707" name="__codelineno-1-707" href="#__codelineno-1-707"></a><span class="s1">        ~}}</span>
 <a id="__codelineno-1-708" name="__codelineno-1-708" href="#__codelineno-1-708"></a><span class="s1">            {{~#if (op &quot;&lt;=&quot; glossary.length 1)~}}</span>
-<a id="__codelineno-1-709" name="__codelineno-1-709" href="#__codelineno-1-709"></a><span class="s1">                {{#each glossary}}{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}{{/each}}</span>
+<a id="__codelineno-1-709" name="__codelineno-1-709" href="#__codelineno-1-709"></a><span class="s1">                {{#each glossary}}{{formatGlossary ../dictionary .}}{{/each}}</span>
 <a id="__codelineno-1-710" name="__codelineno-1-710" href="#__codelineno-1-710"></a><span class="s1">            {{~else~}}</span>
-<a id="__codelineno-1-711" name="__codelineno-1-711" href="#__codelineno-1-711"></a><span class="s1">                &lt;ul&gt;{{#each glossary}}&lt;li&gt;{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}&lt;/li&gt;{{/each}}&lt;/ul&gt;</span>
+<a id="__codelineno-1-711" name="__codelineno-1-711" href="#__codelineno-1-711"></a><span class="s1">                &lt;ul&gt;{{#each glossary}}&lt;li&gt;{{formatGlossary ../dictionary .}}&lt;/li&gt;{{/each}}&lt;/ul&gt;</span>
 <a id="__codelineno-1-712" name="__codelineno-1-712" href="#__codelineno-1-712"></a><span class="s1">            {{~/if~}}</span>
 <a id="__codelineno-1-713" name="__codelineno-1-713" href="#__codelineno-1-713"></a><span class="s1">        {{~else~}}</span>
-<a id="__codelineno-1-714" name="__codelineno-1-714" href="#__codelineno-1-714"></a><span class="s1">            {{~#each glossary}}{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}{{#unless @last}} | {{/unless}}{{/each~}}</span>
+<a id="__codelineno-1-714" name="__codelineno-1-714" href="#__codelineno-1-714"></a><span class="s1">            {{~#each glossary}}{{formatGlossary ../dictionary .}}{{#unless @last}} | {{/unless}}{{/each~}}</span>
 <a id="__codelineno-1-715" name="__codelineno-1-715" href="#__codelineno-1-715"></a><span class="s1">        {{~/if~}}</span>
 <a id="__codelineno-1-716" name="__codelineno-1-716" href="#__codelineno-1-716"></a>
 <a id="__codelineno-1-717" name="__codelineno-1-717" href="#__codelineno-1-717"></a><span class="s1">    {{~/scope~}}</span>
