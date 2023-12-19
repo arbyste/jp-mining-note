@@ -1,5 +1,5 @@
 {{~! ============== ORIGINAL YOMICHAN TEMPLATE CODE ABOVE =============== ~}}
-{{~!                               v1.0.1                                 ~}}
+{{~!                               v1.0.2                                 ~}}
 
 {{~!
     ==================
@@ -78,7 +78,7 @@ is a part of a dictionary) ~}}
 {{#*inline "_jpmn-glossary-single-search"}}
 
     {{~#scope~}}
-        {{~#each glossary}}{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}{{#unless @last}} | {{/unless}}{{/each~}}
+        {{~#each glossary}}{{formatGlossary ../dictionary .}}{{#unless @last}} | {{/unless}}{{/each~}}
     {{~/scope~}}
 
 {{/inline}}
@@ -706,12 +706,12 @@ is a part of a dictionary) ~}}
         )
         ~}}
             {{~#if (op "<=" glossary.length 1)~}}
-                {{#each glossary}}{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}{{/each}}
+                {{#each glossary}}{{formatGlossary ../dictionary .}}{{/each}}
             {{~else~}}
-                <ul>{{#each glossary}}<li>{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}</li>{{/each}}</ul>
+                <ul>{{#each glossary}}<li>{{formatGlossary ../dictionary .}}</li>{{/each}}</ul>
             {{~/if~}}
         {{~else~}}
-            {{~#each glossary}}{{#formatGlossary ../dictionary}}{{{.}}}{{/formatGlossary}}{{#unless @last}} | {{/unless}}{{/each~}}
+            {{~#each glossary}}{{formatGlossary ../dictionary .}}{{#unless @last}} | {{/unless}}{{/each~}}
         {{~/if~}}
 
     {{~/scope~}}

@@ -1,44 +1,35 @@
 # Overview
 
-[Yomichan](https://github.com/FooSoft/yomichan)
-is the main program that will create the cards. You can download Yomichan as a Firefox extension
+[Yomitan](https://github.com/themoeway/yomitan)
+is the main program that will create the cards. You can download Yomitan as a Firefox extension
 or under the Chrome web store.
 
-This section will go over the minimal Yomichan setup to work with this card type.
+This section will go over the minimal Yomitan setup to work with this card type.
 
-**If you have never used Yomichan before**, please see
+**If you have never used Yomitan before**, please see
 [this page](https://learnjapanese.moe/yomichan/) first to get it working.
 
 ---
 
 # Preliminary Steps
-If you have used Yomichan before, please make a
+If you have used Yomitan before, please make a
 [backup of your settings](faq.md#how-do-i-backup-yomichan-settings){:target="_blank"}
 (just in case).
 
 
-Additionally, if you downloaded Yomichan from a file, try updating that as well.
+Additionally, if you downloaded Yomitan from a file, try updating that as well.
 Most users should have installed it from their browser's extension page, in which case
 nothing has to be done.
-
-!!! warning "Warning for Firefox Users"
-    There appears to be an issue where the default version for Yomichan on Firefox
-    is [three years old](https://github.com/FooSoft/yomichan/issues/2295).
-    If you are using Firefox, ensure that your Yomichan version is indeed the latest version,
-    by clicking on the Yomichan icon and clicking on the question mark.
-    If it isn't, you will have to download it
-    [manually](https://github.com/FooSoft/yomichan/releases/tag/22.10.23.0)
-    (use `a708116f79104891acbd-22.10.23.0.xpi`).
 
 ---
 
 
 # Yomichan Fields
-To edit the fields that Yomichan will automatically fill out, do the following:
+To edit the fields that Yomitan will automatically fill out, do the following:
 
 ![type:video](assets/setupyomichan/yomichan_anki_format.mp4)
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Go to the `Anki` section.
 1. Select `Anki card format...`.
 1. Set "Model" as `JP Mining Note`.
@@ -66,7 +57,7 @@ with all other definitions in collapsable fields.
     fill the `IsSentenceCard` field here.
 
 
-The custom markers like `{jpmn-primary-definition}` is not provided by Yomichan by default.
+The custom markers like `{jpmn-primary-definition}` is not provided by Yomitan by default.
 See the section below to make these markers usable.
 
 ---
@@ -74,7 +65,7 @@ See the section below to make these markers usable.
 
 
 # Yomichan Templates
-Yomichan supports user inserted template code that allows the automatic
+Yomitan supports user inserted template code that allows the automatic
 separation of bilingual and monolingual dictionary definitions, custom stylization, etc.
 This note type makes heavy use of these custom templates.
 
@@ -82,7 +73,7 @@ To make the new markers usable, do the following:
 
 ![type:video](assets/setupyomichan/import_yomichan_templates.mp4)
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
 1. Go to the `Anki` section
 1. Select `Configure Anki card templates...`
@@ -94,7 +85,7 @@ After resetting the templates,
 **without** removing any of the existing template code,
 add the following template code as follows:
 
-1. Copy and paste the code below to the **top** of the default Yomichan template code:
+1. Copy and paste the code below to the **top** of the default Yomitan template code:
 
     ??? examplecode "Click here to show the template code to copy."
 
@@ -104,7 +95,7 @@ add the following template code as follows:
         {% endfilter %}
         ```
 
-2. Copy and paste the code below to the **bottom** of the default Yomichan template code:
+2. Copy and paste the code below to the **bottom** of the default Yomitan template code:
 
     ??? examplecode "Click here to show the template code to copy."
 
@@ -117,7 +108,7 @@ add the following template code as follows:
 ---
 
 # Make an example card!
-At this point, you should be able to make cards with Yomichan!
+At this point, you should be able to make cards with Yomitan!
 
 ??? example "Click here to show some example Japanese sentences."
 
@@ -133,12 +124,12 @@ At this point, you should be able to make cards with Yomichan!
     「貴方なんなんです？なにか、妙に銃口慣れしていますね…若者特有の空威張りという訳でもなさそうですし…」
     { .jp-quote-text }
 
-{{ img("adding a card with Yomichan", "assets/setupyomichan/add_card.gif") }}
+{{ img("adding a card with Yomitan", "assets/setupyomichan/add_card.gif") }}
 
-Obviously, just Yomichan alone doesn't fill every field.
+Obviously, just Yomitan alone doesn't fill every field.
 Notably, the picture and sentence audio is missing.
 
-Outside of that, there are some final settings you can adjust within the Yomichan templates
+Outside of that, there are some final settings you can adjust within the Yomitan templates
 if the card doesn't look quite right.
 
 
@@ -223,14 +214,14 @@ there are some other platforms that one can create cards from.
 If you wish to add cards on Android, use
 [AnkiconnectAndroid](https://github.com/KamWithK/AnkiconnectAndroid)
 and follow the instructions on the AnkiconnectAndroid's README page.
-It might help to export a copy of Yomichan settings from your PC and import said settings on Android,
+It might help to export a copy of Yomitan settings from your PC and import said settings on Android,
 instead of re-doing all of the steps on Android.
 
 !!! note
-    Occasionally, importing your Yomichan settings from the PC may lead to
+    Occasionally, importing your Yomitan settings from the PC may lead to
     AnkiconnectAndroid not working.
     If AnkiconnectAndroid doesn't work after going through the entire README,
-    try resetting your Yomichan settings on Android and starting from scratch.
+    try resetting your Yomitan settings on Android and starting from scratch.
 
 
 !!! note
@@ -251,8 +242,8 @@ instead of re-doing all of the steps on Android.
 ## Kindle Setup
 
 One can use something like [ann2html](https://github.com/xythh/ann2html)
-to export a Yomichan-able HTML file based on the Kindle's vocabulary builder.
-This allows you to add the cards through Yomichan on the PC.
+to export a Yomitan-able HTML file based on the Kindle's vocabulary builder.
+This allows you to add the cards through Yomitan on the PC.
 
 
 
@@ -262,9 +253,9 @@ This allows you to add the cards through Yomichan on the PC.
 # Enjoy your new one-click cards!
 
 If you've made it this far, then congratulations!
-Most fields of the cards have been automatically filled out, just from Yomichan alone!
+Most fields of the cards have been automatically filled out, just from Yomitan alone!
 
-This concludes the setup process for creating cards with Yomichan.
+This concludes the setup process for creating cards with Yomitan.
 
 From here, you likely fall under one of the two categories below:
 
@@ -274,7 +265,7 @@ From here, you likely fall under one of the two categories below:
     If you're new to sentence mining, there are likely some things things
     that you would like to set up. These include:
 
-    1. Getting the actual text to use Yomichan on.
+    1. Getting the actual text to use Yomitan on.
     1. Getting the pictures and/or sentence audio from the media into the card.
 
     Head over to the [Setup: Everything Else](setupeverythingelse.md) page to see exactly that.
