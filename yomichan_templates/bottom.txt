@@ -792,7 +792,7 @@
 
 
 {{#*inline "jpmn-frequency-sort"}}
-    {{~! Frequency sort handlebars: v23.03.13.1 ~}}
+    {{~! Frequency sort handlebars: v24.01.06.1 ~}}
     {{~! The latest version can be found at https://github.com/MarvNC/JP-Resources#freq-handlebar ~}}
     {{~#scope~}}
 
