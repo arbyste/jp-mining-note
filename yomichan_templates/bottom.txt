@@ -107,7 +107,9 @@
         {{~#each definition.definitions~}}
             {{~#set "search-def"}}{{~> _jpmn-glossary-single-search . brief=../brief noDictionaryTag=../noDictionaryTag ~}}{{/set~}}
 
-            {{~set "search-regex-match" (regexMatch (get "search-selection") "gu" (get "search-def"))}}
+            {{~#set "search-regex-match"}}
+                {{~#regexMatch (get "search-selection") "gu"}}{{~get "search-def"~}}{{/regexMatch~}}
+            {{/set~}}
             {{~#if (op "&&"
                 (op "===" (get "result-dictionary") null)
                 (op "!==" (get "search-regex-match") "")
@@ -790,7 +792,7 @@
 
 
 {{#*inline "jpmn-frequency-sort"}}
-    {{~! Frequency sort handlebars: v23.03.13.1 ~}}
+    {{~! Frequency sort handlebars: v24.01.06.1 ~}}
     {{~! The latest version can be found at https://github.com/MarvNC/JP-Resources#freq-handlebar ~}}
     {{~#scope~}}
 
@@ -854,7 +856,8 @@
                 {{/if~}}
 
                 {{~#if (get "read-freq") ~}}
-                    {{~set "f" (op "+" (regexMatch "\d+" "" this.frequency)) ~}}
+                    {{~#set "numericFrequencyMatch"}}{{~#regexMatch "\d+" ""}}{{~this.frequency~}}{{/regexMatch~}}{{/set~}}
+                    {{~set "f" (op "+" (get "numericFrequencyMatch")) ~}}
 
                     {{~#if (op "===" (get "opt-freq-sorting-method") "min") ~}}
                         {{~#if

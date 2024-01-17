@@ -34,7 +34,7 @@
 {{~! See here for the official documentation on how these options work:
     https://github.com/MarvNC/JP-Resources#freq-settings ~}}
 
-{{~#set "opt-ignored-freq-dict-regex"~}} ^(JLPT_Level)$ {{~/set~}}
+{{~#set "opt-ignored-freq-dict-regex"~}} ^(JLPT.*)|(HSK.*)$ {{~/set~}}
 {{~#set "opt-ignored-freq-value-regex"~}} ❌ {{~/set~}}
 {{~#set "opt-keep-freqs-past-first-regex"~}} ^()$ {{~/set~}}
 {{~set "opt-no-freq-default-value" 9999999 ~}}
