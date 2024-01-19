@@ -369,11 +369,11 @@ If this add-on is not used, then the following features will be missing:
 
 The config of the add-on must be changed to work with this note.
 
-To change the config of any Anki add-on, head over to:
+To view the files of any Anki add-on, head over to:
 
-> `Tools` →  `Add-ons` →  (select the add-on) →  `Config`.
+> `Tools` →  `Add-ons` →  (select the add-on) →  `View Files`.
 
-An example config is shown below that you can copy/paste.
+Open the file `config.json` and replace the contents with the config file below.
 
 ??? examplecode "Click here to see the full AJT Japanese config"
 
@@ -388,157 +388,162 @@ An example config is shown below that you can copy/paste.
 
     ```json
     {
-        "audio_settings": {
-            "attempts": 4,
-                "audio_download_timeout": 6,
-                "dictionary_download_timeout": 30,
-                "ignore_inflections": false,
-                "maximum_results": 99,
-                "search_dialog_field_name": "VocabAudio",
-                "stop_if_one_source_has_results": false
-        },
-            "audio_sources": [
-            {
-                "enabled": false, // (7)!
-                "name": "NHK-2016",
-                "url": "https://github.com/Ajatt-Tools/nhk_2016_pronunciations_index/releases/download/v1.2/NHK_main.zip"
-            },
-            {
-                "enabled": false,
-                "name": "NHK-1998",
-                "url": "https://github.com/Ajatt-Tools/nhk_1998_pronunciations_index/releases/download/v1.1/NHK_main.zip"
-            },
-            {
-                "enabled": false,
-                "name": "Shinmeikai-8",
-                "url": "https://github.com/Ajatt-Tools/shinmeikai_8_pronunciations_index/releases/download/v1.5/Shinmeikai-8_main.zip"
-            },
-            {
-                "enabled": false,
-                "name": "TAAS",
-                "url": "https://github.com/Ajatt-Tools/taas_pronunciations_index/releases/download/v1.0/TAAS_main.zip"
-            }
-        ],
-        "regenerate_readings": false,
-        "cache_lookups": 1024,
-        "context_menu": {
-            "generate_furigana": true,
-            "literal_pronunciation": true,
-            "to_hiragana": true,
-            "to_katakana": true
-        },
-        "definitions": {
-            "behavior": "append",
-            "destination": "VocabDef",
-            "dict_name": "meikyou",
-            "remove_marks": true,
-            "search_type": "exact",
-            "source": "VocabKanji",
-            "timeout": 10
-        },
-        "furigana": {
-            "blocklisted_words": "人",
-            "discard_mode": "discard_extra",
-            "maximum_results": 1, // (5)!
-            "mecab_only": "彼,猫,首,母,顔,木,頭,私,弟,空,体,行く",
-            "counters": "つ,月,日,人,筋,隻,丁,品,番,枚,時,回,円,万,歳,限,万人",
-            "prefer_literal_pronunciation": false,
-            "reading_separator": ", ",
-            "skip_numbers": true
-        },
-        "last_file_save_location": "",
-        "pitch_accent": {
-            "blocklisted_words": "こと,へ,か,よ,ん,だ,び,の,や,ね,ば,て,と,た,が,に,な,は,も,ます,から,いる,たち,てる,う,ましょ,たい,する,です,ない",
-            "discard_mode": "discard_extra",
-            "kana_lookups": true,
-            "lookup_shortcut": "Ctrl+8",
-            "maximum_results": 100, // (4)!
-            "output_hiragana": false,
-            "reading_separator": "・", // (3)!
-            "skip_numbers": true,
-            "style": "none", // (1)!
-            "word_separator": "、"
-        },
-        "profiles": [ // (2)!
+      "cache_lookups": 1024,
+      "last_file_save_location": "",
+      "profiles": [ // (2)!
         {
-            "destination": "SentenceReading",
-            "mode": "furigana",
-            "name": "Add furigana for sentence",
-            "note_type": "JP Mining Note",
-            "overwrite_destination": false,
-            "source": "Sentence",
-            "split_morphemes": true,
-            "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add"
+          "name": "Add furigana for sentence",
+          "note_type": "JP Mining Note",
+          "source": "Sentence",
+          "destination": "SentenceReading",
+          "mode": "furigana",
+          "split_morphemes": true,
+          "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add",
+          "overwrite_destination": false
         },
         {
-            "destination": "WordReading",
-            "mode": "furigana",
-            "name": "Add furigana for word -- UNUSED BY jp-mining-note",
-            "note_type": "AJT_JAPANESE_IGNORE_PROFILE",
-            "overwrite_destination": false,
-            "source": "Word",
-            "split_morphemes": false,
-            "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add"
+          "name": "Add furigana for word -- UNUSED BY jp-mining-note",
+          "note_type": "AJT_JAPANESE_IGNORE_PROFILE",
+          "source": "VocabKanji",
+          "destination": "VocabFurigana",
+          "mode": "furigana",
+          "split_morphemes": false,
+          "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add",
+          "overwrite_destination": false
         },
         {
-            "destination": "AJTWordPitch",
-            "mode": "pitch",
-            "name": "Add pitch accent html",
-            "note_type": "JP Mining Note",
-            "output_format": "html",
-            "overwrite_destination": false,
-            "source": "Word",
-            "split_morphemes": false,
-            "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add"
+          "name": "Add pitch accent for word",
+          "note_type": "JP Mining Note",
+          "source": "Word",
+          "destination": "AJTWordPitch",
+          "mode": "pitch",
+          "split_morphemes": false,
+          "output_format": "html",
+          "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add",
+          "overwrite_destination": false
         },
         {
-            "destination": "VocabAudio",
-            "mode": "audio",
-            "name": "Add audio for word -- UNUSED BY jp-mining-note",
-            "note_type": "AJT_JAPANESE_IGNORE_PROFILE",
-            "overwrite_destination": false,
-            "source": "VocabKanji",
-            "split_morphemes": false,
-            "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add"
+          "name": "Add audio for word -- UNUSED BY jp-mining-note",
+          "note_type": "AJT_JAPANESE_IGNORE_PROFILE",
+          "source": "VocabKanji",
+          "destination": "VocabAudio",
+          "mode": "audio",
+          "split_morphemes": false,
+          "triggered_by": "focus_lost,toolbar_button,note_added,bulk_add",
+          "overwrite_destination": false
         }
-        ],
-        "toolbar": { // (6)!
-            "add_definition_button": {
-                "enabled": false,
-                "shortcut": "",
-                "text": "意"
-            },
-            "audio_search_button": {
-                "enabled": false,
-                "shortcut": "",
-                "text": "検"
-            },
-            "clean_furigana_button": {
-                "enabled": false,
-                "shortcut": "",
-                "text": "削"
-            },
-            "furigana_button": {
-                "enabled": false,
-                "shortcut": "",
-                "text": "振"
-            },
-            "generate_all_button": {
-                "enabled": false,
-                "shortcut": "Alt+P",
-                "text": "入"
-            },
-            "hiragana_button": {
-                "enabled": false,
-                "shortcut": "",
-                "text": "平"
-            },
-            "regenerate_all_button": {
-                "enabled": false,
-                "shortcut": "Alt+;",
-                "text": "再"
-            }
+      ],
+      "pitch_accent": {
+        "lookup_shortcut": "Ctrl+8",
+        "output_hiragana": false,
+        "kana_lookups": true,
+        "skip_numbers": true,
+        "reading_separator": "・", // (3)!
+        "word_separator": "、",
+        "blocklisted_words": "こと,へ,か,よ,ん,だ,び,の,や,ね,ば,て,と,た,が,に,な,は,も,ます,から,いる,たち,てる,う,ましょ,たい,する,です,ない",
+        "maximum_results": 100, // (4)!
+        "discard_mode": "discard_extra",
+        "style": "none" // (1)!
+      },
+      "furigana": {
+        "skip_numbers": true,
+        "prefer_literal_pronunciation": false,
+        "reading_separator": ", ",
+        "blocklisted_words": "人",
+        "mecab_only": "彼,猫,首,母,顔,木,頭,私,弟,空,体,行く",
+        "maximum_results": 1, // (5)!
+        "discard_mode": "discard_extra"
+      },
+      "context_menu": {
+        "generate_furigana": true,
+        "to_katakana": true,
+        "to_hiragana": true,
+        "literal_pronunciation": true,
+        "look_up_word": true
+      },
+      "toolbar": { // (6)!
+        "generate_all_button": {
+          "enabled": false,
+          "shortcut": "Alt+P",
+          "text": "入"
+        },
+        "regenerate_all_button": {
+          "enabled": false,
+          "shortcut": "Alt+;",
+          "text": "再"
+        },
+        "furigana_button": {
+          "enabled": false,
+          "shortcut": "",
+          "text": "振"
+        },
+        "hiragana_button": {
+          "enabled": false,
+          "shortcut": "",
+          "text": "平"
+        },
+        "clean_furigana_button": {
+          "enabled": false,
+          "shortcut": "",
+          "text": "削"
+        },
+        "audio_search_button": {
+          "enabled": false,
+          "shortcut": "",
+          "text": "検"
+        },
+        "add_definition_button": {
+          "enabled": false,
+          "shortcut": "",
+          "text": "意"
         }
+      },
+      "audio_sources": [
+        {
+          "enabled": false, // (7)!
+          "name": "NHK-2016",
+          "url": "https://github.com/Ajatt-Tools/nhk_2016_pronunciations_index/releases/download/v1.2/NHK_main.zip"
+        },
+        {
+          "enabled": false,
+          "name": "NHK-1998",
+          "url": "https://github.com/Ajatt-Tools/nhk_1998_pronunciations_index/releases/download/v1.1/NHK_main.zip"
+        },
+        {
+          "enabled": false,
+          "name": "Shinmeikai-8",
+          "url": "https://github.com/Ajatt-Tools/shinmeikai_8_pronunciations_index/releases/download/v1.5/Shinmeikai-8_main.zip"
+        },
+        {
+          "enabled": false,
+          "name": "Daijisen",
+          "url": "https://github.com/Ajatt-Tools/daijisen_pronunciations_index/releases/download/v1.0/Daijisen_main.zip"
+        },
+        {
+          "enabled": false,
+          "name": "TAAS",
+          "url": "https://github.com/Ajatt-Tools/taas_pronunciations_index/releases/download/v1.0/TAAS_main.zip"
+        }
+      ],
+      "audio_settings": {
+        "dictionary_download_timeout": 30,
+        "audio_download_timeout": 6,
+        "attempts": 4,
+        "maximum_results": 99,
+        "ignore_inflections": false,
+        "stop_if_one_source_has_results": false,
+        "search_dialog_field_name": "VocabAudio",
+        "tag_separator": "<br>"
+      },
+      "definitions": {
+        "timeout": 10,
+        "remove_marks": true,
+        "dict_name": "meikyou",
+        "search_type": "exact",
+        "source": "VocabKanji",
+        "destination": "VocabDef",
+        "behavior": "append"
+      }
     }
     ```
 
@@ -546,7 +551,7 @@ An example config is shown below that you can copy/paste.
         makes it easy to control how pronunciation information is displayed.
         Without this, pitch accent information in the AJTWordPitch field will not render correctly.
 
-    2. The `Add pitch accent number` and `Add furigana for word` profiles are not used.
+    2. The `Add audio for word` and `Add furigana for word` profiles are not used.
         In order to disable them, the note type is set to `AJT_JAPANESE_IGNORE_PROFILE`,
         which only matches note types containing the string `AJT_JAPANESE_IGNORE_PROFILE`.
         It is very unlikely that your Anki notes will unintentionally contain this string.
