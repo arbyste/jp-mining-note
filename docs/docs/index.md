@@ -21,6 +21,21 @@ hide:
     down this fork. The documentation for the original project can be found [here](https://aquafina-water-bottle.github.io/jp-mining-note/).
 
 ---
+!!! Note
+
+    This is the documentation for the stable version of JPMN (Version
+    0.11). At this point though, it seems that far more people use the prerelease
+    version (0.12). For this reason, bugs tend to be found and fixed more quickly
+    in the prerelease version.
+
+    The documentation for the stable version is pretty much complete, while the docs
+    for the prerelease version are largely incomplete. Even if you install the prerelease
+    version, these stable docs may still be useful in some cases.
+
+    Keep the above points in mind when deciding which version to install.
+
+    If you want to install the prerelease version, the docs can be found
+    [here](https://arbyste.github.io/jp-mining-note-prerelease/)
 
 Welcome to jp-mining-note's documentation!
 Here are a few demos:
