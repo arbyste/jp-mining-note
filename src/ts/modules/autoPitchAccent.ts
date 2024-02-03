@@ -528,9 +528,7 @@ export class ParseAJTWordPitch extends Module implements PitchParser {
     // textContent to remove all markup (overline, devoiced, bold?)
     const d = document.createElement('div');
     d.innerHTML = this.ajtWordPitch;
-    this.logger.debug("d value is: " + d.outerHTML, 5);
     let searchText = d.textContent ?? '';
-    this.logger.debug("searchText =" + searchText, 5);
     searchText = searchText.replace(/°/g, ''); // remove all nasal markers
     searchText = searchText.replace(/&#42780;/g, 'ꜜ'); // normalizes text
     const searchWords = searchText.split(ajtWordSeps);
@@ -556,12 +554,9 @@ export class ParseAJTWordPitch extends Module implements PitchParser {
     for (let i = 0; i < searchWords.length; i++) {
       const w = searchWords[i];
       let h = searchWordsHTML[i];
-      this.logger.debug("w = " + w, 5);
-      this.logger.debug("h = " + h, 5);
       if (this.removeNasal) {
         h = this.autopa.removeNasalStr(h);
       }
-      this.logger.debug("h remove nasal = " + h, 5);
 
       const searchMora = getMorae(w);
 
@@ -590,7 +585,6 @@ export class ParseAJTWordPitch extends Module implements PitchParser {
       posDataList.push(posData);
     }
 
-    this.logger.debug("posDataList = " + posDataList, 5);
     return posDataList;
   }
 
