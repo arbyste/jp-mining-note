@@ -340,9 +340,12 @@ and delete both `css` files.
 
 
 
-## [AJT Japanese](https://ankiweb.net/shared/info/1344485230)
+## [AJT Japanese](https://ankiweb.net/shared/info/200813220)
 
-> Code: `1344485230`
+> Code: `200813220`
+
+JP Mining Note uses a slightly modified version of AJT Japanese that has been
+pre-configured to work with this note type.
 
 !!! warning
     As of writing this (2023/04/28), AJT Japanese is only guaranteed to work on
@@ -365,19 +368,41 @@ If this add-on is not used, then the following features will be missing:
       Fortunately, AJT Japanese can usually detect the existence of multiple words,
       and add the pitch accent for each individual word.
 
+The version of AJT Japanese that is linked above has already been configured
+to work with JP Mining Note, so there is no need to modify the configuration.
+After installation, you can move on to [Final Steps](#final-steps-after-installing-add-ons).
+
+### Additional Info
+Furigana generation is occasionally incorrect,
+so if you plan on using furigana regularly, you should double-check the readings
+to make sure they are correct.
+
+??? info "JapaneseSupport v.s. AJT Japanese (Furigana)"
+
+    If you use [JapaneseSupport](https://ankiweb.net/shared/info/3918629684), bolded words and other styles within a field
+    are not transferred over from the original field to the reading field.
+    Additionally, JapaneseSupport does not have an option to automatically add
+    the reading upon card creation.
+    AJT Japanese supports both of those of those features.
+
+
 ### Config Changes
 
-The config of the add-on must be changed to work with this note.
 
-To view the files of any Anki add-on, head over to:
+If you want to manually modify the configuration of AJT Japanese, this
+section might be useful. It details the changes that have been made to the default
+AJT Japanese configuration file. Documentation for configuring AJT Japanese can be found from the page
+for the [original version of the add on](https://ankiweb.net/shared/info/1344485230).
 
-> `Tools` →  `Add-ons` →  (select the add-on) →  `View Files`.
+To view the config of any Anki add-on, head over to:
 
-Open the file `config.json` and replace the contents with the config file below.
+> `Tools` →  `Add-ons` →  (select the add-on) →  `Config`.
+
+Below is an annotated copy of the config file that JP Mining Note uses:
 
 ??? examplecode "Click here to see the full AJT Japanese config"
 
-    The important things to change in the config are:
+    The important changes to the config are:
 
     * `fields`
     * `profiles`
@@ -578,18 +603,6 @@ Open the file `config.json` and replace the contents with the config file below.
 
 
 
-### Additional Info
-Furigana generation is occasionally incorrect,
-so if you plan on using furigana regularly, you should double-check the readings
-to make sure they are correct.
-
-??? info "JapaneseSupport v.s. AJT Japanese (Furigana)"
-
-    If you use [JapaneseSupport](https://ankiweb.net/shared/info/3918629684), bolded words and other styles within a field
-    are not transferred over from the original field to the reading field.
-    Additionally, JapaneseSupport does not have an option to automatically add
-    the reading upon card creation.
-    AJT Japanese supports both of those of those features.
 
 ---
 
