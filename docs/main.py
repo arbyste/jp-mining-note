@@ -277,7 +277,7 @@ def define_env_vars(env):
         "BATCH_CMDS": "[batch commands](batch.md)",
         "CLICK_HERE": "<small>(click here)</small>",
         "CLICKHERE": "<small>(click here)</small>",
-        "JPMN_MGR_CODE": "1732829476",
+        "JPMN_MGR_CODE": "301910299",
 
     }
 

@@ -24,16 +24,6 @@ You can update the note in one of two ways:
 
 1. Via **JPMN Manager**, an Anki add-on.
     *If you don't know which method to choose, choose this one*.
-
-    !!! Note
-
-        On this temporary bugfix fork of JPMN, you **cannot use JPMN Manager to
-        update the note.** This functionality will return when Aquafina resumes
-        maintenance of JPMN. See
-        [here](faq.md#why-cant-i-use-jpmn-manager-on-this-temporary-bugfix-fork)
-        for more details.
-
-
 2. Via **command line**.
     This method is recommended for people who are familiar with `git` and `python`,
     and don't want to download an Anki add-on.
@@ -47,14 +37,20 @@ These should be recorded in the [Setup Changes](setupchanges.md) page.
 Afterward seeing that page, please view the [final steps](updating.md#final-steps) section.
 {% endset %}
 
-{% set JPMN_MGR_CODE %}1732829476{% endset %}
 
 ??? info "Option 1: Via JPMN Manager <small>(click here)</small>"
 
-    As noted above, on this temporary bugfix fork of JPMN, you cannot use
-    Option 1. Please use Option 2.
+    !!! Note
 
-<!--
+        If you have previously installed [Aquafina's old version](https://ankiweb.net/shared/info/1732829476)
+        of the JPMN add-on, then you must remove it before installing the new version below.
+        The old and new versions will conflict with each other if they are both
+        installed. In your list of Anki add-ons, you should only see
+        `JPMN Manager with prereleases New Version`. If you see
+        `JPMN Manager with prereleases` then please remove it and restart Anki
+        before proceeding.
+
+
     This add-on simply wraps around the python script mentioned below,
     and should behave the exact same as running the script manually.
 

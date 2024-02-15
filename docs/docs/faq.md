@@ -536,26 +536,6 @@ use the `HintNotHidden` field.
 
 
 
-## Why can't I use JPMN Manager on this temporary bugfix fork?
-
-The JPMN Manager Anki add-on is managed by Aquafina-water-bottle. Since we are
-currently unable to contact Aquafina, there is no way for me to update the
-JPMN Manager add-on with new bugfixes.
-
-One possible workaround would be to create my own version of JPMN Manager, but
-this would require the user to uninstall their current version, install the new
-version, and then go back to the original version when Aquafina returns. Building
-and maintaining Anki add-ons is also beyond my ability, so for the time being
-it makes the most sense to require the user to use the command line to update
-the note.
-
-If you previously installed the note using JPMN Manager then don't worry, if you
-follow the update process as written, then everything should still work.
-
-
-
-
-
 ## Where is the (X) folder in Anki?
 
 You must first locate the `Anki2` folder.
