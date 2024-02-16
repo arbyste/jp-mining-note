@@ -73,16 +73,26 @@ TODO example gif
 
 # Collapsed Images
 
-Any customly inserted images, including images inserted directly by Yomichan,
+Any images that are added to a definition by Yomitan are shown by default. If you
+add a custom image to a definiton however, it
 will be converted to text which you have to hover over to reveal.
 Of course, this image can also be clicked on to zoom.
 See the video demo below to see exactly what happens.
 
 ![type:video](assets/images/collapsed_images.mp4)
 
-## How to Disable Collapsed Images
+## How to Collapse Yomitan Images
 
-There are several ways of disabling collapsed images.
+If you want images from Yomitan to be collapsed by default, add the following
+to your {{ RTO_FILE }}:
+
+    ```json
+    "imgStylizer.glossary.primaryDef.mode.yomichan": "collapse",
+    ```
+
+## How to Disable Collapsed User Images
+
+There are several ways of disabling collapsed user images.
 
 1. Place your images in the `PrimaryDefinitionPicture` field, as shown in the [section below](images.md#the-primarydefinitionpicture-field).
 
@@ -90,11 +100,11 @@ There are several ways of disabling collapsed images.
 
     ```json
     // alternatively, try "none" instead of "float".
-    "imgStylizer.glossary.primaryDef.mode.yomichan": "float",
+    "imgStylizer.glossary.primaryDef.mode.user": "float",
     ```
 
-1. Disable it per card, by adding the following tag: `img-yomichan-float`.
-    Alternatively, try adding `img-yomichan-no-styling`.
+1. Disable it per card, by adding the following tag: `img-user-float`.
+    Alternatively, try adding `img-user-no-styling`.
 
 
 1. To disable this for only specific images,
