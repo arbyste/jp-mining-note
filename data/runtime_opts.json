@@ -169,7 +169,7 @@
   ],
   "imgStylizer.mainImage.blur.startState": "only-tagged",
   "imgStylizer.glossary.primaryDef.enabled": true,
-  "imgStylizer.glossary.primaryDef.mode.yomichan": "collapse",
+  "imgStylizer.glossary.primaryDef.mode.yomichan": "match-yomichan",
   "imgStylizer.glossary.primaryDef.mode.user": "collapse",
   "imgStylizer.glossary.primaryDef.mode.general.tagOverride.none": [
     "img-no-styling",

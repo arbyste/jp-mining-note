@@ -173,6 +173,17 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 16 </summary>
+
+- **Features**
+    - Changed the default behavior so that images inserted by Yomitan are expanded by default
+
+</details>
+
+
+
+
+<details>
 <summary> Pre-release 15 </summary>
 
 - **Fixes**
