@@ -111,6 +111,7 @@ nav:
     - "Setup Changes": setupchanges.md
     - "Final Steps": updatingfinalsteps.md
     - Changelog: https://github.com/arbyste/jp-mining-note/blob/dev/CHANGELOG.md
+    - "Updating from Aquafina's Version": updatingaquafinaversion.md
   - Reference:
     - Quick Start (TODO): quickstart.md
     - Blockquotes (TODO): blockquotes.md
