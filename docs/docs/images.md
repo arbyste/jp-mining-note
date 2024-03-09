@@ -79,20 +79,30 @@ TODO example gif
 
 # Collapsed Images
 
-Any customly inserted images, including images inserted directly by Yomichan,
-will be converted to text which you have to hover over to reveal.
-Of course, this image can also be clicked on to zoom.
-See the video demo below to see exactly what happens.
+By default, images in the Primary Definition are visible. It is possible to
+replace them with text that you need to hover over to reveal the image.
+The video below shows how this works.
 
 ![type:video](assets/images/collapsed_images.mp4)
 
-## How to Disable Collapsed Images
+## How to Enable Collapsed Images
 
-There are three ways of disabling collapsed images.
+Collapsed images can be enabled in the {{ RTO_FILE }}:
+
+    ```json
+    "img-utils": {
+      "stylize-images-in-glossary": true,
+      // ...
+    }
+    ```
+
+## How to Expand Specific Images
+
+If you have enabled collapsed images, and want to expand a specific image, there are two ways to do this:
 
 1. Place your images in the `PrimaryDefinitionPicture` field, as shown in the [section below](images.md#the-primarydefinitionpicture-field).
 
-1. To disable this for only specific images,
+1. To expand a specific image,
     [edit the HTML](faq.md#how-do-i-edit-the-fields-raw-html){:target="_blank"}
     of the desired field, and add `data-do-not-convert="true"`.
 
@@ -101,14 +111,6 @@ There are three ways of disabling collapsed images.
     <img src="your_image.png" data-do-not-convert="true">
     ```
 
-1. Disable it globally in the {{ RTO_FILE }}:
-
-    ```json
-    "img-utils": {
-      "stylize-images-in-glossary": false,
-      // ...
-    }
-    ```
 
 ---
 
