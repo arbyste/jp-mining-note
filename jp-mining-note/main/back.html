@@ -510,7 +510,7 @@ function optionsNotFound() {
 
     
   <!-- DO NOT CHANGE/REMOVE THIS: this is used to record the version when updating the note. -->
-  <div class="card-description-ver">JP Mining Note: Version 0.11.0.5</div>
+  <div class="card-description-ver">JP Mining Note: Version 0.11.0.6</div>
 
 
 </div>
@@ -827,7 +827,7 @@ function optionsNotFound() {
 
 
   <div class="glossary-text glossary-text--primary-definition" id="primary_definition_text">
-    {{furigana:PrimaryDefinition}}
+    {{PrimaryDefinition}}
     <div style="font-size: 0px"><br></div>
     <!-- The above is a hack to allow a user to triple-click the definition
       without selecting everything below the line.
@@ -4013,7 +4013,7 @@ const JPMNImgUtils = (() => {
     run() {
       editDisplayImage();
 
-      if (getSetting(['modules','img-utils','stylize-images-in-glossary',],true)) {
+      if (getSetting(['modules','img-utils','stylize-images-in-glossary',],false)) {
         searchImages();
       }
     }

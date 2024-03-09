@@ -285,7 +285,7 @@ var JPMNOpts = (function (my) {
           // Replaces all images in the glossary (definition) sections
           // with an internal representation similar to how Yomichan displays images:
           // an `[Image]` text where you can see the image upon hover, and with click to zoom.
-          "stylize-images-in-glossary": true,
+          "stylize-images-in-glossary": false,
 
           "primary-definition-picture": {
             // Where to place the `PrimaryDefinitionPicture` field contents

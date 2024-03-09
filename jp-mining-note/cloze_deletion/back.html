@@ -434,7 +434,7 @@ function optionsNotFound() {
 
     
   <!-- DO NOT CHANGE/REMOVE THIS: this is used to record the version when updating the note. -->
-  <div class="card-description-ver">JP Mining Note: Version 0.11.0.5</div>
+  <div class="card-description-ver">JP Mining Note: Version 0.11.0.6</div>
 
 
 </div>
@@ -639,7 +639,7 @@ function optionsNotFound() {
     <summary>Primary Definition</summary>
     <blockquote class="glossary-blockquote highlight-bold" id="primary_definition">
       <div class="glossary-text glossary-text--primary-definition">
-        {{furigana:PrimaryDefinition}}
+        {{PrimaryDefinition}}
       </div>
     </blockquote>
 </details>
@@ -3666,7 +3666,7 @@ const JPMNImgUtils = (() => {
     run() {
       editDisplayImage();
 
-      if (getSetting(['modules','img-utils','stylize-images-in-glossary',],true)) {
+      if (getSetting(['modules','img-utils','stylize-images-in-glossary',],false)) {
         searchImages();
       }
     }

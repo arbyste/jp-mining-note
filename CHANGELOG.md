@@ -20,6 +20,14 @@ by simply installing a new version of the .apkg package,
 and must use `./install.py --update`.
 
 
+## [0.11.0.6] - 2024-03-09
+#### Fixes
+- Expanded images by default in the Primary Definition, to prevent issues with some dictionaries that use images as tags
+- Updated documentation to link to my own fork of AJT Japanese which is preconfigured with the correct config settings
+- Replaced furigana:PrimaryDefinition with PrimaryDefinition to prevent issues with some dictionaries that use square brackets in the definitions
+
+
+
 ## [0.11.0.5] - 2023-10-06
 #### Fixes
 - Updated the way pitch accent is styled to work with the latest version of AJTJapanese. Pronunciation is now styled with the following html span classes:
