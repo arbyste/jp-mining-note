@@ -701,8 +701,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-to-disable-collapsed-images" class="md-nav__link">
-    How to Disable Collapsed Images
+  <a href="#how-to-enable-collapsed-images" class="md-nav__link">
+    How to Enable Collapsed Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-expand-specific-images" class="md-nav__link">
+    How to Expand Specific Images
   </a>
   
 </li>
@@ -1096,8 +1103,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-to-disable-collapsed-images" class="md-nav__link">
-    How to Disable Collapsed Images
+  <a href="#how-to-enable-collapsed-images" class="md-nav__link">
+    How to Enable Collapsed Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-expand-specific-images" class="md-nav__link">
+    How to Expand Specific Images
   </a>
   
 </li>
@@ -1242,32 +1256,32 @@ to automatically set the image to the cover of the book.</p>
 <p>TODO example gif</p>
 <hr />
 <h2 id="collapsed-images">Collapsed Images<a class="headerlink" href="#collapsed-images" title="Permanent link">&para;</a></h2>
-<p>Any customly inserted images, including images inserted directly by Yomichan,
-will be converted to text which you have to hover over to reveal.
-Of course, this image can also be clicked on to zoom.
-See the video demo below to see exactly what happens.</p>
+<p>By default, images in the Primary Definition are visible. It is possible to
+replace them with text that you need to hover over to reveal the image.
+The video below shows how this works.</p>
 <p><div class="video-container"><video style="width: 100%; height: 100%" controls  ><source src="../assets/images/collapsed_images.mp4" type="video/mp4" /></video></div></p>
-<h3 id="how-to-disable-collapsed-images">How to Disable Collapsed Images<a class="headerlink" href="#how-to-disable-collapsed-images" title="Permanent link">&para;</a></h3>
-<p>There are three ways of disabling collapsed images.</p>
+<h3 id="how-to-enable-collapsed-images">How to Enable Collapsed Images<a class="headerlink" href="#how-to-enable-collapsed-images" title="Permanent link">&para;</a></h3>
+<p>Collapsed images can be enabled in the <a href="../runtimeoptions/" target="_blank">runtime options</a>:</p>
+<div class="highlight"><pre><span></span><code>```json
+&quot;img-utils&quot;: {
+  &quot;stylize-images-in-glossary&quot;: true,
+  // ...
+}
+```
+</code></pre></div>
+<h3 id="how-to-expand-specific-images">How to Expand Specific Images<a class="headerlink" href="#how-to-expand-specific-images" title="Permanent link">&para;</a></h3>
+<p>If you have enabled collapsed images, and want to expand a specific image, there are two ways to do this:</p>
 <ol>
 <li>
 <p>Place your images in the <code>PrimaryDefinitionPicture</code> field, as shown in the <a href="./#the-primarydefinitionpicture-field">section below</a>.</p>
 </li>
 <li>
-<p>To disable this for only specific images,
+<p>To expand a specific image,
     <a href="../faq/#how-do-i-edit-the-fields-raw-html" target="_blank">edit the HTML</a>
     of the desired field, and add <code>data-do-not-convert="true"</code>.</p>
 <p>An example is shown below:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;your_image.png&quot;</span> <span class="na">data-do-not-convert</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;your_image.png&quot;</span> <span class="na">data-do-not-convert</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
 </code></pre></div></p>
-</li>
-<li>
-<p>Disable it globally in the <a href="../runtimeoptions/" target="_blank">runtime options</a>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&quot;img-utils&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;stylize-images-in-glossary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="c1">// ...</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div>
 </li>
 </ol>
 <hr />
@@ -1529,7 +1543,7 @@ By default, states cycle from left to right.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2024</span>
       
     
   </small>
