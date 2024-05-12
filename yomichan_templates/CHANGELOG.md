@@ -10,6 +10,9 @@ Public facing markers are markers starting with `jpmn` (whereas private markers 
 
 The Yomichan template version is incremented independently from the jp-mining-note version.
 
+## v1.0.4
+- Updated CC-CEDICT so that it can have a datestamp after the dictionary name
+
 ## v1.0.3
 - Updated the bilingual dictionary list to include more recent dictionaries like Jitendex
 
