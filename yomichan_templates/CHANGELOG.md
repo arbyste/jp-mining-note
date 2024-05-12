@@ -10,6 +10,9 @@ Public facing markers are markers starting with `jpmn` (whereas private markers 
 
 The Yomichan template version is incremented independently from the jp-mining-note version.
 
+## v1.0.13
+- Updated CC-CEDICT regex to allow for a trailing date (e.g. CC-CEDICT [2024-04-12])
+
 ## v1.0.12
 - Fixed frequencySort miscalculation that was caused by upstream change to Yomitan, and added JLPT dictionaries to the list of ignored frequency dictionaries
 
