@@ -10,6 +10,7 @@ repo_name: jp-mining-note
 edit_uri: edit/dev/docs/docs/
 #site_url: https://arbyste.github.io/jp-mining-note/
 site_url: https://arbyste.github.io/jp-mining-note-prerelease/
+remote_name: prerelease-docs
 
 theme:
   name: material
