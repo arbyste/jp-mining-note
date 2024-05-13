@@ -135,7 +135,7 @@ A word is automatically colored as 起伏 if the `WordTags` field contains a ver
 and its pitch accent group is not 平板.
 
 This `WordTags` field can only be filled out if you have a modern version of the
-[JMdict dictionary for Yomichan](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan)
+JMdict or Jitendex dictionary in Yomitan.
 For old cards that do not have this field filled, you will have to manually mark
 the word with `-1` (in `PAOverride`).
 
@@ -356,7 +356,7 @@ This will behave exactly the same as `PAOverrideText`.
 
 # (3) PAPositions
 
-This field is automatically filled out as long as Yomichan has pitch accent dictionaries,
+This field is automatically filled out as long as Yomitan has pitch accent dictionaries,
 and the tested word is covered in said dictionary.
 
 By default, the first pitch of the first dictionary is shown.

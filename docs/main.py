@@ -247,8 +247,8 @@ def define_env_vars(env):
 
     data = {
         #"FIELDS": FIELDS,
-        "TOP_YOMICHAN": top,
-        "BOTTOM_YOMICHAN": bottom,
+        "TOP_YOMITAN": top,
+        "BOTTOM_YOMITAN": bottom,
         "JPMN_OPTIONS_EXAMPLE": runtime_opts_ex,
         "VERSION": version,
         "MPVACIOUS_CONF": mpvacious_conf,
@@ -435,11 +435,11 @@ def define_env(env):
         return "\n".join(rows)
 
     @env.macro
-    def yomichan_fields_table():
+    def yomitan_fields_table():
         rows = []
 
         # top row
-        rows.append("| Anki Fields | Yomichan Format |")
+        rows.append("| Anki Fields | Yomitan Format |")
 
         # sep row
         rows.append("|-|-|")
@@ -447,11 +447,11 @@ def define_env(env):
         for field in get_fields():
 
             anki_field = ("*" if field.binary_field else "") + field.name
-            yomichan_format = ""
+            yomitan_format = ""
             if field.setup is not None:
-                yomichan_format = "`" + str(field.setup) + "`"
+                yomitan_format = "`" + str(field.setup) + "`"
 
-            elements = [anki_field, yomichan_format]
+            elements = [anki_field, yomitan_format]
             elements = [e + " { .smaller-table-row }" if e else "" for e in elements]
             rows.append("|" + "|".join(elements) + "|")
 

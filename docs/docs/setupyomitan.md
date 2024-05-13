@@ -14,7 +14,7 @@ This section will go over the minimal Yomitan setup to work with this card type.
 
 # Preliminary Steps
 *   If you have used Yomitan before, please make a
-    [backup of your settings](faq.md#how-do-i-backup-yomichan-settings)
+    [backup of your settings](faq.md#how-do-i-backup-yomitan-settings)
     (just in case).
 
 *   On top of the standard dictionaries, I highly recommend installing some frequency and
@@ -28,10 +28,10 @@ This section will go over the minimal Yomitan setup to work with this card type.
 ---
 
 
-# Yomichan Fields
+# Yomitan Fields
 To edit the fields that Yomitan will automatically fill out, do the following:
 
-![type:video](assets/setupyomichan/yomichan_anki_format.mp4)
+![type:video](assets/setupyomitan/yomitan_anki_format.mp4)
 
 1. Navigate to Yomitan Settings.
 1. Go to the `Anki` section.
@@ -43,7 +43,7 @@ To edit the fields that Yomitan will automatically fill out, do the following:
 
 ??? example "Click here to see the fields to copy and paste."
 
-    {{ yomichan_fields_table() | indent(4) }}
+    {{ yomitan_fields_table() | indent(4) }}
 
 
 The above fields will create, by default,
@@ -69,14 +69,14 @@ See the section below to make these helpers usable.
 
 
 
-# Yomichan Templates
+# Yomitan Templates
 Yomitan supports user inserted template code that allows the automatic
 separation of bilingual and monolingual dictionary definitions, custom stylization, etc.
 This note type makes heavy use of these custom templates.
 
 To make the new helpers usable, do the following:
 
-![type:video](assets/setupyomichan/import_yomichan_templates.mp4)
+![type:video](assets/setupyomitan/import_yomitan_templates.mp4)
 
 1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
@@ -96,7 +96,7 @@ add the following template code as follows:
 
         ```handlebars
         {% filter indent(width=8) -%}
-        {{ TOP_YOMICHAN }}
+        {{ TOP_YOMITAN }}
         {% endfilter %}
         ```
 
@@ -106,7 +106,7 @@ add the following template code as follows:
 
         ```handlebars
         {% filter indent(width=8) -%}
-        {{ BOTTOM_YOMICHAN }}
+        {{ BOTTOM_YOMITAN }}
         {% endfilter %}
         ```
 
@@ -131,7 +131,7 @@ At this point, you should be able to make cards with Yomitan!
     「浮動小数点数は、IEEE-754規格に従って表現されています。`f32`が単精度浮動小数点数、 `f64`が倍精度浮動小数点数です」
     { .jp-quote-text }
 
-{{ img("adding a card with Yomitan", "assets/setupyomichan/add_card.gif") }}
+{{ img("adding a card with Yomitan", "assets/setupyomitan/add_card.gif") }}
 
 Obviously, just Yomitan alone doesn't fill every field.
 Notably, the picture and sentence audio is missing.
@@ -178,50 +178,6 @@ to do exactly that.
 
 
 
-<!--
-
-IT WORKS WITH OLD JMDICT!!
-THIS SECTION IS NO LONGER NECESSARY!!!
-
-## Legacy JMdict
-
-The newest JMdict Yomichan dictionary, informally known as "JMdict Extra",
-contains many things outside of the plain definitions,
-including antonyms, example sentences, and alternate forms.
-This dictionary can be downloaded
-[here](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan).
-
-If you are using JMdict Extra, then nothing has to be done.
-
-However, if you are using a legacy versions of JMdict,
-your definitions will export incorrectly (in a non-compact form).
-
-??? example "Compact Legacy JMdict Option {{ CLICK_HERE }}"
-    To export legacy JMdict in compact form, change the following option:
-    set the following option to `false`:
-
-    {% raw %}
-    ```handlebars
-    {{~set "opt-jmdict-list-format" false ~}}
-    ```
-    {% endraw %}
-
-
-
-then the exported compact list will not be fully compact.
-This is a [known issue](https://github.com/FooSoft/yomichan/issues/2297) with Yomichan's
-default handlebars.
-
-However, with the power of custom CSS and handlebars, the issue is fixed in this note type.
-To fix it, set `opt-jmdict-list-format` to `true`, i.e.
-
-{% raw %}
-```handlebars
-{{~set "opt-jmdict-list-format" true ~}}
-```
-{% endraw %}
-
--->
 ---
 
 
