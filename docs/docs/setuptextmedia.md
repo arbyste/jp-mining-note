@@ -2,7 +2,7 @@
 
 This page is dedicated to providing resources on how to do the following:
 
-1. Getting the actual text to use Yomichan on.
+1. Getting the actual text to use Yomitan on.
 1. Getting the pictures and/or sentence audio from the media.
 
 There are plenty of well established resources out there on how to do just that,
@@ -37,7 +37,7 @@ This shouldn't be an issue as long as you change the appropriate the field names
 
 I use a texthooker setup,
 which is able to extract subtitles or text into the browser.
-Once the text is on the browser, you can use Yomichan to select the word and create the
+Once the text is on the browser, you can use Yomitan to select the word and create the
 Anki card (by clicking on the green plus button).
 
 The standard texthooker setup works for most games, and any show with subtitle files.
@@ -326,7 +326,7 @@ Video content includes streamed content (Youtube, Netflix, etc.) and locally dow
 
 # Books (EPUBs, HTMLZ, PDF)
 As long as you're not using a scan (image-based), the text should already be available.
-Below will list a few ways to view these files in a browser to Yomichan.
+Below will list a few ways to view these files in a browser to Yomitan.
 
 ??? example "Resources <small>(click here)</small>"
     * [**ッツ Ebook Reader**](https://reader.ttsu.app) (EPUBs, HTMLZ) (recommended)
@@ -411,7 +411,7 @@ There are a few common issues that asbplayer users have, when creating cards wit
 1. **The `Sentence` field has extra info.**
 
     This is because asbplayer requires you to use its internal `Sentence` field
-    instead of Yomichan's automatically generated sentence.
+    instead of Yomitan's automatically generated sentence.
 
     However, using this will naturally lead you to the second problem:
 
@@ -435,7 +435,7 @@ There are a few common issues that asbplayer users have, when creating cards wit
 
 1. **The `SentenceReading` differs from the `Sentence` field, or has extra text.**
 
-    This relates to the first problem: Yomichan's automatically generated sentence
+    This relates to the first problem: Yomitan's automatically generated sentence
     differs from asbplayer's sentence field.
 
     To fix this,

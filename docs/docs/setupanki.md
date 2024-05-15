@@ -159,7 +159,7 @@ To download an add-on, copy the add-on's code, and navigate to the following to 
 
 > Code: `2055492159`
 
-Required for Yomichan and most other Anki-related automated tasks to work.
+Required for Yomitan and most other Anki-related automated tasks to work.
 I use the default config that comes with the add-on.
 
 If you installed JPMN Manager, you likely already have this installed.
@@ -354,7 +354,7 @@ pre-configured to work with this note type.
     please update Anki to 2.1.60 or above.
 
 This is an add-on that automatically adds furigana and pitch accents to
-cards upon Yomichan card creation.
+cards upon Yomitan card creation.
 Previously known as `AJT Furigana`, and now comes packaged with `AJT Pitch Accent`.
 
 If this add-on is not used, then the following features will be missing:
@@ -362,7 +362,7 @@ If this add-on is not used, then the following features will be missing:
 - Automatically generated furigana
 - Devoiced and nasal information to pitch accents
 - Less coverage on pitch accents
-    - If your Yomichan pitch accent dictionaries did not contain any pitch accent info for the word
+    - If your Yomitan pitch accent dictionaries did not contain any pitch accent info for the word
       but the add-on does, then it will use the add-on data.
       This will likely happen for expressions containing more than one word.
       Fortunately, AJT Japanese can usually detect the existence of multiple words,
@@ -648,14 +648,14 @@ because this note should update along with Anki.
 
 ---
 
-# Setting up Yomichan
+# Setting up Yomitan
 
 Of course, you can have an Anki template, but what's the point of it
 if you can't make cards with it?
 
-We will use Yomichan to create these cards.
+We will use Yomitan to create these cards.
 
-[Click here see how to setup Yomichan!](setupyomichan.md){ .md-button }
+[Click here see how to setup Yomitan!](setupyomitan.md){ .md-button }
 
 
 

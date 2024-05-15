@@ -59,7 +59,7 @@ auxilary information is hidden behind various tooltips and dropdowns.
     in `PrimaryDefinitionPicture` appears.
 
 === "**Blockquotes**"
-    In general, this contains all the other information and dictionaries from Yomichan.
+    In general, this contains all the other information and dictionaries from Yomitan.
     See [here](blockquotes.md) for more info.
 
 <!--
@@ -158,7 +158,7 @@ to change its card type!
 If you don't want to use the first bilingual/monolingual definition,
 you can select the dictionary or text that you want to use.
 
-![type:video](assets/setupyomichan/selected_text.mp4)
+![type:video](assets/setupyomitan/selected_text.mp4)
 
 Here is exactly what's happening:
 

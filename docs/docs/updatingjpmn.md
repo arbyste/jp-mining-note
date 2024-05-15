@@ -31,7 +31,7 @@ You can update the note in one of two ways:
 
 {% set post_install %}
 There may be further steps outside of just updating the card,
-such as updating Yomichan's templates / format.
+such as updating Yomitan's templates / format.
 These should be recorded in the [Setup Changes](setupchanges.md) page.
 
 Afterward seeing that page, please view the [final steps](updating.md#final-steps) section.
@@ -126,7 +126,7 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
     This will change the note in place, and gives you various options on how
     the note will be changed.
     Lastly, it will give you warnings on anything you have to change manually,
-    such as Yomichan Templates.
+    such as Yomitan Templates.
     -->
 
 

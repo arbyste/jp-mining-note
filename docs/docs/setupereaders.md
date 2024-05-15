@@ -8,8 +8,8 @@ However, there are a few ways of creating Anki Cards with various eReaders.
 # Kindle
 
 One can use something like [ann2html](https://github.com/xythh/ann2html)
-to export a Yomichan-able HTML file based on the Kindle's vocabulary builder.
-This allows you to add the cards through Yomichan on the PC.
+to export a Yomitan-able HTML file based on the Kindle's vocabulary builder.
+This allows you to add the cards through Yomitan on the PC.
 
 
 ---

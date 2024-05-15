@@ -4,7 +4,7 @@ On iOS (iPhone and iPad), it is possible to review JPMN cards.
 However, **I am not currently aware of a setup that can create cards with iOS**.
 If you do know of a setup that can create cards on iOS, please let me know!
 
-It is expected that you have setup Anki and Yomichan properly on your desktop machine
+It is expected that you have setup Anki and Yomitan properly on your desktop machine
 before continuing with this page.
 
 ---

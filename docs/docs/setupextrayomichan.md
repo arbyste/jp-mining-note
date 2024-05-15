@@ -1,33 +1,33 @@
 # Summary
 
-This page contains a bunch of completely optional tips for making the best use of Yomichan.
-It is expected that you have setup Yomichan properly before continuing with this page.
+This page contains a bunch of completely optional tips for making the best use of Yomitan.
+It is expected that you have setup Yomitan properly before continuing with this page.
 
 ---
 
 
-# Yomichan Appearance
-If you want to follow my exact Yomichan popup appearance:
+# Yomitan Appearance
+If you want to follow my exact Yomitan popup appearance:
 
-* Go to (Yomichan settings) →  `Popup Appearance`.
+* Go to (Yomitan settings) →  `Popup Appearance`.
 * Set `Compact glossaries` to ON.
 * Set `Compact tags` to OFF.
 
-There are also plenty of CSS customizations for Yomichan listed out
+There are also plenty of CSS customizations for Yomitan listed out
 in the [JP Resources page](jpresources.md).
 Some popular customizations within that page include:
 
 - Setting the max number of frequency lists or pitch accent dictionaries shown
 - Hiding bilingual dictionaries by default, until hovered over
 
-## Yomichan Themes
-I personally haven't changed the theme / color scheme of Yomichan.
+## Yomitan Themes
+I personally haven't changed the theme / color scheme of Yomitan.
 However, many others have.
 Here's a small list of some popular custom themes:
 
 - [Rudnam's Dark Mode](https://github.com/rudnam/JP-study#popup-appearance-custom-css)
 - [Nord Theme](https://learnjapanese.moe/yomicss/#example-full-nord-theme)
-- [Tutorial on editing Yomichan's color scheme](https://learnjapanese.moe/yomicss)
+- [Tutorial on editing Yomitan's color scheme](https://learnjapanese.moe/yomicss)
 
 ---
 
@@ -40,20 +40,16 @@ Here's a small list of some popular custom themes:
 
 If you are planning on using the JMdict dictionary,
 the ones provided from most sources
-(TMW's google drive - The "JMdict Extra" version is fine, Matt's video on Yomichan,
-and Yomichan's main github page)
+(TMW's google drive - The "JMdict Extra" version is fine, Matt's video on Yomitan,
+and Yomitan's main github page)
 are all somewhat outdated, which usually means less accurate definitions and less coverage.
 
 To get the most recent version of JMdict,
 download it from the
 [official site](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project)
 (download `JMdict_e_examp.gz`)
-and use [yomichan-import](https://github.com/FooSoft/yomichan-import)
+and use [yomitan-import](https://github.com/themoeway/yomitan-import)
 to get the latest JMdict version available.
-
-If you don't want to compile it from source, I provide a download link
-[here](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan),
-which should only be a few months stale at most.
 
 
 ---
@@ -95,9 +91,9 @@ which should only be a few months stale at most.
 
 
 
-# Local Audio Server for Yomichan
+# Local Audio Server for Yomitan
 See
-[here](https://github.com/Aquafina-water-bottle/local-audio-yomichan)
+[here](https://github.com/themoeway/local-audio-yomichan)
 if you want to be able to create Anki cards nearly instanteously,
 and fetch audio without a working internet connection.
 

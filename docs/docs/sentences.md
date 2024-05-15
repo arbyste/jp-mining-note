@@ -91,7 +91,7 @@ TODO `sentence-max-width` under `cssFolders`
 
 {{ feature_version("0.12.0.0") }}
 
-Usually, the word within the sentence is already bolded by Yomichan.
+Usually, the word within the sentence is already bolded by Yomitan.
 However, there are some cases where the word within the sentence may not be bold,
 such as when external programs update the `Sentence` field, or if you are using
 imported cards.
@@ -368,14 +368,14 @@ TODO AJT Japanese and `{jpmn-sentence-bolded-furigana-plain}`
 TODO
 
 
-## Furigana Generation: Yomichan Helper
+## Furigana Generation: Yomitan Helper
 {{ feature_version("0.11.0.0") }}
 
 > helper: `{jpmn-sentence-bolded-furigana-plain}`
 
 TODO add details on how to even use this
 
-This automatically uses Yomichan's internal furigana generator to
+This automatically uses Yomitan's internal furigana generator to
 add furigana to your sentence. Use this under `SentenceReading`.
 
 This is useful if:

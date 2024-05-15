@@ -1,4 +1,4 @@
-This section documents how to use the jp-mining-note handlebars for Yomichan
+This section documents how to use the jp-mining-note handlebars for Yomitan
 on any template that **is not jp-mining-note**.
 If you are using jp-mining-note, please see the
 [Definitions](definitions.md)
@@ -21,7 +21,7 @@ This handlebars package provides all of the features that comes with the standar
 The main difference between these handlebars and the handlebars used by jp-mining-note
 is that some default settings have been manually changed,
 so that definitions are exported in a minimalistic HTML format.
-This minimal format (almost) completely conforms with the default Yomichan handlebars,
+This minimal format (almost) completely conforms with the default Yomitan handlebars,
 so it should work for any note type.
 
 ---
@@ -47,13 +47,13 @@ Anki note templates, and will likely work on yours as well.
 # Setup Handlebars
 
 Before doing anything, please
-[make a backup of your Yomichan settings.](faq.md#how-do-i-backup-yomichan-settings)
+[make a backup of your Yomitan settings.](faq.md#how-do-i-backup-yomitan-settings)
 
 
 ??? example "Video demo <small>(click here)</small>"
-    ![type:video](assets/setupyomichan/import_yomichan_templates.mp4)
+    ![type:video](assets/setupyomitan/import_yomitan_templates.mp4)
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
 1. Go to the `Anki` section
 1. Select `Configure Anki card templates...`
@@ -65,7 +65,7 @@ After resetting the templates,
 **without** removing any of the existing template code,
 add the following template code as follows:
 
-1. Copy and paste the code below to the **top** of the default Yomichan template code:
+1. Copy and paste the code below to the **top** of the default Yomitan template code:
 
     ??? examplecode "Click here to show the template code to copy."
 
@@ -75,7 +75,7 @@ add the following template code as follows:
         {% endfilter %}
         ```
 
-2. Copy and paste the code below to the **bottom** of the default Yomichan template code:
+2. Copy and paste the code below to the **bottom** of the default Yomitan template code:
 
     ??? examplecode "Click here to show the template code to copy."
 
@@ -99,7 +99,7 @@ Set `opt-first-definition-type` to `monolingual` if you want monolingual Anki ca
 ??? example "Video demo TODO <small>(click here)</small>"
     TODO video
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Go to the `Anki` section.
 1. Select `Anki card format...`.
 1. Under your definition field (`Glossary`, `VocabDef`, etc.),

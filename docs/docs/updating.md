@@ -9,7 +9,7 @@ Updating JPMN usually comprises of updating two things separately:
 
 - **The JPMN template itself within Anki**.
     The internal updater does most of the work, so you should not have to do much on this end.
-- **External settings**, such as the Yomichan settings required to interface with Anki.
+- **External settings**, such as the Yomitan settings required to interface with Anki.
     The internal updater CANNOT interface with these, so you will have to manually update these if they exist.
 
 ## What to Expect: Updating the JPMN template
@@ -31,7 +31,7 @@ User-required changes are usually present for major updates
 
 Some common user-required changes include:
 
-- Updating the Yomichan templates
+- Updating the Yomitan templates
 - Updating optional add-on configs
 
 All of these user required changes should be listed under the [Setup Changes](setupchanges.md) page,

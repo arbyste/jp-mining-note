@@ -62,7 +62,7 @@ I also provide a small list of other popular add-ons that I don't use, but may b
     **Other:**
 
     * [AnkiWebView Inspector](https://ankiweb.net/shared/info/31746032)
-    * [Local Audio Server for Yomichan](https://github.com/Aquafina-water-bottle/local-audio-yomichan)
+    * [Local Audio Server for Yomitan](https://github.com/themoeway/local-audio-yomichan)
     * [Yomichan Forvo Server](https://ankiweb.net/shared/info/580654285)
 
 

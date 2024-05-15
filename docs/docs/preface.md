@@ -36,8 +36,8 @@ to your heart's content.
 # Supported Systems
 The most important step is to see if jp-mining-note (JPMN) works on your device.
 
-## Card Creation (Yomichan)
-The card creation process requires a working instance of Yomichan, Anki-Connect, and Anki.
+## Card Creation (Yomitan)
+The card creation process requires a working instance of Yomitan, Anki-Connect, and Anki.
 
 By default, this works on PC (Windows, Mac, Linux), and the instructions shown will be for PC.
 However, with the proper setup, one can also create cards on the following platforms:
@@ -45,14 +45,13 @@ However, with the proper setup, one can also create cards on the following platf
 - [Android](setupandroid.md) (including Android based e-readers such as ONYX BOOX)
 - [Kindle](setupextrakindle.md) (export a list of sentences to the PC to manually create)
 
-I'm not aware of a workflow for iOS that works with Yomichan.
+I'm not aware of a workflow for iOS that works with Yomitan.
 
 !!! note
-    JPMN currently requires Yomichan to create the Anki cards.
-    As common as Yomichan is, this dependency to Yomichan can be considered a weakness
-    (especially now that Yomichan is no longer getting updates).
+    JPMN currently requires Yomitan to create the Anki cards.
+    As common as Yomitan is, this dependency to Yomitan can be considered a weakness.
 
-    There are many popular setups out there that do not use Yomichan
+    There are many popular setups out there that do not use Yomitan
     and instead have their own card exporter,
     such as
     [JL](https://github.com/rampaa/JL)

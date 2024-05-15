@@ -42,7 +42,7 @@
 # `Comment` field
 Similarly to the `Key` field, this field will not be used in any card template.
 In other words, this is a place where you can write down notes without affecting the card itself.
-I personally like using this field to test handlebars from Yomichan.
+I personally like using this field to test handlebars from Yomitan.
 
 This is named `Comment` in reference to comments in code (comments do not change
 the execution of the code).

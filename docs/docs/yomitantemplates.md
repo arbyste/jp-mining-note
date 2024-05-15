@@ -1,6 +1,6 @@
 
-Yomichan template options are options that are specified, as you may have guessed,
-in Yomichan's templates.
+Yomitan template options are options that are specified, as you may have guessed,
+in Yomitan's templates.
 These options are applied on card creation, so
 changing these options will only affect cards created in the future.
 
@@ -10,10 +10,10 @@ changing these options will only affect cards created in the future.
 
 TODO video
 
-To access the Yomichan template options,
-head to the Yomichan templates as normal:
+To access the Yomitan template options,
+head to the Yomitan templates as normal:
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
 1. Go to the `Anki` section
 1. Select `Configure Anki card templates...`

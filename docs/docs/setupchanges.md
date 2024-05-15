@@ -168,8 +168,8 @@ that is guaranteed to work is documented below.
 ## Yomichan Handlebars { #v0-12-0-0-handlebars }
 Yomichan's Handlebars has been updated, with some new helpers and features being added.
 
-- To update Yomichan's Anki Card Format, see [here](updating.md#updating-yomichans-anki-card-format).
-- To update your handlebars templates, see [here](updating.md#updating-yomichan-templates).
+- To update Yomichan's Anki Card Format, see [here](updating.md#updating-yomitans-anki-card-format).
+- To update your handlebars templates, see [here](updating.md#updating-yomitan-templates).
 
 After updating the templates, the following fields must be changed:
 
@@ -177,7 +177,7 @@ After updating the templates, the following fields must be changed:
     - Newer users might already have this set correctly.
         In that case, you don't have to change anything.
 - `YomichanWordTags`: `(empty)` →  `{tags}`
-- See [here](updating.md#updating-yomichans-anki-card-format)
+- See [here](updating.md#updating-yomitans-anki-card-format)
   for instructions on how to update Anki Card Format.
 
 
@@ -305,8 +305,8 @@ The handlebars got an update to support other note types other than jp-mining-no
 Documentation has still not been released on the new options, so this update has not been
 officially announced yet.
 
-* See the full changelog [here](https://github.com/arbyste/jp-mining-note/blob/dev/yomichan_templates/CHANGELOG.md#v101).
-* See how to update your handlebars [here](updating.md#updating-yomichan-templates).
+* See the full changelog [here](https://github.com/arbyste/jp-mining-note/blob/dev/yomitan_templates/CHANGELOG.md#v101).
+* See how to update your handlebars [here](updating.md#updating-yomitan-templates).
 
 ---
 
@@ -335,10 +335,10 @@ See the setup instructions [here](https://arbyste.github.io/jp-mining-note/setup
 ---
 
 # 2022/11/19 (JPMN 0.11.0.0) { #v0-11-0-0 }
-- Yomichan's handlebars was updated. See how to update your handlebars [here](updating.md#updating-yomichan-templates).
+- Yomichan's handlebars was updated. See how to update your handlebars [here](updating.md#updating-yomitan-templates).
 - Yomichan's 'Anki Card Format' section was updated, and the following fields must be changed:
     - `WordReadingHiragana`: `(empty)` →  `{jpmn-word-reading-hiragana}`
-    - See [here](https://arbyste.github.io/jp-mining-note/updating/#updating-yomichans-anki-card-format)
+    - See [here](https://arbyste.github.io/jp-mining-note/updating/#updating-yomitans-anki-card-format)
       for instructions on how to update Anki Card Format.
 - If you are using the nsfw-toggle function, the option name was changed
   from `nsfw-toggle` to `image-blur`. Please change it in your runtime options

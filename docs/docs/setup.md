@@ -8,7 +8,7 @@ A full sentence mining workflow requires two main parts:
     * And optionally, the image and sentence audio from the media (if the media has either).
 
 These next few sections
-([Installing](setup.md), [Anki](setupanki.md) and [Yomichan](setupyomichan.md))
+([Installing](setup.md), [Anki](setupanki.md) and [Yomitan](setupyomitan.md))
 are all dedicated to providing the
 <span class="text-yellow">**minimal setup**</span>
 to setup the card exporter to create cards with this note type.

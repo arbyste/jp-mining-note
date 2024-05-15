@@ -60,9 +60,9 @@ installed Yomichan. Yomichan has now been sunset, and has been replaced by
 Yomitan.
 
 The easiest way to make sure Yomitan is correctly set up is to carefully follow
-the instructions on the [Yomitan setup page](setupyomichan.md).
+the instructions on the [Yomitan setup page](setupyomitan.md).
 
-Note that the [Yomitan templates](setupyomichan.md#yomichan-templates) are
+Note that the [Yomitan templates](setupyomitan.md#yomitan-templates) are
 slightly different to the old Yomichan templates. The easiest way to make sure
 they are correct is to use the red `Reset Templates` button on the templates screen
 to reset the templates back to default. Then, copy the JPMN Yomitan templates

@@ -1,7 +1,7 @@
 # Summary
 
 On Android, it is possible to review and create JPMN cards similarly to desktop.
-It is expected that you have setup Anki and Yomichan properly on your desktop machine
+It is expected that you have setup Anki and Yomitan properly on your desktop machine
 before continuing with this page.
 
 ---
@@ -52,11 +52,11 @@ Both require AnkiDroid to be installed.
 1. [**AnkiconnectAndroid**](https://github.com/KamWithK/AnkiconnectAndroid) <small>(recommended)</small>
 
     AnkiconnectAndroid is an implementation of Anki-Connect, on Android.
-    Combined with Kiwi browser, you can use Yomichan directly on your Android device,
+    Combined with Kiwi browser, you can use Yomitan directly on your Android device,
     and have the exact same setup as you would on desktop.
     To do this, follow the instructions on the AnkiconnectAndroid's README page.
 
-    It might help to export a copy of Yomichan settings from your PC and import said settings on Android,
+    It might help to export a copy of Yomitan settings from your PC and import said settings on Android,
     instead of re-doing all of the steps on Android.
 
     !!! note

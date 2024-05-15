@@ -58,7 +58,7 @@ To create JPMN cards with asbplayer:
 - [Attach asbplayer to the desired video](https://github.com/killergerbah/asbplayer#syncing-with-streaming-video),
     or
     [drag/drop a downloaded video into the asbplayer site](https://github.com/killergerbah/asbplayer#loading-files).
-- Create the card with Yomichan
+- Create the card with Yomitan
 - Capture the audio (TODO specific instructions! What default keybinds?)
 - Update the last card (TODO is this the exact text?)
 

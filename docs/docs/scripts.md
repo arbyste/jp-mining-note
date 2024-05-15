@@ -52,7 +52,7 @@ To use these hotkeys with ShareX, you must have the following installed:
 
 - [ShareX](https://getsharex.com/)
 - [Python](https://www.python.org/) (Python 3.10 or above should work)
-- [Anki-Connect](https://ankiweb.net/shared/info/2055492159) (You probably have this installed already if you're using Yomichan or jp-mining-note).
+- [Anki-Connect](https://ankiweb.net/shared/info/2055492159) (You probably have this installed already if you're using Yomitan or jp-mining-note).
 - `hotkey.py` (see below)
 
 The `hotkey.py` file can be downloaded in any of the following ways:
@@ -576,8 +576,8 @@ If you are using [AutoKey](https://github.com/autokey/autokey) for Linux, it sho
 This script updates the sentence with the current clipboard (while preserving the bolded word),
 and removes the `SentenceReading` field (of the newest note added).
 
-This script is useful when Yomichan's parsed sentence does not match the recorded audio.
-This is also useful for when Yomichan's word parser doesn't match the word itself (steps shown below).
+This script is useful when Yomitan's parsed sentence does not match the recorded audio.
+This is also useful for when Yomitan's word parser doesn't match the word itself (steps shown below).
 
 !!! note
     After running this script, you must manually generate the `SentenceReading` field
@@ -588,7 +588,7 @@ This is also useful for when Yomichan's word parser doesn't match the word itsel
 ??? info "How-To: Fix incorrectly-bolded words <small>(click here)</small>"
 
     As an example, The target word 希望 in the sentence 「入部希望なんですけど…」
-    will be parsed by Yomichan as the following:
+    will be parsed by Yomitan as the following:
     ```
     入部<b>希望な</b>んですけど…
     ```

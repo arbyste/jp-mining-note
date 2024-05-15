@@ -9,7 +9,7 @@ None that I am aware of.
 - `Sentence`: The tested word won't be automatically bolded on export (TODO: will be possible
     if/when handlebars is implemented)
 - `PrimaryDefinition` field is a bit limited, cannot stylize the definition output as much
-    as Yomichan, such as:
+    as Yomitan, such as:
     - The first line / dictionary name cannot be removed
     - Lists cannot be collapsed into a compact list
 - Pitch accent display is generated from AJT Japanese, and there is no control on card export.

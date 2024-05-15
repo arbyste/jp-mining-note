@@ -121,7 +121,7 @@ to see if there are other options that you may want to change.
 
 To create JPMN cards with mpvacious:
 
-- Create a card from Yomichan.
+- Create a card from Yomitan.
     The text is usually gotten via a
     [texthooker](setuptextmedia.md#getting-the-text-to-create-the-cards).
 - Within mpv, navigate to the desired subtitle, and then press ++ctrl+m++.
