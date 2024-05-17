@@ -13,10 +13,10 @@ from typing import Optional
 class Field:
     name: str
     font: int  # font size
-    auto_fill: bool  # whether this field should be auto-filled by some program (i.e. Yomichan, mpvacious, etc.)
+    auto_fill: bool  # whether this field should be auto-filled by some program (i.e. Yomitan, mpvacious, etc.)
     binary_field: bool
 
-    # exact text used for Yomichan's "Anki Card Format"
+    # exact text used for Yomitan's "Anki Card Format"
     setup: Optional[str] = None
 
     # personal setup of the above
@@ -229,10 +229,10 @@ def define_env_vars(env):
     top = ""
     bottom = ""
 
-    with open(os.path.join("..", "yomichan_templates", "top.txt")) as f:
+    with open(os.path.join("..", "yomitan_templates", "top.txt")) as f:
         top = f.read()
 
-    with open(os.path.join("..", "yomichan_templates", "bottom.txt")) as f:
+    with open(os.path.join("..", "yomitan_templates", "bottom.txt")) as f:
         bottom = f.read()
 
     with open(os.path.join("..", "src", "jp-mining-note", "_jpmn-options.js")) as f:
@@ -265,8 +265,8 @@ def define_env_vars(env):
         "CTO_FILE": '[compile options](compiletimeoptions.md)', # previously known as compile time options
         "CTOs": '[compile options](compiletimeoptions.md)',
         "CTO": '[compile option](compiletimeoptions.md)',
-        "YTCOs": '[Yomichan template options](yomichantemplates.md)',
-        "YTCO": '[Yomichan template option](yomichantemplates.md)',
+        "YTCOs": '[Yomitan template options](yomitantemplates.md)',
+        "YTCO": '[Yomitan template option](yomitantemplates.md)',
         "TMW_SERVER": "[TMW server](https://learnjapanese.moe/join/)",
         "THEMOEWAY_LINK": "https://learnjapanese.moe/join/",
         "TMW_LINK": "https://learnjapanese.moe/join/",
@@ -396,9 +396,9 @@ def define_env(env):
         return math.ceil(x)
 
     @env.macro
-    def plaintext_change_defaults(top_yomichan: str):
+    def plaintext_change_defaults(top_yomitan: str):
         lines = []
-        for line in top_yomichan.splitlines(keepends=False):
+        for line in top_yomitan.splitlines(keepends=False):
 
             # override lines
             if line.startswith('{{~set "opt__plaintext__'):
@@ -503,7 +503,7 @@ def define_env(env):
         rows = []
 
         # top row
-        rows.append("| Anki Fields | Yomichan Format |")
+        rows.append("| Anki Fields | Yomitan Format |")
 
         # sep row
         rows.append("|-|-|")

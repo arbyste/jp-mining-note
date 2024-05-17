@@ -88,7 +88,7 @@ nav:
   - Setup:
     - "Setup: Installing": setup.md
     - "Setup: Anki": setupanki.md
-    - "Setup: Yomichan": setupyomichan.md
+    - "Setup: Yomitan": setupyomitan.md
     - "Setup: Text & Media": setuptextmedia.md
     - "Text & Media":
       - "mpvacious": setupmpvacious.md
@@ -96,7 +96,7 @@ nav:
     - Transfer Existing Notes:
       - Transfer Existing Notes: importing.md
     - Extra Setup:
-      - "Extra: Yomichan": setupextrayomichan.md
+      - "Extra: Yomitan": setupextrayomitan.md
       - "Extra: Anki": setupextraanki.md
       - "Extra: Android": setupandroid.md
       - "Extra: iOS": setupios.md
@@ -108,7 +108,7 @@ nav:
   - Updating:
     - "Updating: Overview": updating.md
     - "Updating: JPMN": updatingjpmn.md
-    - "Updating: Yomichan": updatingyomichan.md
+    - "Updating: Yomitan": updatingyomitan.md
     - "Setup Changes": setupchanges.md
     - "Final Steps": updatingfinalsteps.md
     - Changelog: https://github.com/arbyste/jp-mining-note/blob/dev/CHANGELOG.md
@@ -137,7 +137,7 @@ nav:
     - Options:
       - Runtime Options (TODO): runtimeoptions.md
       - Compile Options (TODO): compiletimeoptions.md
-      - Yomichan Template Options (TODO): yomichantemplates.md
+      - Yomitan Template Options (TODO): yomitantemplates.md
    #- DEPRECATED:
    #  - User Interface: ui.md
    #  - UI Customization: uicustomization.md

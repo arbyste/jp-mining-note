@@ -15,17 +15,17 @@ TODO copy/paste from quickstart
 TODO video
 
 If you want to change the card type for all new cards, you can simply
-fill the field in [Yomichan's Anki Card Format](setupyomichan.md#yomichan-fields).
+fill the field in [Yomitan's Anki Card Format](setupyomitan.md#yomitan-fields).
 
 For example, if you want to set the default card type to be a sentence card:
 
-* Navigate to Yomichan settings, and then to `Anki` →  `Configure Anki card format...`.
+* Navigate to Yomitan settings, and then to `Anki` →  `Configure Anki card format...`.
 * Set `IsSentenceCard` to `1`.
 
 This will set all new cards to be a sentence card by default.
 
 However, what if you don't want *ALL* new cards to be sentence cards?
-With the power of Yomichan handlebars, it is possible to selectively fill fields depending
+With the power of Yomitan handlebars, it is possible to selectively fill fields depending
 on select properties of the target word.
 
 
@@ -41,7 +41,7 @@ For example, let's say you want the default card to be a vocab card,
 but want hiragana terms to be [TSCs](cardtypes.md#targeted-sentence-card).
 To do exactly that, do the following:
 
-* Navigate to Yomichan settings, and then to `Anki` →  `Configure Anki card format...`.
+* Navigate to Yomitan settings, and then to `Anki` →  `Configure Anki card format...`.
 * Set `IsTargetedSentenceCard` to `{jpmn-filled-if-word-is-hiragana}`.
 
 ??? example "Example behavior <small>(click here)</small>"
@@ -88,7 +88,7 @@ in order for this helper to function.
 
 You may want to change the card type of many existing cards all at once.
 For example, you may have cards imported into JPMN,
-or cards that were simply not created by Yomichan in the first place.
+or cards that were simply not created by Yomitan in the first place.
 
 !!! warning
     As always, before mass editing your collection, please
