@@ -25,7 +25,7 @@ functionality after importing the notes.
 <!--
 The biggest example is frequency list information,
 as it requires special HTML + CSS formatting that can only be specified
-in the Yomichan Templates section.
+in the Yomitan Templates section.
 -->
 
 ---
@@ -107,7 +107,7 @@ However, here are a few tips:
 
 [^1]: `FrequenciesStylized` uses a custom set of handlebars to
     store the frequency info in a way that css styles can be easily applied without javascript.
-    This differs heavily from the `{frequencies}` helper provided by Yomichan.
+    This differs heavily from the `{frequencies}` helper provided by Yomitan.
     Mapping an existing field that stores frequencies using `{frequencies}`
     to `FrequenciesStylized`
     will result in **incorrect display of data**.
@@ -195,7 +195,7 @@ Sentences are usually formatted in one of three ways, as shown below:
             今日も、なんか、昼<span style="color: #ffc2c7">爆睡</span>してしまったんので…
             ```
 
-            The above is created from the following Yomichan fields:
+            The above is created from the following Yomitan fields:
             ```
             {cloze-prefix}<span style="color: #ffc2c7">{cloze-body}</span>{cloze-suffix}
             ```

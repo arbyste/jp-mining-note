@@ -454,7 +454,7 @@ You have three main options:
 
 ## How do I disable furigana on card generation?
 
-1. In [Yomichan's Anki Card Format](setupyomichan.md#yomichan-fields),
+1. In [Yomitan's Anki Card Format](setupyomitan.md#yomitan-fields),
     ensure that the `SentenceReading` field is empty.
 
 1. If you are using the AJT Furigana addon, navigate to:
@@ -597,13 +597,13 @@ for more info.
 
 
 
-## How do I backup Yomichan settings?
+## How do I backup Yomitan settings?
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Go to the `Backup` section
 1. Select `Export Settings`
 
-{{ img("how-to import Yomichan settings", "assets/faq/yomichan_import_settings.gif") }}
+{{ img("how-to import Yomitan settings", "assets/faq/yomitan_import_settings.gif") }}
 
 
 

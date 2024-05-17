@@ -168,8 +168,8 @@ in order to fit the extremely diverse needs of the Japanese learning community.
     <i><sup>[→  TODO]()</sup></i>
 
 
-# It's just Yomichan!
-The card is created from the popular Yomichan setup that you're likely already familiar with.
+# It's just Yomitan!
+The card is created from the popular Yomitan setup that you're likely already familiar with.
 Cards are created instantly, no extra steps necessary.
 
 TODO change video

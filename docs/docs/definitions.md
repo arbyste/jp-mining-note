@@ -16,14 +16,14 @@ how definitions can be easily chosen, overwritten and customized overall.
 # Dictionary Placement
 
 <!--
-This section deals with how the custom Yomichan Templates categorizes dictionaries,
+This section deals with how the custom Yomitan Templates categorizes dictionaries,
 and how to properly customize them for your setup.
 
 
 ## Expected Dictionary Placement
 -->
 
-Dictionaries from Yomichan are sorted into the following fields:
+Dictionaries from Yomitan are sorted into the following fields:
 
 <!--
 * `PrimaryDefinition`:
@@ -104,12 +104,12 @@ To see how to edit the regex, go to [this section](#editing-the-dictionary-regex
 
 
 ## Ignoring a Dictionary
-If you want to see the dictionary on Yomichan but not have it show on Anki,
+If you want to see the dictionary on Yomitan but not have it show on Anki,
 you can use the `ignored-dict-regex` option.
 
 To see how to edit the option, see [the section below](#editing-the-dictionary-regex).
 
-Conversely, if you want to not see the dictionary on Yomichan but want it to show up on Anki,
+Conversely, if you want to not see the dictionary on Yomitan but want it to show up on Anki,
 [see here](jpresources.md#hide-the-dictionary-but-allow-it-to-be-used-by-anki).
 
 
@@ -146,7 +146,7 @@ the dictionary name or a section of the definition.
 
 ## Primary Definition Selection: Automatic
 The dictionary for the primary definition is the first bilingual dictionary
-(that appears on Yomichan) by default.
+(that appears on Yomitan) by default.
 
 This can be changed to the first monolingual dictionary by changing the following {{ YTCO }} to `monolingual`:
 
@@ -170,7 +170,7 @@ or highlight the definition that makes sense with the context.
 This is enabled by default.
 In case you want to disable this behavior, set `opt-selection-text-enabled` to `false`.
 
-![type:video](assets/setupyomichan/selected_text.mp4)
+![type:video](assets/setupyomitan/selected_text.mp4)
 
 
 This manual selection behavior does the following:
@@ -202,7 +202,7 @@ The handlebars algorithm runs thusly:
 
 - If the selected text exactly matches any dictionary in the exported definition,
     then the dictionary entry is selected as the primary definition.
-- Otherwise, we do the same search as the above, except we search through every dictionary's HTML (in Yomichan's order) for the selected text.
+- Otherwise, we do the same search as the above, except we search through every dictionary's HTML (in Yomitan's order) for the selected text.
 - If the selected text was found in some dictionary, then that dictionary is chosen.
     Otherwise, we fallback to the selected text itself.
 
@@ -292,7 +292,7 @@ In the case that automatic bolding fails, the highlighted text itself is simply 
     ??? example "Example: 垣根"
 
         On the word 垣根, if you have the デジタル大辞泉 dictionary before JMdict
-        in Yomichan and you highlight `border`,
+        in Yomitan and you highlight `border`,
         then デジタル大辞泉 will be incorrectly selected as the primary definition.
 
         <figure markdown>
@@ -305,10 +305,10 @@ In the case that automatic bolding fails, the highlighted text itself is simply 
 
         This is due to a perfect storm of events:
 
-        * Due to Yomichan's implementation details, definitions with images contain a
+        * Due to Yomitan's implementation details, definitions with images contain a
         `border` property in an internal style attribute.
         * デジタル大辞泉 indeed has images for the word 垣根.
-        * デジタル大辞泉 is ordered before JMdict in Yomichan
+        * デジタル大辞泉 is ordered before JMdict in Yomitan
 
         With all these three combined, デジタル大辞泉 is prioritized over JMdict,
         leading to an incorrect dictionary selected and invalid HTML.
@@ -317,14 +317,14 @@ In the case that automatic bolding fails, the highlighted text itself is simply 
         {{ img("", "assets/definitions/highlight_fail/kakine_html.png") }}
         </figure>
 
-## Usage on Yomichan's Search Page / Clipboard Page
+## Usage on Yomitan's Search Page / Clipboard Page
 
-On Yomichan's Search Page or Clipboard Page, the word is usually highlighted within the
+On Yomitan's Search Page or Clipboard Page, the word is usually highlighted within the
 example sentence when searching for the word. For example, the word 「人里離れた」 is highlighted
 in the following image:
 
 <figure markdown>
-  {{ img("", "assets/yomichan/search_page_highlight.png") }}
+  {{ img("", "assets/yomitan/search_page_highlight.png") }}
 </figure>
 
 This highlighted word interferes with the definition selector used by the handlebars,
@@ -334,8 +334,8 @@ In order to fix this, you have a few different options:
 
 - Simply don't use the search page or clipboard page. Instead, you can use a
     [texthooker setup](setuptextmedia.md#getting-the-text-to-create-the-cards).
-- Create a new Yomichan profile that matches the desired page(s),
-    and disable `Selected matching text` within your new profile in the Yomichan settings.
+- Create a new Yomitan profile that matches the desired page(s),
+    and disable `Selected matching text` within your new profile in the Yomitan settings.
     If you must use the search page or clipboard page,
     this is the recommended way to deal with the issue,
     as it has minimal impact on the rest of your workflow.
@@ -687,7 +687,7 @@ This is because the resulting HTML is parsed with regex in order to match that f
 In computer science, it is recommended that
 [you should not parse HTML with regex](https://stackoverflow.com/a/1732454),
 because it is mathematically impossible to fully describe and parse HTML with regex.
-Unfortunately, Yomichan's handlebars does not expose any HTML parser,
+Unfortunately, Yomitan's handlebars does not expose any HTML parser,
 so we are left with using regex to parse our HTML.
 Due to this, an unexpected dictionary format may cause the resulting export to
 be invalid HTML.
@@ -726,7 +726,7 @@ specified dictionaries can have their first lines removed.)
 # Exporting only one dictionary entry
 
 A "dictionary entry" in this context is the single section of text corresponding to a
-number indicated by Yomichan, to the very far left.
+number indicated by Yomitan, to the very far left.
 
 In the following example, 旺文社国語辞典 第十一版 and 明鏡国語辞典 第二版 each have one single entry,
 corresponding to `1` and `2` respectively.
@@ -743,9 +743,9 @@ Instead, most monolingual dictionaries store the definition as one gigantic entr
 
 <!--
 A "dictionary entry" in this context is the single section of text corresponding to a
-dictionary tag (with `Compact tags` turned off in Yomichan).
+dictionary tag (with `Compact tags` turned off in Yomitan).
 
-For example, recent version of the Yomichan JMdict dictionaries stores its definitions
+For example, recent version of the Yomitan JMdict dictionaries stores its definitions
 as multiple entries.
 It is almost never the case that monolingual dictionaries has multiple dictionary entries.
 Instead, most monolingual dictionaries store the definition as one gigantic entry.
@@ -776,7 +776,7 @@ which allows the note's CSS to re-compact the list.
 This is required over plaintext, because
 [JMdict Extra](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan)
 cannot compact export a compact definition normally.
-This is a [known issue](https://github.com/FooSoft/yomichan/issues/2297) with Yomichan's
+This is a [known issue](https://github.com/FooSoft/yomichan/issues/2297) with Yomitan's
 default handlebars.
 
 If you prefer using a legacy version of JMdict and prefer a full line of plaintext

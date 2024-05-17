@@ -71,7 +71,7 @@ add the following template code as follows:
 
         ```handlebars
         {% filter indent(width=8) -%}
-        {{ plaintext_change_defaults(TOP_YOMICHAN) }}
+        {{ plaintext_change_defaults(TOP_YOMITAN) }}
         {% endfilter %}
         ```
 
@@ -81,7 +81,7 @@ add the following template code as follows:
 
         ```handlebars
         {% filter indent(width=8) -%}
-        {{ BOTTOM_YOMICHAN }}
+        {{ BOTTOM_YOMITAN }}
         {% endfilter %}
         ```
 
@@ -198,7 +198,7 @@ To summarize the introduced definition handlebars:
 If you want to select a different dictionary, highlight the dictionary, or a portion of the definition
 before importing. This will override the primary definition with the selected dictionary / definition.
 
-![type:video](assets/setupyomichan/selected_text.mp4)
+![type:video](assets/setupyomitan/selected_text.mp4)
 
 
 
@@ -216,7 +216,7 @@ In other words, feel free to use this in the exact same way as you would with `{
 ## Other handlebars
 - TODO `jpmn-sentence-bolded-furigana-plain`
 - TODO binary field handlebars
-- link to appropriate yomichan template section
+- link to appropriate yomitan template section
 
 
 ---
@@ -239,10 +239,10 @@ If you are looking for information about the other options, please see the
 ## `opt__plaintext__stylize-glossary`
 
 Setting this option to `true` will no longer stylize the definition handlebars for jp-mining-note
-usage, and instead stylizes it to be virtually the same as Yomichan's default HTML structure.
+usage, and instead stylizes it to be virtually the same as Yomitan's default HTML structure.
 
-??? example "Differences between default Yomichan format and JPMN plaintext <small>(click here)</small>"
-    There are a few minor differences between Yomichan's format and these non-stylized definitions:
+??? example "Differences between default Yomitan format and JPMN plaintext <small>(click here)</small>"
+    There are a few minor differences between Yomitan's format and these non-stylized definitions:
 
     - The dictionary and tags are not italicized. This is to avoid seeing italic kanjis/kana.
     - The div that left-aligns the text is not present.
@@ -259,7 +259,7 @@ usage, and instead stylizes it to be virtually the same as Yomichan's default HT
 
     - Dictionaries with only one entry is formatted as a list of one element by default.
         This is usually not desired. To disable this behavior and make the behavior more like
-        Yomichan, set `opt__plaintext__one-dict-entry-only-no-list` to `true`.
+        Yomitan, set `opt__plaintext__one-dict-entry-only-no-list` to `true`.
 
     - The first line for most dictionaries are removed by default.
         This can be controlled with the following options:

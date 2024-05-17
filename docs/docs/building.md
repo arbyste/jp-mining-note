@@ -173,7 +173,7 @@ python3 tools/main.py
     "WordReadingHiragana": 10,
     "PrimaryDefinitionPicture": 20, # default
     "PAOverrideText": 20, # default
-    "YomichanWordTags": 10,
+    "YomitanWordTags": 10,
     "IsHintCard": 10,
     ```
 
