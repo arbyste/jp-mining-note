@@ -528,9 +528,13 @@ export class ParseAJTWordPitch extends Module implements PitchParser {
     // textContent to remove all markup (overline, devoiced, bold?)
     const d = document.createElement('div');
     d.innerHTML = this.ajtWordPitch;
-    let searchText = d.textContent ?? '';
-    searchText = searchText.replace(/°/g, ''); // remove all nasal markers
-    searchText = searchText.replace(/&#42780;/g, 'ꜜ'); // normalizes text
+    let searchText = d.innerHTML ?? '';
+    searchText = searchText.replace(/\<span class="nasal"\>.*?\<\/span\>/g, ''); // remove all nasal markers
+    searchText = searchText.replace(/\<span class="devoiced"\>(.*?)\<\/span\>/g, '$1'); // remove devoiced markers
+    searchText = searchText.replace(/\<span class="high"\>(.*?)\<\/span\>/g, '$1'); // remove non dropping overlines
+    searchText = searchText.replace(/\<span class="low.*?"\>(.*?)\<\/span\>/g, '$1'); // remove non dropping overlines
+    searchText = searchText.replace(/\<span class="high_drop"\>(.*?)\<\/span\>/g, '$1ꜜ'); // replace the drop with an arrow
+    searchText = searchText.replace(/\<b\>(.*?)\<\/b\>/g, '$1'); // remove bold markers
     const searchWords = searchText.split(ajtWordSeps);
 
     // raw html to get the pure reading
