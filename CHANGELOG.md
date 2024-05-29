@@ -173,6 +173,13 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 17 </summary>
+
+- **Fixes**
+    - Fixed a bug that prevented JPMN from determining the PA from the AJTWordPitch field if there was no other PA info in the card
+
+</details>
+<details>
 <summary> Pre-release 16 </summary>
 
 - **Features**
