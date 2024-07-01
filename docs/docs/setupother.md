@@ -2,7 +2,7 @@
 # Overview
 
 This page contains all setup steps that are purely optional, as well as random miscellaneous info.
-It is expected that you have [Anki](setupanki.md) and [Yomichan](setupyomichan.md)
+It is expected that you have [Anki](setupanki.md) and [Yomitan](setupyomitan.md)
 already setup, and the note is already working.
 
 ---
