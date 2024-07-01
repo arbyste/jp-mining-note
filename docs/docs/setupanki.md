@@ -87,7 +87,7 @@ To download an add-on, copy the add-on's code, and navigate to the following to 
 
 > Code: `2055492159`
 
-Required for Yomichan and most other Anki-related automated tasks to work.
+Required for Yomitan and most other Anki-related automated tasks to work.
 I use the default config that comes with the add-on.
 
 !!! note "Note for Anki versions 2.1.49 and below"
@@ -247,7 +247,7 @@ and delete both `css` files.
 > Code: `1344485230`
 
 Alternative and up-to-date version of JapaneseSupport.
-Automatically generates furigana upon Yomichan card creation.
+Automatically generates furigana upon Yomitan card creation.
 
 This add-on is optional, because the card will simply show the sentence without
 furigana (on hover) if there is no furigana generated sentence.
@@ -343,7 +343,7 @@ For the purposes of the card,
 the only purpose that this add-on serves is the following:
 
 - Adds devoiced and nasal information to the existing reading.
-- If your Yomichan pitch accent dictionaries did not contain any pitch accent info for the word
+- If your Yomitan pitch accent dictionaries did not contain any pitch accent info for the word
   but the add-on does, then it will use the add-on data.
 
 
@@ -430,14 +430,14 @@ and you have to manually update the note if you want it to update.
 
 ---
 
-# Setting up Yomichan
+# Setting up Yomitan
 
 Of course, you can have an Anki template, but what's the point of it
 if you can't make cards with it?
 
-We will use Yomichan to create these cards.
+We will use Yomitan to create these cards.
 
-[Click here see how to setup Yomichan!](setupyomichan.md){ .md-button }
+[Click here see how to setup Yomitan!](setupYomitan.md){ .md-button }
 
 
 
