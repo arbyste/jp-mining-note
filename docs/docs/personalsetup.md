@@ -34,11 +34,11 @@ plugins:
 - forvo plugin
 
 
-# Yomichan
+# Yomitan
 
 - import settings from an existing computer / backup drive
 - [TMW dicts](https://learnjapanese.link/dictionaries)
-- Yomichan settings →  "Popup Appearance":
+- Yomitan settings →  "Popup Appearance":
   - "Compact glossaries": on
   - "Compact tags": off,
 
@@ -66,7 +66,7 @@ pa:
 
 
 {% raw %}
-??? examplecode "Yomichan Template Options"
+??? examplecode "Yomitan Template Options"
     ```handlebars
     {{~! NOTE: this MUST be put at the very top of the templates section! ~}}
 
@@ -365,7 +365,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
     ```
 
 
-## Yomichan Fields
+## Yomitan Fields
 
 {% macro getarg(f, v) -%}
   {%- set result = v.get("personal_setup", None) -%}
@@ -379,7 +379,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 
 ??? example
 
-    | Anki Fields | Yomichan Format |
+    | Anki Fields | Yomitan Format |
     |-------------|-----------------|
     {% for f, v in FIELDS.items() -%}
     | {{ f }} { .smaller-table-row } | {{ getarg(f, v) }} |
