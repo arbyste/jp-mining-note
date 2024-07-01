@@ -7,14 +7,14 @@ already setup, and the note is already working.
 
 ---
 
-# Yomichan Appearance
-If you want to follow my exact Yomichan popup appearance:
+# Yomitan Appearance
+If you want to follow my exact Yomitan popup appearance:
 
-* Go to (Yomichan settings) →  `Popup Appearance`.
+* Go to (Yomitan settings) →  `Popup Appearance`.
 * Set `Compact glossaries` to ON.
 * Set `Compact tags` to OFF.
 
-There are also plenty of css customizations for Yomichan listed out
+There are also plenty of css customizations for Yomitan listed out
 in the [JP Resources page](jpresources.md){:target="_blank"}.
 
 ---
@@ -22,7 +22,7 @@ in the [JP Resources page](jpresources.md){:target="_blank"}.
 # JMdict
 If you are planning on using the JMdict dictionary,
 the ones provided from most sources
-(TMW's google drive, Matt's video on Yomichan, and Yomichan's main github page)
+(TMW's google drive, Matt's video on Yomichan, and Yomitan's main github page)
 are all somewhat outdated, which usually means less accurate definitions and less coverage.
 
 To get the most recent version of JMdict,
