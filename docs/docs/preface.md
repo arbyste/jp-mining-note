@@ -8,12 +8,12 @@ it would be best to make sure that the note aligns with exactly what you want.
 # Supported Systems
 The most important step is to see if jp-mining-note (JPMN) works on your device.
 
-## Card Creation (Yomichan)
+## Card Creation (Yomitan)
 The card creation process is primarily done on PC (Windows, Mac, Linux).
 However, with the
 [proper setup](https://github.com/KamWithK/AnkiconnectAndroid),
 cards can be created on Android.
-I'm not aware of a workflow for iOS that works with Yomichan.
+I'm not aware of a workflow for iOS that works with Yomitan.
 
 ## Anki Desktop
 Primary support is given to the latest Anki versions (2.1.54+ & Qt6).
@@ -55,8 +55,8 @@ This note is visually designed to be minimalistic because the fundamental goal i
 not to have eye catching graphics.
 
 ## Minimal Dependencies
-The only fundamental dependencies are `Yomichan` (to create the note) and the `Anki-Connect` add-on
-(to export the note from `Yomichan`, update the note, and for certain features to work within the note).
+The only fundamental dependencies are `Yomitan` (to create the note) and the `Anki-Connect` add-on
+(to export the note from `Yomitan`, update the note, and for certain features to work within the note).
 Absolutely nothing else is required.
 This helps with maintaining stability across various Anki versions.
 
