@@ -53,7 +53,7 @@ for more information.
 
 ---
 
-# Local Audio Server for Yomichan
+# Local Audio Server for Yomitan
 See
 [here](jpresources.md#local-audio-server-for-yomichan)
 if you want to be able to create Anki cards nearly instanteously,
