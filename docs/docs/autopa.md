@@ -338,7 +338,7 @@ This will behave exactly the same as `PAOverrideText`.
 
 # (3) PAPositions
 
-This field is automatically filled out as long as Yomichan has pitch accent dictionaries,
+This field is automatically filled out as long as Yomitan has pitch accent dictionaries,
 and the tested word is covered in said dictionary.
 
 By default, the first pitch of the first dictionary is shown.

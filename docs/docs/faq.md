@@ -191,7 +191,7 @@ allowing it to be shared easily on a place like Discord.
 ---
 
 ## How do I set the default card type?
-In [Yomichan's Anki Card Format](setupyomichan.md#yomichan-fields),
+In [Yomitan's Anki Card Format](setupyomitan.md#yomitan-fields),
 you can simply fill the field.
 
 For example, if you want to set the default card type to be a sentence card,
@@ -230,7 +230,7 @@ You have three main options:
 
 ## How do I disable furigana on card generation?
 
-1. In [Yomichan's Anki Card Format](setupyomichan.md#yomichan-fields),
+1. In [Yomitan's Anki Card Format](setupyomitan.md#yomitan-fields),
     ensure that the `SentenceReading` field is empty.
 
 1. If you are using the AJT Furigana addon, edit the config and set `generate_on_note_add` to `false`.
@@ -366,13 +366,13 @@ for more info.
 
 
 
-## How do I backup Yomichan settings?
+## How do I backup Yomitan settings?
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Go to the `Backup` section
 1. Select `Export Settings`
 
-{{ img("how-to import Yomichan settings", "assets/yomichan/import_settings.gif") }}
+{{ img("how-to import Yomitan settings", "assets/yomitan/import_settings.gif") }}
 
 
 
@@ -421,14 +421,8 @@ Preview any card. At the top left corner, the version should be displayed.
 ---
 
 ## Do you plan on supporting any other language other than Japanese?
-Unfortunately, other languages outside of Japanese will not be supported.
+Some Languages outside Japanese are now [supported](https://github.com/themoeway/yomitan?tab=readme-ov-file#changes)
 
-The reason for this decision is best explained in the
-"When are you going to add support for $MYLANGUAGE?" question
-within [Yomichan's README](https://github.com/FooSoft/yomichan#frequently-asked-questions){:target="_blank"}:
-
-!!! quote
-    Developing Yomichan requires a decent understanding of Japanese sentence structure and grammar, and other languages are likely to have their own unique set of rules for syntax, grammar, inflection, and so on. Supporting additional languages would not only require many additional changes to the codebase, it would also incur significant maintenance overhead and knowledge demands for the developers. Therefore, suggestions and contributions for supporting new languages will be declined, allowing Yomichan's focus to remain Japanese-centric.
 
 
 # Discord Contact Info { .text-yellow }
