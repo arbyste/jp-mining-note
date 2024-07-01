@@ -1,21 +1,21 @@
 
-This page contains extra info on how the custom Yomichan Templates works,
+This page contains extra info on how the custom Yomitan Templates works,
 and how to customize it even further.
 
 
 # Categorization of Dictionaries
-This section deals with how the custom Yomichan Templates categorizes dictionaries,
+This section deals with how the custom Yomitan Templates categorizes dictionaries,
 and how to properly customize them for your setup.
 
 
 ## Expected Dictionary Placement
-Dictionaries from Yomichan are sorted in to the following fields:
+Dictionaries from Yomitan are sorted in to the following fields:
 
 * `PrimaryDefinition`:
     A dictionary specified by the user. Bilingual by default.
 
     This can be changed in many different ways.
-    See [here](setupyomichan.md#yomichan-templates-options)
+    See [here](setupyomitan.md#yomitan-templates-options)
     for a summary of these methods.
 
 * `SecondaryDefinition`:
@@ -74,16 +74,16 @@ Monolingual dictionaries are considered to be dictionaries that aren't either
 of the two above, so no handlebars code has to be changed if one were to
 use more monolingual dictionaries.
 
-To see how to edit the regex, go to [this section](yomichantemplates.md#editing-the-dictionary-regex).
+To see how to edit the regex, go to [this section](yomitantemplates.md#editing-the-dictionary-regex).
 
 
 ## Ignoring a Dictionary
-If you want to see the dictionary on Yomichan but not have it show on Anki,
+If you want to see the dictionary on Yomitan but not have it show on Anki,
 you can use the `ignored-dict-regex` option.
 
-To see how to edit the option, see [the section below](yomichantemplates.md#editing-the-dictionary-regex).
+To see how to edit the option, see [the section below](yomitantemplates.md#editing-the-dictionary-regex).
 
-Conversely, if you want to not see the dictionary on Yomichan but want it to show up on Anki,
+Conversely, if you want to not see the dictionary on Yomitan but want it to show up on Anki,
 [see here](jpresources.md#hide-the-dictionary-but-allow-it-to-be-used-by-anki){:target="_blank"}.
 
 
