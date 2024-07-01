@@ -9,7 +9,7 @@ hide:
 {% from "macros.html" import sharex_display with context %}
 
 
-A collection of tips and tricks, primarily related to CSS, Yomichan templates, and ShareX.
+A collection of tips and tricks, primarily related to CSS, Yomitan templates, and ShareX.
 
 This page was inspired by [Marv's resources page](https://github.com/MarvNC/JP-Resources),
 which has a bunch of different but equally awesome resources.
@@ -43,7 +43,7 @@ I exist on the TheMoeWay and Refold (Japanese) servers.
 ---
 
 
-# Local Audio Server for Yomichan
+# Local Audio Server for Yomitan
 
 See the instructions
 [here](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan/tree/master/local_audio).
@@ -52,20 +52,20 @@ See the instructions
 ---
 
 
-# CSS (Yomichan)
+# CSS (Yomitan)
 
-## How-To: Add Custom CSS In Yomichan
+## How-To: Add Custom CSS In Yomitan
 
-To add custom CSS in Yomichan, do the following:
+To add custom CSS in Yomitan, do the following:
 
-1. Head over to Yomichan settings (Yomichan extension marker -> cogwheel)
+1. Head over to Yomitan settings (Yomitan extension marker -> cogwheel)
 1. Go to `Appearance` →  `Configure custom CSS...`
 1. Add the CSS to the top section.
 1. Close the window.
 
 ??? example "Demo *(click here)*"
 
-    {{ img("how to add custom css to Yomichan", "assets/yomichan/howto_css.gif") }}
+    {{ img("how to add custom css to Yomitan", "assets/yomitan/howto_css.gif") }}
 
 
 ---
@@ -74,7 +74,7 @@ To add custom CSS in Yomichan, do the following:
 
 
 ## Not selecting or copying furigana { .text-yellow }
-If you want to select / copy the main word within Yomichan without copying the furigana,
+If you want to select / copy the main word within Yomitan without copying the furigana,
 you can use the following CSS:
 
 ```css
@@ -107,7 +107,7 @@ span.frequency-group-item:nth-child(n+3) {
 
 ??? example "Demo *(click here)*"
 
-    {{ img("limit frequencies demo", "assets/yomichan/limit_frequencies.gif") }}
+    {{ img("limit frequencies demo", "assets/yomitan/limit_frequencies.gif") }}
 
 ---
 
@@ -140,7 +140,7 @@ to any dictionary you find to be of higher quality)
 
 ??? example "Demo *(click here)*"
 
-    {{ img("limit pitch accent dictionaries demo", "assets/yomichan/limit_pitch_accents.gif") }}
+    {{ img("limit pitch accent dictionaries demo", "assets/yomitan/limit_pitch_accents.gif") }}
 
 
 ---
@@ -150,14 +150,14 @@ to any dictionary you find to be of higher quality)
 ## Hide the dictionary, but allow it to be used by Anki { .text-yellow }
 
 The default way to hide a dictionary is by disabling the dictionary
-under Yomichan's `Dictionaries` section.
+under Yomitan's `Dictionaries` section.
 However, if you disable the dictionary, you cannot export it into Anki,
 which is a problem if you are using a bilingual profile but you want to export
 monolingual definitions.
 
 **Steps**:
 
-1. Ensure that the dictionary is enabled in your Yomichan profile.
+1. Ensure that the dictionary is enabled in your Yomitan profile.
 1. Add the following CSS for the desired dictionaries (this has to be done for each individual dictionary):
 
 ```css
@@ -176,7 +176,7 @@ li.definition-item[data-dictionary='DICTIONARY'] {
 
 ??? example "Demo *(click here)*"
 
-    {{ img("hide dictionary in Yomichan", "assets/yomichan/hide_dictionary.gif") }}
+    {{ img("hide dictionary in Yomitan", "assets/yomitan/hide_dictionary.gif") }}
 
 ---
 
@@ -206,7 +206,7 @@ li.definition-item[data-dictionary='DICTIONARY']:hover .gloss-list {
 
 ??? example "Demo *(click here)*"
 
-    {{ img("hide bilingual dictionaries until hover", "assets/yomichan/bilingual_hover.gif") }}
+    {{ img("hide bilingual dictionaries until hover", "assets/yomitan/bilingual_hover.gif") }}
 
 ---
 
@@ -225,7 +225,7 @@ button[title^="Add reading"] {
 ??? example "Demo *(click here)*"
 
     <figure markdown>
-      {{ img("remove add reading button", "assets/yomichan/hide_add_reading.png") }}
+      {{ img("remove add reading button", "assets/yomitan/hide_add_reading.png") }}
       <figcaption>Left: without CSS. Right: with CSS.</figcaption>
     </figure>
 
@@ -291,45 +291,45 @@ An example JSFiddle can be found [here](https://jsfiddle.net/Aquafina_water_bott
 
 
 
-# Yomichan Templates / Handlebars
+# Yomitan Templates / Handlebars
 
 !!! note
     If you are using the jp-mining-note template,
     most things here will likely not be useful for you 
-    as the Yomichan templates that comes with the note
+    as the Yomitan templates that comes with the note
     already contains most of these features and more.
 
 
-## How-To: Edit Yomichan Fields
-1. Navigate to Yomichan Settings.
+## How-To: Edit Yomitan Fields
+1. Navigate to Yomitan Settings.
 1. Go to the `Anki` section.
 1. Select `Anki card format...`.
 
 ??? example "Demo *(click here)*"
 
-    {{ img("how to edit yomichan fields", "assets/yomichan/howto_format.gif") }}
+    {{ img("how to edit Yomitan fields", "assets/yomitan/howto_format.gif") }}
 
     The above showcases option 2 of
     [this example](jpresources.md#automatically-highlight-the-tested-word-within-the-sentence-upon-card-creation).
 
 ---
 
-## How-To: Edit Yomichan Templates (Handlebars)
-1. Navigate to Yomichan Settings.
+## How-To: Edit Yomitan Templates (Handlebars)
+1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
 1. Go to the `Anki` section
 1. Select `Configure Anki card templates...`
 
 ??? example "Demo *(click here)*"
 
-    {{ img("how to edit yomichan templates", "assets/yomichan/howto_templates.gif") }}
+    {{ img("how to edit Yomitan templates", "assets/yomitan/howto_templates.gif") }}
 
 ---
 
 
 ## Grab only the first pitch accent dictionary { .text-yellow }
 
-Adds the following Yomichan Fields:
+Adds the following Yomitan Fields:
 
 - `{pitch-accents-single-dict}`: Pitch accent in text (downstep) format
 - `{pitch-accent-graphs-single-dict}`: Pitch accent in svg graph format
@@ -442,7 +442,7 @@ The following grabs the first dictionary
 
 For further customization on how the first dictionary is selected
 (say, for automatic bilingual / monolingual separation),
-see the handlebars code used by jp-mining-note [here](setupyomichan.md#yomichan-templates).
+see the handlebars code used by jp-mining-note [here](setupyomitan.md#yomitan-templates).
 
 
 ??? examplecode "Template code *(click here)*"
@@ -484,7 +484,7 @@ see the handlebars code used by jp-mining-note [here](setupyomichan.md#yomichan-
 ## Automatically highlight the tested word within the sentence upon card creation { .text-yellow }
 
 ??? info "Option 1: Bold only"
-    **Yomichan Fields**:
+    **Yomitan Fields**:
     ```
     {cloze-prefix}<b>{cloze-body}</b>{cloze-suffix}
     ```
@@ -492,7 +492,7 @@ see the handlebars code used by jp-mining-note [here](setupyomichan.md#yomichan-
 
 ??? info "Option 2: Bold + Styling (recommended)"
 
-    **Yomichan Fields**:
+    **Yomitan Fields**:
     ```
     {cloze-prefix}<b>{cloze-body}</b>{cloze-suffix}
     ```
@@ -517,7 +517,7 @@ see the handlebars code used by jp-mining-note [here](setupyomichan.md#yomichan-
 
 ??? info "Option 3: Custom div"
 
-    **Yomichan Fields**:
+    **Yomitan Fields**:
     ```
     {cloze-prefix}<span class="word-highlight">{cloze-body}</span>{cloze-suffix}
     ```
@@ -609,7 +609,7 @@ For example, if your field is `SentenceReading`, use `{{furigana:SentenceReading
         Nonetheless, I recommend keeping AJT Furigana so furigana can be generated even after editing
         the sentence field.
 
-    - The `{furigana}` marker provided by default in Yomichan does not generate plain style furigana,
+    - The `{furigana}` marker provided by default in Yomitan does not generate plain style furigana,
         which makes editing furigana more difficult in Anki.
 
 
@@ -620,10 +620,10 @@ For example, if your field is `SentenceReading`, use `{{furigana:SentenceReading
 
 
 ## Further Reading
-Official documentation om Yomichan's templates:
+Official documentation om Yomitan's templates:
 
-- [Yomichan template helper functions](https://github.com/FooSoft/yomichan/blob/master/docs/templates.md)
-- [Yomichan template structure](https://github.com/FooSoft/yomichan/blob/master/docs/interfaces/dictionary-entry.ts)
+- [Yomitan template helper functions](https://github.com/themoeway/yomitan/blob/master/docs/templates.md)
+- [Yomitan template structure](https://github.com/themoeway/yomitan/blob/master/docs/templates.md)
 
 Example template code can be found here:
 
@@ -893,8 +893,8 @@ However, some tips for ShareX and AutoKey are given below.
 This script updates the sentence with the current clipboard (while preserving the bolded word),
 and removes the `SentenceReading` field (of the newest note added).
 
-This script is useful when Yomichan's parsed sentence does not match the recorded audio.
-This is also useful for when Yomichan's word parser doesn't match the word itself (steps shown below).
+This script is useful when Yomitan's parsed sentence does not match the recorded audio.
+This is also useful for when Yomitan's word parser doesn't match the word itself (steps shown below).
 
 !!! note
     After running this script, you must manually generate the `SentenceReading` field
@@ -905,7 +905,7 @@ This is also useful for when Yomichan's word parser doesn't match the word itsel
 ??? info "How-To: Fix incorrectly-bolded words *(click here)*"
 
     As an example, The target word 希望 in the sentence 「入部希望なんですけど…」
-    will be parsed by Yomichan as the following:
+    will be parsed by Yomitan as the following:
     ```
     入部<b>希望な</b>んですけど…
     ```
