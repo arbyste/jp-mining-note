@@ -2,7 +2,7 @@
 
 This page is dedicated to providing resources on how to do the following:
 
-1. Getting the actual text to use Yomichan on.
+1. Getting the actual text to use Yomitan on.
 1. Getting the pictures and/or sentence audio from the media.
 
 There are plenty of well established resources out there on how to do just that,
@@ -36,7 +36,7 @@ This shouldn't be an issue as long as you change the appropriate the field names
 # Getting the Text to Create the Cards
 
 I use a texthooker setup, which is able to extract subtitles or text into the browser.
-Once the text is on the browser, you can use Yomichan to select the word and create the
+Once the text is on the browser, you can use Yomitan to select the word and create the
 Anki card (click on the green plus button).
 
 The classic texthooker setup works for most games, and any show with subtitle files.
@@ -250,7 +250,7 @@ Video content includes streamed content (Youtube, Netflix, etc.) and locally dow
 
 # Books (EPUBs, HTMLZ, PDF)
 As long as you're not using a scan (image-based), the text should already be available.
-Below will list a few ways to view these files in a browser to Yomichan.
+Below will list a few ways to view these files in a browser to Yomitan.
 
 ??? example "Resources *(click here)*"
     * [ッツ Ebook Reader](https://ttu-ebook.web.app/) (EPUBs, HTMLZ) (recommended)
@@ -383,7 +383,7 @@ Other websites have significantly larger resource lists that may prove useful fo
 
 ## [asbplayer](https://github.com/killergerbah/asbplayer)
 
-* To use asbplayer, add the card with Yomichan, and then update the created note with asbplayer.
+* To use asbplayer, add the card with Yomitan, and then update the created note with asbplayer.
     I recommend filling out the following fields as follows:
 
     ??? example "asbplayer Fields *(click here)*"
@@ -407,7 +407,7 @@ There are a few common issues that asbplayer users have, when creating cards wit
 1. **The `Sentence` field has extra info.**
 
     This is because asbplayer requires you to use its internal `Sentence` field
-    instead of Yomichan's automatically generated sentence.
+    instead of Yomitan's automatically generated sentence.
 
     However, using this will naturally lead you to the second problem:
 
@@ -426,7 +426,7 @@ There are a few common issues that asbplayer users have, when creating cards wit
 
 1. **The `SentenceReading` differs from the `Sentence` field, or has extra text.**
 
-    This relates to the first problem: Yomichan's automatically generated sentence
+    This relates to the first problem: Yomitan's automatically generated sentence
     differs from asbplayer's sentence field.
 
     To fix this,
@@ -441,7 +441,7 @@ There are a few common issues that asbplayer users have, when creating cards wit
 ## [jidoujisho](https://github.com/lrorpilla/jidoujisho)
 
 I'm not very sure how the Anki card generation works for this app,
-since this app does not use Yomichan.
+since this app does not use Yomitan.
 
 The custom handlebars used by JPMN does a lot of heavy lifting
 and has plenty of customizations specifically to work JPMN.
