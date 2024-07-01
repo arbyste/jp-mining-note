@@ -1,13 +1,13 @@
 # Overview
 
-[Yomichan](https://github.com/FooSoft/yomichan)
+[Yomitan](https://github.com/themoeway/yomitan)
 is the main program that will create the cards. You can download Yomichan as a Firefox extension
 or under the Chrome web store.
 
 This section will go over the minimal Yomichan setup to work with this card type.
 
-**If you have never used Yomichan before**, please see
-[this page](https://learnjapanese.moe/yomichan/) first to get it working.
+**If you have never used Yomitan before**, please see
+[this page](https://learnjapanese.moe/yomichan/#what-is-yomitan) first to get it working.
 
 ---
 
@@ -24,7 +24,7 @@ nothing has to be done.
 ---
 
 
-# Yomichan Fields
+# Yomitan Fields
 To edit the fields that Yomichan will automatically fill out, do the following:
 
 ![type:video](assets/yomichan/yomichan_anki_format.mp4)
