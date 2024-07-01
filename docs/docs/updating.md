@@ -18,12 +18,12 @@ The recommended way to install the note is by using a python script.
 This will change the note in place, and gives you various options on how
 the note will be changed.
 Lastly, it will give you warnings on anything you have to change manually,
-such as Yomichan Templates.
+such as Yomitan Templates.
 
 ??? question "Why can't I just copy/paste the templates, or just re-install the .apkg file to update the note?"
 
     It's not uncommon for updates to contain many changes outside of just the templates
-    alone. For example, required Yomichan settings, add-on config changes,
+    alone. For example, required Yomitan settings, add-on config changes,
     or sometimes even the data within the note fields must be changed.
     Additionally, the field list is changed somewhat frequently.
 
@@ -31,7 +31,7 @@ such as Yomichan Templates.
     almost all settings within Anki are automatically updated
     with the python script.
     Additionally, the python script will give you plenty of instructions on
-    exactly how to update any Yomichan setting or add-on config change.
+    exactly how to update any Yomitan setting or add-on config change.
 
     Finally, installing the .apkg file when the field list is in any way different
     will actually create a new version of the note
@@ -289,7 +289,7 @@ To fix this, there are a few cases to go through.
 
 # After Updating the Card
 There may be further steps outside of just updating the card,
-such as updating Yomichan's templates / format.
+such as updating Yomitan's templates / format.
 Further instructions on these are written below.
 
 
@@ -299,19 +299,19 @@ Afterwards, please see the [final steps](updating.md#final-steps) section.
 
 
 
-# Updating Yomichan's Anki Card Format
+# Updating Yomitan's Anki Card Format
 
-To update the Yomichan Format, the steps should be almost the same as the
-one specified already in the [setup](setupyomichan.md#yomichan-fields).
+To update the Yomitan Format, the steps should be almost the same as the
+one specified already in the [setup](setupyomitan.md#yomitan-fields).
 The most important difference is that if a new field was added or a field has been renamed,
-then **the field will not show up automatically in Yomichan**.
+then **the field will not show up automatically in Yomitan**.
 
 <!--
 The only way to refresh the fields as of writing this (2022/09/06)
 is to change the `Model` at the top right hand corner to something else,
 and then switching back to `JP Mining Note`.
 
-Hopefully in the future, there will be a `refresh` button in Yomichan itself to avoid all this trouble.
+Hopefully in the future, there will be a `refresh` button in Yomitan itself to avoid all this trouble.
 -->
 
 !!! warning
@@ -319,13 +319,13 @@ Hopefully in the future, there will be a `refresh` button in Yomichan itself to 
     is a matching field in that other card.
 
 
-## Refreshing Yomichan Fields
+## Refreshing Yomitan Fields
 
 ??? example "Video Demo *(click here)*"
     ![type:video](assets/yomichan/updating_yomichan_fields.mp4)
 
 1. As always, create a [backup](faq.md#how-do-i-backup-yomichan-settings){:target="_blank"}
-    of your Yomichan settings, just in case.
+    of your Yomitan settings, just in case.
 1. After running `install.py --update`, create a temporary copy of the note by: <br>
     `Tools` <br>
     →  `Manage Note Types` <br>
@@ -333,15 +333,15 @@ Hopefully in the future, there will be a `refresh` button in Yomichan itself to 
     →  Select `Clone: JP Mining Note` →  `Ok` <br>
     →  Name the note anything you want (the following examples will use `JP Mining Note copy`)  →  `Ok`<br>
     →  `Close`
-1. If you are currently viewing Yomichan Settings, please refresh the page.
-1. Head over to Anki Card Format [as before](setupyomichan.md#yomichan-fields){:target="_blank"}.
+1. If you are currently viewing Yomitan Settings, please refresh the page.
+1. Head over to Anki Card Format [as before](setupyomitan.md#yomitan-fields){:target="_blank"}.
 1. In the top right corner, change `Model` to `JP Mining Note copy`,
     and then change it back to `JP Mining Note`.
     (If you don't see `JP Mining Note copy`, please refresh the page.)
 1. Update the fields as specified.
     - It should be specified in the text you see when running `install.py --update`.
     - However, you should also simply compare the table on the
-        [setup page](setupyomichan.md#yomichan-fields){:target="_blank"} to your filled out fields.
+        [setup page](setupyomitan.md#yomitan-fields){:target="_blank"} to your filled out fields.
 1. Remove the temporary note: <br>
     `Tools` <br>
     →  `Manage Note Types` <br>
@@ -351,7 +351,7 @@ Hopefully in the future, there will be a `refresh` button in Yomichan itself to 
 !!! info "Explanation"
     Using the temporary copy of the updated card
     means that fields that remain unchanged between the old card and new card
-    will be transferred automatically in the Yomichan Format.
+    will be transferred automatically in the Yomitan Format.
     If you simply choose some random model like `Basic`,
     then almost none of the fields will be preserved, as the `Basic` card
     does not have any matching fields with the `JP Mining Note` model.
@@ -359,16 +359,16 @@ Hopefully in the future, there will be a `refresh` button in Yomichan itself to 
 ---
 
 
-# Updating Yomichan Templates
-Like the above, you can simply follow the steps already specified in [setup](setupyomichan.md#yomichan-templates){:target="_blank"}.
+# Updating Yomitan Templates
+Like the above, you can simply follow the steps already specified in [setup](setupyomitan.md#yomitan-templates){:target="_blank"}.
 
-Again, please make a [backup](faq.md#how-do-i-backup-yomichan-settings){:target="_blank"}
-of your Yomichan settings just in case,
+Again, please make a [backup](faq.md#how-do-i-backup-yomitan-settings){:target="_blank"}
+of your Yomitan settings just in case,
 and again, please make sure you **reset the existing templates** (unless you know what you are doing).
 
-Note that your Yomichan template options will be reset if you follow all the steps.
-I recommend temporarily saving a copy of the Yomichan templates so you can easily
-reset your Yomichan template options after updating.
+Note that your Yomitan template options will be reset if you follow all the steps.
+I recommend temporarily saving a copy of the Yomitan templates so you can easily
+reset your Yomitan template options after updating.
 
 
 ---
