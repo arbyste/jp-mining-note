@@ -71,7 +71,7 @@ This note type makes heavy use of these custom templates.
 
 To make the new markers usable, do the following:
 
-![type:video](assets/yomichan/import_yomichan_templates.mp4)
+![type:video](assets/yomitan/import_yomichan_templates.mp4)
 
 1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
