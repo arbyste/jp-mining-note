@@ -71,7 +71,7 @@ nav:
   - Setup:
     - "Setup: Installing": setup.md
     - "Setup: Anki": setupanki.md
-    - "Setup: Yomichan": setupyomichan.md
+    - "Setup: Yomitan": setupyomitan.md
     - "Setup: Everything Else": setupeverythingelse.md
     - "Setup: Other": setupother.md
     - Transfer Existing Notes: importing.md
@@ -84,7 +84,7 @@ nav:
     - Card Types: cardtypes.md
     - Runtime Options: runtimeoptions.md
     - Compile-Time Options: compiletimeoptions.md
-    - Yomichan Template Options (TODO): yomichantemplates.md
+    - Yomitan Template Options (TODO): yomitantemplates.md
     - Tooltip Results (TODO): tooltipresults.md
     - Developer Documentation:
       - Modding Overview: modding.md
