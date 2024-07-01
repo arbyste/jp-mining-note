@@ -34,7 +34,7 @@ or not meant to be edited.
 ??? example "Click here to reveal the field list"
 
     !!! note
-        `Auto-filled` represents fields that should be automatically filled out from Yomichan
+        `Auto-filled` represents fields that should be automatically filled out from Yomitan
         and Anki add-ons.
 
     {{ field_quick_jump_table() | indent(4)}}

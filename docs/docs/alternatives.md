@@ -124,7 +124,7 @@ see: https://stackoverflow.com/questions/43895390/imgur-images-returning-403
 
 ??? quote "Description from the author"
 
-    This is my anki card format it is based in the Gruvbox color scheme ({{ link("https://github.com/morhetz/gruvbox") }}) and changes dynamically with your Anki theme, you will need this handlebars in yomichan for it to work: {{ link("https://pastebin.com/KSjbwrHk") }} (It is a modified version of the one in animecards, the only thing it changes is the color of the pitch pattern so it changes dynamically with the Anki theme) although if you're going to use the dark theme and you already have the animecards handlebars is not neccessary to download it although I still recommend it.
+    This is my anki card format it is based in the Gruvbox color scheme ({{ link("https://github.com/morhetz/gruvbox") }}) and changes dynamically with your Anki theme, you will need this handlebars in Yomitan for it to work: {{ link("https://pastebin.com/KSjbwrHk") }} (It is a modified version of the one in animecards, the only thing it changes is the color of the pitch pattern so it changes dynamically with the Anki theme) although if you're going to use the dark theme and you already have the animecards handlebars is not neccessary to download it although I still recommend it.
 
     You can change between vocab card, sentence card, vocab audio card, and sentence audio card. 
 
@@ -150,7 +150,7 @@ see: https://stackoverflow.com/questions/43895390/imgur-images-returning-403
 
 ??? quote "Description from the author"
 
-    **UPDATE1: tango wasn't being colored in the sentence so i fixed it, check yomichan screen shot and add the css**
+    **UPDATE1: tango wasn't being colored in the sentence so i fixed it, check Yomitan screen shot and add the css**
     **UPDATE2: added css**
 
     Here is my anki template, which is the result of bits I liked from other templates which I tried to glue together with my limited knowledge of programming.
@@ -159,7 +159,7 @@ see: https://stackoverflow.com/questions/43895390/imgur-images-returning-403
 
     Includes a card mined from the VN Steins;Gate 0 and a card from the LN 忘却探偵
 
-    Yomichan: [https://i.imgur.com/vuHoVlM.png](https://i.imgur.com/vuHoVlM.png)
+    Yomitan: [https://i.imgur.com/vuHoVlM.png](https://i.imgur.com/vuHoVlM.png)
 
     Add this to the styling page of the template in anki
 
@@ -187,7 +187,7 @@ see: https://stackoverflow.com/questions/43895390/imgur-images-returning-403
 
     **CSS update:**
 
-    Add this to the styling of the template in anki and check the yomichan screenshot above
+    Add this to the styling of the template in anki and check the Yomitan screenshot above
 
     ```css
     .jpsentence {

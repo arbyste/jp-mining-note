@@ -24,7 +24,7 @@ it is unlikely that you will have complete 100% full
 functionality after importing the notes.
 The biggest example is frequency list information,
 as it requires special HTML + css formatting that can only be specified
-in the Yomichan Templates section.
+in the Yomitan Templates section.
 
 ---
 
@@ -110,7 +110,7 @@ However, here are a few tips:
 
 [^1]: `FrequenciesStylized` uses a custom set of handlebars to
     store the frequency info in a way that css styles can be easily applied without javascript.
-    This differs heavily from the `{frequencies}` marker provided by Yomichan.
+    This differs heavily from the `{frequencies}` marker provided by Yomitan.
     Mapping an existing field that stores frequencies using `{frequencies}`
     to `FrequenciesStylized`
     will result in **incorrect display of data**.
@@ -131,7 +131,7 @@ However, here are a few tips:
     is by manually setting the position for all affected cards.
 
     Of course, any new cards should have automatically generated pitch accent positions,
-    so long as you have a Yomichan pitch accent dictionary installed.
+    so long as you have a Yomitan pitch accent dictionary installed.
 
 
 An example with [Anime cards](https://animecards.site/ankicards/) is shown below.
@@ -203,7 +203,7 @@ Sentences are usually formatted in one of three ways, as shown below:
             今日も、なんか、昼<span style="color: #ffc2c7">爆睡</span>してしまったんので…
             ```
 
-            The above is created from the following Yomichan fields:
+            The above is created from the following Yomitan fields:
             ```
             {cloze-prefix}<span style="color: #ffc2c7">{cloze-body}</span>{cloze-suffix}
             ```

@@ -27,7 +27,7 @@ nothing has to be done.
 # Yomitan Fields
 To edit the fields that Yomitan will automatically fill out, do the following:
 
-![type:video](assets/yomichan/yomichan_anki_format.mp4)
+![type:video](assets/yomitan/yomichan_anki_format.mp4)
 
 1. Navigate to Yomitan Settings.
 1. Go to the `Anki` section.
@@ -124,7 +124,7 @@ At this point, you should be able to make cards with Yomitan!
     「貴方なんなんです？なにか、妙に銃口慣れしていますね…若者特有の空威張りという訳でもなさそうですし…」
     { .jp-quote-text }
 
-{{ img("adding a card with Yomitan", "assets/yomichan/add_card.gif") }}
+{{ img("adding a card with Yomitan", "assets/yomitan/add_card.gif") }}
 
 Obviously, just Yomitan alone doesn't fill every field.
 Notably, the picture and sentence audio is missing.
@@ -139,7 +139,7 @@ if the card doesn't look quite right.
 # Yomitan Templates Options
 
 ## Monolingual Definition
-<i><sup>Main page: [Yomichan Template Options (Categorization of Dictionaries)](yomichantemplates.md#categorization-of-dictionaries)</sup></i>
+<i><sup>Main page: [Yomitan Template Options (Categorization of Dictionaries)](yomitantemplates.md#categorization-of-dictionaries)</sup></i>
 
 If you want the first definition you see (the `PrimaryDefinition` field) to be monolingual,
 change the following line at the top of the templates code:
@@ -164,19 +164,19 @@ to
 
     If your dictionaries are ending up in the wrong sections,
     then it is likely a problem with how the template code categorizes the dictionaries.
-    See [here](yomichantemplates.md#categorization-of-dictionaries){:target="_blank"} for more info.
+    See [here](yomitantemplates.md#categorization-of-dictionaries){:target="_blank"} for more info.
 
 <br>
 
 
 ## Selected Text as the Definition
-<i><sup>Main page: [Yomichan Template Options (Selected Text)](yomichantemplates.md#selected-text)</sup></i>
+<i><sup>Main page: [Yomitan Template Options (Selected Text)](yomitantemplates.md#selected-text)</sup></i>
 
 
 If you want to select the text to use instead of the definition,
 simply set `opt-selection-text-enabled` to `true`.
 
-![type:video](assets/yomichan/selected_text.mp4)
+![type:video](assets/yomitan/selected_text.mp4)
 
 By default, this enable the following behavior:
 
@@ -188,7 +188,7 @@ By default, this enable the following behavior:
 !!! note
     Selecting parts of a definition to bold the text does not always work,
     especially when used across text with formatting or newlines.
-    See [this](yomichantemplates.md#overriding-the-definition){:target="_blank"} for more details.
+    See [this](yomitantemplates.md#overriding-the-definition){:target="_blank"} for more details.
 
     With this being said, selecting the dictionary should always work.
 
