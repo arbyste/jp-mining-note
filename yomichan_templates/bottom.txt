@@ -1,5 +1,5 @@
 {{~! ============== ORIGINAL YOMICHAN TEMPLATE CODE ABOVE =============== ~}}
-{{~!                               v1.0.3                                 ~}}
+{{~!                               v1.0.5                                 ~}}
 
 {{~!
     ==================
@@ -47,7 +47,7 @@
     {{~#if (op "===" (get "opt-selection-text-enabled") true)~}}
         {{~! removes leading and trailing whitespace ~}}
         {{~#regexReplace "^\s+|\s+$" "" "g"~}}
-            {{~#getMedia "selectionText"}}{{/getMedia~}}
+            {{~#getMedia "popupSelectionText"}}{{/getMedia~}}
         {{~/regexReplace~}}
     {{~/if~}}
 {{~/inline~}}
