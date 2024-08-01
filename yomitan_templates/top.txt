@@ -1,8 +1,8 @@
 {{~!                                                                      ~}}
 {{~! ==================== jp-mining-note handlebars ===================== ~}}
-{{~!                               v1.0.13                                ~}}
+{{~!                               v1.0.14                                ~}}
 {{~!                                                                      ~}}
-{{~!              https://arbyste.github.io/jp-mining-note/               ~}}
+{{~!         https://arbyste.github.io/jp-mining-note-prerelease/         ~}}
 {{~!       -------------------------------------------------------        ~}}
 
 

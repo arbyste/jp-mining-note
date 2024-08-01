@@ -10,6 +10,9 @@ Public facing markers are markers starting with `jpmn` (whereas private markers 
 
 The Yomichan template version is incremented independently from the jp-mining-note version.
 
+## v1.0.14
+- Updated "selectionText" variable to "popupSelectionText" to work with latest Yomitan version
+
 ## v1.0.13
 - Updated CC-CEDICT regex to allow for a trailing date (e.g. CC-CEDICT [2024-04-12])
 
