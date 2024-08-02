@@ -11,7 +11,7 @@ These are called "blockquotes" because they are stylized as a blockquote,
 and are internally contained inside a `blockquote` HTML tag.
 
 Topics such as how dictionaries are selected are not covered here.
-For those topics, see the [Definitions](#definitions.md) page instead.
+For those topics, see the [Definitions](definitions.md) page instead.
 
 ---
 
