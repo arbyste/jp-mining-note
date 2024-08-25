@@ -173,6 +173,13 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 18 </summary>
+
+- **Fixes**
+    - Fixed a bug so that if there are multiple PA patterns in a word, they are each colored correctly
+
+</details>
+<details>
 <summary> Pre-release 17 </summary>
 
 - **Fixes**
