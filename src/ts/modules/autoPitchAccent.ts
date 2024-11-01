@@ -719,14 +719,6 @@ export class AutoPitchAccent extends RunnableModule {
       }
     }
 
-    if (this.getOption('autoPitchAccent.coloredPitchAccent.color.wordReadingPitchOverline')) {
-      const displayEle = document.getElementsByClassName('pitchterm')
-      for (let i = 0; i < displayEle.length; i++) {
-          displayEle.item(i)?.classList.remove('pa-group-heiban','pa-group-odaka','pa-group-nakadaka', 'pa-group-atamadaka', 'pa-group-kifuku')
-          displayEle.item(i)?.classList.add('pa-group-' + paGroup)
-      }
-    }
-
     // full sentence (back side)
     if (this.getOption('autoPitchAccent.coloredPitchAccent.color.fullSentence')) {
       const fullSentEle = document.getElementById('full_sentence');
