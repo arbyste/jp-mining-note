@@ -173,6 +173,13 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 19 </summary>
+
+- **Fixes**
+    - Actually fixed the bug this time, so pitch accents should now be colored correctly
+
+</details>
+<details>
 <summary> Pre-release 18 </summary>
 
 - **Fixes**
