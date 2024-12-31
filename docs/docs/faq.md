@@ -705,16 +705,12 @@ including [TheMoeWay](https://learnjapanese.moe/) and [AnimeCards](https://anime
 # Contact Info { .text-yellow }
 
 * **Discord**
-    * Username: `aquafina_water_bottle` (user id: `244677612272746496`)
+    * Username: `arbyste`
     * Servers:
         * [TheMoeWay]({{THEMOEWAY_LINK}})
             (I recommend using the
             [jp-mining-note](https://discord.com/channels/617136488840429598/1041466793094557879)
             thread in the `#resources-sharing` channel)
-        * Refold (JP) server
-            (I recommend using the
-            [jp-mining-note](https://discord.com/channels/778787713012727809/1031068624447873055)
-            thread in the `#sentence-mining-workflows` channel)
 
 * **Github**
     * If you don't want to use Discord, please shoot your message [here](https://github.com/arbyste/jp-mining-note/issues).
