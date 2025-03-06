@@ -13,7 +13,7 @@
 
   display: inline-block !important;
 
-  > div {
+  .field-container {
     display: inline-block !important;
     width: 100%;
     padding-bottom: var(--field-gap);
@@ -38,14 +38,16 @@ $extra-padding-bottom: 4,5,6, 8, 10, 14, 17, 28,29,30,31, 38,39,40,41, 44;
 @mixin combine-row-single($start, $length) {
 
   @if $length >= 1 {
-    > div:nth-child(#{$start}) {
+    // Using a * for now instead of svelte-css-wrapper because old versions of Anki still use
+    // div. Might change it to svelte-css-wrapper later
+    > *:nth-child(#{$start}) > .field-container {
       width: calc(100%/#{$length});
       padding-left: 0px;
     }
   }
 
   @for $i from ($start+1) to ($start + $length) {
-    > div:nth-child(#{$i}) {
+    > *:nth-child(#{$i}) > .field-container {
       width: calc(100%/#{$length});
       padding-left: var(--field-gap);
     }
@@ -66,7 +68,7 @@ $extra-padding-bottom: 4,5,6, 8, 10, 14, 17, 28,29,30,31, 38,39,40,41, 44;
 
 @mixin extra-padding-top-remove($indices) {
   @each $i in $indices {
-    > div:nth-child(#{$i}) {
+    > *:nth-child(#{$i}) > .field-container {
       padding-top: 0px;
       border-top: none;
     }
@@ -75,7 +77,7 @@ $extra-padding-bottom: 4,5,6, 8, 10, 14, 17, 28,29,30,31, 38,39,40,41, 44;
 
 @mixin extra-padding-bottom-remove($indices) {
   @each $i in $indices {
-    > div:nth-child(#{$i}) {
+    > *:nth-child(#{$i}) > .field-container {
       padding-bottom: var(--field-gap);
     }
   }
@@ -86,20 +88,20 @@ $extra-padding-bottom: 4,5,6, 8, 10, 14, 17, 28,29,30,31, 38,39,40,41, 44;
 [notetype="JP Mining Note"] .fields {
 
   @each $i in $extra-padding-top {
-    > div:nth-child(#{$i}) {
+    > *:nth-child(#{$i}) > .field-container {
       padding-top: var(--larger-field-gap-top);
       border-top: var(--field-group-border);
     }
   }
 
   @each $i in $extra-padding-bottom {
-    > div:nth-child(#{$i}) {
+    > *:nth-child(#{$i}) > .field-container {
       padding-bottom: var(--larger-field-gap-bottom);
     }
   }
 
   //@each $i in $extra-padding-sides {
-  //  > div:nth-child(#{$i}) {
+  //  > *:nth-child(#{$i}) > .field-container {
   //    padding-left: var(--padding-side);
   //    padding-right: var(--padding-side);
   //  }
