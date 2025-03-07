@@ -173,6 +173,13 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 20 </summary>
+
+- **Fixes**
+    - Update to Anki broke the CSS formatting in the editor. This update fixes that, and should remain backwards compatible with older versions of Anki.
+
+</details>
+<details>
 <summary> Pre-release 19 </summary>
 
 - **Fixes**

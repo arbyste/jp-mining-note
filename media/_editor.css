@@ -194,7 +194,7 @@
 [notetype="JP Mining Note"] .fields {
   display: inline-block !important;
 }
-[notetype="JP Mining Note"] .fields > div {
+[notetype="JP Mining Note"] .fields .field-container {
   display: inline-block !important;
   width: 100%;
   padding-bottom: var(--field-gap);
@@ -209,299 +209,299 @@
   /* Word, WordReading */
   /* PAOverride, PAOverrideText, AJTWordPitch */
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(7) {
+[notetype="JP Mining Note"] .fields > *:nth-child(7) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(9) {
+[notetype="JP Mining Note"] .fields > *:nth-child(9) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(11) {
+[notetype="JP Mining Note"] .fields > *:nth-child(11) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(15) {
+[notetype="JP Mining Note"] .fields > *:nth-child(15) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(18) {
+[notetype="JP Mining Note"] .fields > *:nth-child(18) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(19) {
+[notetype="JP Mining Note"] .fields > *:nth-child(19) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(20) {
+[notetype="JP Mining Note"] .fields > *:nth-child(20) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(21) {
+[notetype="JP Mining Note"] .fields > *:nth-child(21) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(32) {
+[notetype="JP Mining Note"] .fields > *:nth-child(32) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(42) {
+[notetype="JP Mining Note"] .fields > *:nth-child(42) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(45) {
+[notetype="JP Mining Note"] .fields > *:nth-child(45) > .field-container {
   padding-top: var(--larger-field-gap-top);
   border-top: var(--field-group-border);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(4) {
+[notetype="JP Mining Note"] .fields > *:nth-child(4) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(5) {
+[notetype="JP Mining Note"] .fields > *:nth-child(5) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(6) {
+[notetype="JP Mining Note"] .fields > *:nth-child(6) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(8) {
+[notetype="JP Mining Note"] .fields > *:nth-child(8) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(10) {
+[notetype="JP Mining Note"] .fields > *:nth-child(10) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(14) {
+[notetype="JP Mining Note"] .fields > *:nth-child(14) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(17) {
+[notetype="JP Mining Note"] .fields > *:nth-child(17) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(28) {
+[notetype="JP Mining Note"] .fields > *:nth-child(28) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(29) {
+[notetype="JP Mining Note"] .fields > *:nth-child(29) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(30) {
+[notetype="JP Mining Note"] .fields > *:nth-child(30) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(31) {
+[notetype="JP Mining Note"] .fields > *:nth-child(31) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(38) {
+[notetype="JP Mining Note"] .fields > *:nth-child(38) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(39) {
+[notetype="JP Mining Note"] .fields > *:nth-child(39) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(40) {
+[notetype="JP Mining Note"] .fields > *:nth-child(40) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(41) {
+[notetype="JP Mining Note"] .fields > *:nth-child(41) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(44) {
+[notetype="JP Mining Note"] .fields > *:nth-child(44) > .field-container {
   padding-bottom: var(--larger-field-gap-bottom);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(2) {
+[notetype="JP Mining Note"] .fields > *:nth-child(2) > .field-container {
   width: calc(100%/2);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(3) {
+[notetype="JP Mining Note"] .fields > *:nth-child(3) > .field-container {
   width: calc(100%/2);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(4) {
+[notetype="JP Mining Note"] .fields > *:nth-child(4) > .field-container {
   width: calc(100%/3);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(5) {
+[notetype="JP Mining Note"] .fields > *:nth-child(5) > .field-container {
   width: calc(100%/3);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(6) {
+[notetype="JP Mining Note"] .fields > *:nth-child(6) > .field-container {
   width: calc(100%/3);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(18) {
+[notetype="JP Mining Note"] .fields > *:nth-child(18) > .field-container {
   width: calc(100%/4);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(19) {
+[notetype="JP Mining Note"] .fields > *:nth-child(19) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(20) {
+[notetype="JP Mining Note"] .fields > *:nth-child(20) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(21) {
+[notetype="JP Mining Note"] .fields > *:nth-child(21) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(22) {
+[notetype="JP Mining Note"] .fields > *:nth-child(22) > .field-container {
   width: calc(100%/3);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(23) {
+[notetype="JP Mining Note"] .fields > *:nth-child(23) > .field-container {
   width: calc(100%/3);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(24) {
+[notetype="JP Mining Note"] .fields > *:nth-child(24) > .field-container {
   width: calc(100%/3);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(25) {
+[notetype="JP Mining Note"] .fields > *:nth-child(25) > .field-container {
   width: calc(100%/3);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(26) {
+[notetype="JP Mining Note"] .fields > *:nth-child(26) > .field-container {
   width: calc(100%/3);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(27) {
+[notetype="JP Mining Note"] .fields > *:nth-child(27) > .field-container {
   width: calc(100%/3);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(28) {
+[notetype="JP Mining Note"] .fields > *:nth-child(28) > .field-container {
   width: calc(100%/4);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(29) {
+[notetype="JP Mining Note"] .fields > *:nth-child(29) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(30) {
+[notetype="JP Mining Note"] .fields > *:nth-child(30) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(31) {
+[notetype="JP Mining Note"] .fields > *:nth-child(31) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(38) {
+[notetype="JP Mining Note"] .fields > *:nth-child(38) > .field-container {
   width: calc(100%/4);
   padding-left: 0px;
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(39) {
+[notetype="JP Mining Note"] .fields > *:nth-child(39) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(40) {
+[notetype="JP Mining Note"] .fields > *:nth-child(40) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
-[notetype="JP Mining Note"] .fields > div:nth-child(41) {
+[notetype="JP Mining Note"] .fields > *:nth-child(41) > .field-container {
   width: calc(100%/4);
   padding-left: var(--field-gap);
 }
 
 @media (max-width: 1000px) {
-  [notetype="JP Mining Note"] .fields > div:nth-child(20) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(20) > .field-container {
     padding-top: 0px;
     border-top: none;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(21) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(21) > .field-container {
     padding-top: 0px;
     border-top: none;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(4) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(4) > .field-container {
     padding-bottom: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(5) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(5) > .field-container {
     padding-bottom: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(28) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(28) > .field-container {
     padding-bottom: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(29) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(29) > .field-container {
     padding-bottom: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(38) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(38) > .field-container {
     padding-bottom: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(39) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(39) > .field-container {
     padding-bottom: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(4) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(4) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(5) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(5) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(6) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(6) > .field-container {
     width: calc(100%/1);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(18) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(18) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(19) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(19) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(20) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(20) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(21) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(21) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(22) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(22) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(23) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(23) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(24) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(24) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(25) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(25) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(26) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(26) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(27) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(27) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(28) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(28) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(29) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(29) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(30) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(30) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(31) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(31) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(38) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(38) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(39) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(39) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(40) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(40) > .field-container {
     width: calc(100%/2);
     padding-left: 0px;
   }
-  [notetype="JP Mining Note"] .fields > div:nth-child(41) {
+  [notetype="JP Mining Note"] .fields > *:nth-child(41) > .field-container {
     width: calc(100%/2);
     padding-left: var(--field-gap);
   }
