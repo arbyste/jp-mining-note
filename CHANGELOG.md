@@ -173,6 +173,13 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 21 </summary>
+
+- **Fixes**
+    - Minor formatting fix in the browser that creates solid borders instead of slightly rounded boxes
+
+</details>
+<details>
 <summary> Pre-release 20 </summary>
 
 - **Fixes**
