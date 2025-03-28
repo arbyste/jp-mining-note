@@ -1,5 +1,5 @@
 {{~! ============== ORIGINAL YOMITAN TEMPLATE CODE ABOVE =============== ~}}
-{{~!                               v1.0.14                                ~}}
+{{~!                               v1.0.15                                ~}}
 
 {{~!
     ==================
@@ -1328,6 +1328,15 @@ thanks to:
     {{~/scope~}}
 {{/inline}}
 
+{{#*inline "jpmn-filled-if-kifuku"~}}
+    {{~#set "first-category" ~}}
+        {{~#each (pitchCategories @root)~}}{{#if @first}}{{~.~}}{{/if}}{{~/each~}}
+    {{/set}}
+
+    {{~#if (op "===" (get "first-category") "kifuku")~}}
+    -1
+    {{~/if~}}
+{{/inline}}
 
 
 
