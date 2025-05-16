@@ -130,14 +130,11 @@ In the cases where pitch accent coloring does not work as expected, your two mai
 
 
 ## Kifuku Coloring
-{{ feature_version("0.12.0.0") }}
-A word is automatically colored as 起伏 if the `WordTags` field contains a verb tag,
-and its pitch accent group is not 平板.
+{{ feature_version("0.12.0.0-prerelease-21") }}
 
-This `WordTags` field can only be filled out if you have a modern version of the
-JMdict or Jitendex dictionary in Yomitan.
-For old cards that do not have this field filled, you will have to manually mark
-the word with `-1` (in `PAOverride`).
+To color a word with the 起伏 pitch accent, put the value `-1` in the `PAOverride` field. When setting up the Yomitan templates, the handlebar `{jpmn-filled-if-kifuku}` should have been put into the PAOverride field. If Yomitan can determine that a word is kifuku, then this handlebar will automatically fill the PAOverride field with a `-1`.
+
+If you don't want Yomitan to automatically mark 起伏 words with a `-1`, then simply go to `Configure Anki flashcards...` in the Yomitan settings, and delete `{jpmn-filled-if-kifuku}` from the PAOverride field.
 
 
 
