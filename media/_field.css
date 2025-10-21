@@ -126,6 +126,13 @@ anki-editable[field=PAPositions] {
   color: var(--pa-nasal-color);
 }
 
+.nasal:has(.handakuten) {
+  color: initial;
+}
+.nasal:has(.handakuten) .handakuten {
+  color: var(--pa-nasal-color);
+}
+
 /*
  * customization for specific dictionaries
  */

@@ -173,6 +173,16 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 22 </summary>
+
+- **Fixes**
+    - Brings in some updates for AJT Japanese
+
+- **Features**
+    - Adds the ability to automatically fill the PAOverride field with -1 if a word is Kifuku
+
+</details>
+<details>
 <summary> Pre-release 21 </summary>
 
 - **Fixes**
