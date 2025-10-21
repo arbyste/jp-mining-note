@@ -31,7 +31,8 @@
       "name": "PAOverride",
       "font": 20,
       "auto_fill": false,
-      "binary_field": false
+      "binary_field": false,
+      "setup": "{jpmn-filled-if-kifuku}"
     },
     {
       "name": "PAOverrideText",

@@ -671,6 +671,14 @@ export class AutoPitchAccent extends RunnableModule {
           new RegExp(`${ka_gyou[i]}<span class="nasal">(°|&#176;)</span>`, 'g'),
           ga_gyou[i]
         );
+        str = str.replace(
+          new RegExp(`<span class="handakuten">(°|&#176;)</span>`, 'g'),
+          ''
+        );
+        str = str.replace(
+          new RegExp(`<span class="nasal">${ka_gyou[i]}</span>`, 'g'),
+          ga_gyou[i]
+        );
       }
     }
 

@@ -371,10 +371,17 @@ $font-backup-sans:
   .devoiced {
     color: var(--pa-no-pron-color);
   }
+
   .nasal {
     color: var(--pa-nasal-color);
   }
 
+  .nasal:has(.handakuten) {
+    color: initial;
+    .handakuten {
+     color: var(--pa-nasal-color);
+    }
+  }
 }
 
 
