@@ -11,6 +11,20 @@ please check here first! If you can't find any solution,
 
 ---
 
+# 2025/10/22 (JPMN 0.12.0.0-prerelease-22) { #v0-12-0-0-prerelease-22}
+
+This version of jp-mining-note introduces the ability to automatically mark cards
+as having the kifuku pitch accent pattern. To use this feature, you will need to
+update to the latest Yomitan handlebars (Version `v1.0.15` as of this update). You
+will also need to add the `{jpmn-filled-if-kifuku}` handlebar to the PAOverride field.
+To update these values, first make a [backup](faq.md#how-do-i-backup-yomitan-settings) 
+of your Yomitan settings, then simply go through the initial [Yomitan setup guide](setupyomitan.md).
+Make sure you fully reset the Handlebar templates by clicking the red `Reset Templates` button
+before copying the new templates across.
+
+See [Kifuku Coloring](autopa.md#kifuku-coloring) for more info about this feature.
+
+
 # 2023/10/08 (JPMN 0.12.0.0-prerelease-13) { #v0-12-0-0-prerelease-13 }
 
 This version of jp-mining-note fixes a bug that was introduced with a recent

@@ -130,7 +130,7 @@ In the cases where pitch accent coloring does not work as expected, your two mai
 
 
 ## Kifuku Coloring
-{{ feature_version("0.12.0.0-prerelease-21") }}
+{{ feature_version("0.12.0.0-prerelease-22") }}
 
 To color a word with the 起伏 pitch accent, put the value `-1` in the `PAOverride` field. When setting up the Yomitan templates, the handlebar `{jpmn-filled-if-kifuku}` should have been put into the PAOverride field. If Yomitan can determine that a word is kifuku, then this handlebar will automatically fill the PAOverride field with a `-1`.
 
