@@ -648,18 +648,48 @@ function optionsNotFound() {
   </div>
 </div>
 
-<!-- hides primary definition since the definition is not important for this card -->
-{{#PrimaryDefinition}}
-  <details class="glossary-details" id="primary_definition_details">
-    <summary>Primary Definition</summary>
-    <blockquote class="glossary-blockquote highlight-bold" id="primary_definition">
-      <div class="glossary-text glossary-text--primary-definition">
-        {{PrimaryDefinition}}
-      </div>
-    </blockquote>
-</details>
-{{/PrimaryDefinition}}
 
+
+
+
+<blockquote class="glossary-blockquote
+    highlight-bold
+    glossary-blockquote--primary-definition
+    " id="primary_definition">
+
+  
+
+  
+
+
+  <!-- pictures not turned into text -->
+  <div class="glossary-primary-definition-right glossary-primary-definition-right--float" id="primary_definition_picture"><div class="glossary-primary-definition-right-img">{{PrimaryDefinitionPicture}}</div></div>
+
+
+  <div class="glossary-text glossary-text--primary-definition" id="primary_definition_text">
+    {{PrimaryDefinition}}
+    <div style="font-size: 0px"><br></div>
+    <!-- The above is a hack to allow a user to triple-click the definition
+      without selecting everything below the line.
+      This seems to ONLY affect the texthooker page;
+      regular copy/pastes through everything I tried
+      (pyperclip, text editor paste, pasting into Anki, etc)
+      does not suffer from this problem.
+      I figure that adding this shouldn't affect anything
+    -->
+  </div>
+
+  <!-- placed outside of glossary-text so it doesn't get converted automatically -->
+  <div class="glossary-primary-definition-right
+        glossary-primary-definition-right--bottom
+        {{#PrimaryDefinition}}glossary-primary-definition-right--above-text{{/PrimaryDefinition}}
+        " id="primary_definition_picture_bottom">
+    <div class="glossary-primary-definition-right-img">
+      {{PrimaryDefinitionPicture}}
+    </div>
+  </div>
+
+</blockquote>
 
 
 {{#SecondaryDefinition}}
