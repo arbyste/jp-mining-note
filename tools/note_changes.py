@@ -69,6 +69,59 @@ class NoteChange:
 NOTE_CHANGES = [
 
     NoteChange(
+        version=Version(0, 12, 0, 0),
+        actions=[
+            action.RenameField("SeparateClozeDeletionCard", "IsAudioCard"),
+            action.NoteToUser(
+                description="The 'Cloze Deletion Card' has been renamed to 'Audio Card'.\n"
+                "The field `SeparateClozeDeletionCard` has been renamed to `IsAudioCard`.\n"
+                "Audio now auto-plays on the front side of the card.\n"
+                "Filling both `IsAudioCard` and `IsSentenceCard` creates a sentence audio card variant."
+            ),
+        ],
+        fields=[
+            "Key",
+            "Word",
+            "WordReading",
+            "PAOverride",
+            "PAOverrideText",
+            "AJTWordPitch",
+            "PrimaryDefinition",
+            "PrimaryDefinitionPicture",
+            "Sentence",
+            "SentenceReading",
+            "AltDisplay",
+            "AltDisplayPASentenceCard",
+            "AdditionalNotes",
+            "IsSentenceCard",
+            "IsClickCard",
+            "IsHoverCard",
+            "IsTargetedSentenceCard",
+            "IsAudioCard",
+            "PAShowInfo",
+            "PATestOnlyWord",
+            "PADoNotTest",
+            "PASeparateWordCard",
+            "PASeparateSentenceCard",
+            "Hint",
+            "HintNotHidden",
+            "Picture",
+            "WordAudio",
+            "SentenceAudio",
+            "PAGraphs",
+            "PAPositions",
+            "PASilence",
+            "WordReadingHiragana",
+            "FrequenciesStylized",
+            "FrequencySort",
+            "SecondaryDefinition",
+            "ExtraDefinitions",
+            "UtilityDictionaries",
+            "Comment",
+        ],
+    ),
+
+    NoteChange(
         version=Version(0, 11, 0, 5),
         actions=[
             action.SetField("AJTWordPitch", ""),

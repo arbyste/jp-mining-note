@@ -335,19 +335,19 @@ to see how to sort and review your cards by frequency.
 
 <br>
 
-## Cloze Deletion Cards
-Cloze Deletion cards are, simply put, "fill-in-the-blank cards".
-This allows you to create cards that tests word audio or sentence audio.
+## Audio Cards
+Audio cards allow you to create cards that test word or sentence audio.
+The audio is automatically played on the front side of the card.
 
-To create a cloze deletion card, simply fill in the `SeparateClozeDeletionCard` field.
-The words that are hidden are exactly the words that are bolded in the `Sentence` (or `AltDisplay`) field.
+To create an audio card, fill in the `IsAudioCard` field.
+The word(s) that are hidden are exactly the words that are bolded in the `Sentence` (or `AltDisplay`) field.
+On the front of the card, the bolded content is replaced with `[...]`.
 
-To create a sentence audio card, copy/paste the sentence into `AltDisplay`, and bold the entire `AltDisplay` field (say, with `ctrl+a` and `ctrl+b`).
-There's currently no shortcut to creating a sentence audio card.
+To create a sentence audio card, fill both the `IsAudioCard` and `IsSentenceCard` fields.
+The front of the card will display 「？」 instead of the sentence, testing your
+comprehension of the entire sentence from audio alone.
 
-TODO: IsSentenceCard -> tests entire sentence, not filled -> currently as is
-
-{{ img("cloze deletion card", "assets/cloze_deletion.png") }}
+{{ img("audio card", "assets/cloze_deletion.png") }}
 
 
 

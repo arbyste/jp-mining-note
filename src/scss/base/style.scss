@@ -175,6 +175,11 @@ details > summary {
   @include common.bold_highlight;
 }
 
+.audio-card-question {
+  font-weight: bold;
+  @include common.bold_highlight;
+}
+
 .override-display-none {
   display: none !important;
 }

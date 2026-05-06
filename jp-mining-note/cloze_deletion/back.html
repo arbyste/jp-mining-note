@@ -384,7 +384,12 @@ function optionsNotFound() {
     
 
     
-  Cloze Deletion
+  {{#IsSentenceCard}}
+  Audio (Sentence)
+  {{/IsSentenceCard}}
+  {{^IsSentenceCard}}
+  Audio
+  {{/IsSentenceCard}}
 
     </span>
 
@@ -434,7 +439,7 @@ function optionsNotFound() {
 
     
   <!-- DO NOT CHANGE/REMOVE THIS: this is used to record the version when updating the note. -->
-  <div class="card-description-ver">JP Mining Note: Version 0.11.0.6</div>
+  <div class="card-description-ver">JP Mining Note: Version 0.12.0.0</div>
 
 
 </div>
@@ -448,17 +453,27 @@ function optionsNotFound() {
 
 
 
-{{#AltDisplay}}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+{{#IsSentenceCard}}
+  
+  <div class="expression expression--single expression--sentence" id="display">
+    <span class="sentence-quote sentence-quote--open">「</span><span><span class="audio-card-question">？</span></span><span class="sentence-quote sentence-quote--close">」</span>
   </div>
-{{/AltDisplay}}
+{{/IsSentenceCard}}
 
-{{^AltDisplay}}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
-  </div>
-{{/AltDisplay}}
+{{^IsSentenceCard}}
+  
+  {{#AltDisplay}}
+    <div class="expression expression--single expression--sentence" id="display">
+      <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+    </div>
+  {{/AltDisplay}}
+
+  {{^AltDisplay}}
+    <div class="expression expression--single expression--sentence" id="display">
+      <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
+    </div>
+  {{/AltDisplay}}
+{{/IsSentenceCard}}
 
 
 {{#HintNotHidden}}
@@ -1286,7 +1301,7 @@ const JPMNKanjiHover = (() => {
     // multi query result, in the format of
     // [kanji 1 (non-new), kanji 1 (new), kanji 2 (non-new), kanji 2 (new), etc.]
     async cardQueries(kanjiArr) {
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
 
       function constructFindCardAction(query) {
         return {
@@ -1828,7 +1843,7 @@ const JPMNAnkiConnectActions = (() => {
       }
       logger.debug("Testing for new card...", 2);
 
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
       //const cid = await this.getDisplayedCardId();
       //if (cid === 0) {
       //  return false;
@@ -1877,7 +1892,7 @@ const JPMNAnkiConnectActions = (() => {
       //  return currentCard.cardId;
       //}
 
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
       const noteName = 'JP Mining Note';
 
       let cachable = true;
@@ -4195,7 +4210,7 @@ const JPMNCheckDuplicateKey = (() => {
       }
 
       const keyText = this.ankiConnectHelper.escapeStr(key);
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
       const noteName = 'JP Mining Note';
 
       const query = `"Key:${keyText}" "card:${cardTypeName}" "note:${noteName}"`;
@@ -4436,13 +4451,12 @@ function main() {
     
         
     if (getSetting(['modules','sent-utils','enabled',],true)) {
-      let isAltDisplay = false;
-      /* {{#AltDisplay}} */
-        isAltDisplay = false;
-      /* {{/AltDisplay}} */
+      let isAltDisplay = !!'{{#AltDisplay}}FILLED{{/AltDisplay}}';
 
+      /* {{^IsSentenceCard}} */
       let sent_utils = new JPMNSentUtils(isAltDisplay, true);
       sent_utils.run();
+      /* {{/IsSentenceCard}} */
 
     }
     /// 

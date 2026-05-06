@@ -24,7 +24,7 @@ NOTE_DATA = {
             "name": "PA Word Card",
         },
         "cloze_deletion": {
-            "name": "Cloze Deletion Card",
+            "name": "Audio Card",
         },
     },
     #"scss-files": [

@@ -3,7 +3,7 @@
 {% set note = namespace() %}
 {% set note.side = "front" %}
 {% set note.card_type = "cloze_deletion" %}
-{% set note.field_restrict = ["SeparateClozeDeletionCard", "SentenceAudio"] %}
+{% set note.field_restrict = ["IsAudioCard", "SentenceAudio"] %}
 
 {% block card_type %}
 {{ super() }}
@@ -25,5 +25,5 @@
 
 {% block javascript %}
 {{ super() }}
-{% include "jp-mining-note/base.js" %}
+{% include "jp-mining-note/cloze_deletion/js/front.js" %}
 {% endblock %}

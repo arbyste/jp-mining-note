@@ -98,7 +98,7 @@ An example set of compile-time options to create a more optimized vocab card is 
         "never-filled-fields": [
             "PAShowInfo", "PATestOnlyWord", "PADoNotTest",
             "PASeparateWordCard", "PASeparateSentenceCard", "AltDisplayPASentenceCard",
-            "SeparateClozeDeletionCard",
+            "IsAudioCard",
             "IsClickCard", "IsHoverCard", "IsSentenceCard", "IsTargetedSentenceCard",
         ],
 

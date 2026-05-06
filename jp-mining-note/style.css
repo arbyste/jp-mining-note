@@ -256,6 +256,11 @@ details > summary {
   color: var(--highlight-bold-color);
 }
 
+.audio-card-question {
+  font-weight: bold;
+  color: var(--highlight-bold-color);
+}
+
 .override-display-none {
   display: none !important;
 }
@@ -1051,10 +1056,6 @@ ruby rt {
   border-radius: 6px;
 }
 
-.hover-tooltip .hover-tooltip__pitch-accent {
-  /* cancels out bolded colors */
-  /* cancels out extra colors */
-}
 .hover-tooltip .hover-tooltip__pitch-accent b {
   font-weight: normal;
   filter: opacity(30%);
@@ -1081,8 +1082,14 @@ ruby rt {
   top: -1px;
   right: 0px;
 }
+.hover-tooltip .hover-tooltip__pitch-accent {
+  /* cancels out bolded colors */
+}
 .hover-tooltip .hover-tooltip__pitch-accent b {
   color: var(--text-color);
+}
+.hover-tooltip .hover-tooltip__pitch-accent {
+  /* cancels out extra colors */
 }
 .hover-tooltip .hover-tooltip__pitch-accent .high_drop:after,
 .hover-tooltip .hover-tooltip__pitch-accent .high_drop:before,

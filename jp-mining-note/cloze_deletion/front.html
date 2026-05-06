@@ -1,4 +1,4 @@
-{{#SeparateClozeDeletionCard}}
+{{#IsAudioCard}}
 {{#SentenceAudio}}
 <!--
 WARNING: This template is auto-generated.
@@ -365,7 +365,12 @@ function optionsNotFound() {
     
 
     
-  Cloze Deletion
+  {{#IsSentenceCard}}
+  Audio (Sentence)
+  {{/IsSentenceCard}}
+  {{^IsSentenceCard}}
+  Audio
+  {{/IsSentenceCard}}
 
     </span>
 
@@ -415,7 +420,7 @@ function optionsNotFound() {
 
     
   <!-- DO NOT CHANGE/REMOVE THIS: this is used to record the version when updating the note. -->
-  <div class="card-description-ver">JP Mining Note: Version 0.11.0.6</div>
+  <div class="card-description-ver">JP Mining Note: Version 0.12.0.0</div>
 
 
 </div>
@@ -429,17 +434,27 @@ function optionsNotFound() {
 
 
 
-{{#AltDisplay}}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+{{#IsSentenceCard}}
+  
+  <div class="expression expression--single expression--sentence" id="display">
+    <span class="sentence-quote sentence-quote--open">「</span><span><span class="audio-card-question">？</span></span><span class="sentence-quote sentence-quote--close">」</span>
   </div>
-{{/AltDisplay}}
+{{/IsSentenceCard}}
 
-{{^AltDisplay}}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
-  </div>
-{{/AltDisplay}}
+{{^IsSentenceCard}}
+  
+  {{#AltDisplay}}
+    <div class="expression expression--single expression--sentence" id="display">
+      <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+    </div>
+  {{/AltDisplay}}
+
+  {{^AltDisplay}}
+    <div class="expression expression--single expression--sentence" id="display">
+      <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
+    </div>
+  {{/AltDisplay}}
+{{/IsSentenceCard}}
 
 
 {{#HintNotHidden}}
@@ -477,7 +492,7 @@ function optionsNotFound() {
 
 
 
-// v1.0.0 - https://github.com/SimonLammer/anki-persistence/blob/cd2ca88e019dc3b8f32dad623932c1eabdba7e21/script.js
+/// // v1.0.0 - https://github.com/SimonLammer/anki-persistence/blob/cd2ca88e019dc3b8f32dad623932c1eabdba7e21/script.js
 if(void 0===window.Persistence){var _persistenceKey="github.com/SimonLammer/anki-persistence/",_defaultKey="_default";if(window.Persistence_sessionStorage=function(){var e=!1;try{"object"==typeof window.sessionStorage&&(e=!0,this.clear=function(){for(var e=0;e<sessionStorage.length;e++){var t=sessionStorage.key(e);0==t.indexOf(_persistenceKey)&&(sessionStorage.removeItem(t),e--)}},this.setItem=function(e,t){null==t&&(t=e,e=_defaultKey),sessionStorage.setItem(_persistenceKey+e,JSON.stringify(t))},this.getItem=function(e){return null==e&&(e=_defaultKey),JSON.parse(sessionStorage.getItem(_persistenceKey+e))},this.removeItem=function(e){null==e&&(e=_defaultKey),sessionStorage.removeItem(_persistenceKey+e)})}catch(e){}this.isAvailable=function(){return e}},window.Persistence_windowKey=function(e){var t=window[e],n=!1;"object"==typeof t&&(n=!0,this.clear=function(){t[_persistenceKey]={}},this.setItem=function(e,n){null==n&&(n=e,e=_defaultKey),t[_persistenceKey][e]=n},this.getItem=function(e){return null==e&&(e=_defaultKey),null==t[_persistenceKey][e]?null:t[_persistenceKey][e]},this.removeItem=function(e){null==e&&(e=_defaultKey),delete t[_persistenceKey][e]},null==t[_persistenceKey]&&this.clear()),this.isAvailable=function(){return n}},window.Persistence=new Persistence_sessionStorage,Persistence.isAvailable()||(window.Persistence=new Persistence_windowKey("py")),!Persistence.isAvailable()){var titleStartIndex=window.location.toString().indexOf("title"),titleContentIndex=window.location.toString().indexOf("main",titleStartIndex);titleStartIndex>0&&titleContentIndex>0&&titleContentIndex-titleStartIndex<10&&(window.Persistence=new Persistence_windowKey("qt"))}}
 
 // for testing purposes
@@ -1682,6 +1697,16 @@ function main() {
 
 
 
+
+  { // auto-plays sentence audio on the front side of the audio card
+    let elem = document.querySelector("#sentence-audio .soundLink, #sentence-audio .replaybutton");
+    if (elem) {
+      elem.click();
+    }
+  }
+
+  /// 
+
   // END_BLOCK: js_run
 
   
@@ -1697,13 +1722,12 @@ function main() {
     
         
     if (getSetting(['modules','sent-utils','enabled',],true)) {
-      let isAltDisplay = false;
-      /* {{#AltDisplay}} */
-        isAltDisplay = false;
-      /* {{/AltDisplay}} */
+      let isAltDisplay = !!'{{#AltDisplay}}FILLED{{/AltDisplay}}';
 
+      /* {{^IsSentenceCard}} */
       let sent_utils = new JPMNSentUtils(isAltDisplay, true);
       sent_utils.run();
+      /* {{/IsSentenceCard}} */
 
     }
     /// 
@@ -1843,4 +1867,4 @@ main();
 
 
 {{/SentenceAudio}}
-{{/SeparateClozeDeletionCard}}
+{{/IsAudioCard}}
