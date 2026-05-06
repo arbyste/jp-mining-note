@@ -9,6 +9,12 @@
 {% endfor -%}
 {%- endif -%}
 
+{%- if note.field_exclude is defined and note.field_exclude -%}
+{%- for x in note.field_exclude -%}
+{{ IFNOT(x) }}
+{% endfor -%}
+{%- endif -%}
+
 {% include "jp-mining-note/partials/compile_options_comment.html" %}
 
 
@@ -58,6 +64,12 @@
 
 
 
+
+{% if note.field_exclude is defined and note.field_exclude -%}
+{%- for x in note.field_exclude | reverse -%}
+{{ END(x) }}
+{% endfor -%}
+{%- endif -%}
 
 {% if note.field_restrict is defined and note.field_restrict -%}
 {%- for x in note.field_restrict | reverse -%}

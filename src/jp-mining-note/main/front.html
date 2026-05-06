@@ -3,6 +3,7 @@
 {% set note = namespace() %}
 {% set note.side = "front" %}
 {% set note.card_type = "main" %}
+{% set note.field_exclude = ["IsAudioCard"] %}
 
 {% block card_type %}
 {{ super() }}
