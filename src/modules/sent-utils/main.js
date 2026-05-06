@@ -202,7 +202,20 @@ const JPMNSentUtils = (() => {
 if ({{ utils.opt("modules", "sent-utils", "enabled") }}) {
 
   let isAltDisplay = !!'{{ utils.any_of_str("AltDisplay") }}';
+
+  /* {% call IF('IsAudioCard') %} */
+  /* {% call IFNOT('IsSentenceCard') %} */
+  let sent_utils = new JPMNSentUtils(isAltDisplay, true, paIndicator);
+  /* {% endcall %} */
+  /* {% call IF('IsSentenceCard') %} */
   let sent_utils = new JPMNSentUtils(isAltDisplay, false, paIndicator);
+  /* {% endcall %} */
+  /* {% endcall %} */
+
+  /* {% call IFNOT('IsAudioCard') %} */
+  let sent_utils = new JPMNSentUtils(isAltDisplay, false, paIndicator);
+  /* {% endcall %} */
+
   sent_utils.run();
 
 }

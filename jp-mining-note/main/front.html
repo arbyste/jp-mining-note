@@ -365,6 +365,17 @@ function optionsNotFound() {
     
 
 
+  {{#IsAudioCard}}
+    {{#IsSentenceCard}}
+      Audio (Sentence)
+    {{/IsSentenceCard}}
+    {{^IsSentenceCard}}
+      Audio
+    {{/IsSentenceCard}}
+  {{/IsAudioCard}}
+
+  {{^IsAudioCard}}
+
   {{#IsHoverCard}}
     Hover ({{#IsSentenceCard}}Sentence{{/IsSentenceCard}}{{^IsSentenceCard}}Word{{/IsSentenceCard}})
   {{/IsHoverCard}}
@@ -440,6 +451,8 @@ function optionsNotFound() {
 
   {{/PAShowInfo}} 
 
+  {{/IsAudioCard}} 
+
 
     </span>
 
@@ -500,6 +513,51 @@ function optionsNotFound() {
 
 
 
+{{#IsAudioCard}}
+  
+  <div class="expression expression-box">
+    {{#IsSentenceCard}}
+      <div class="expression expression--single expression--sentence" id="display">
+        <span class="sentence-quote sentence-quote--open">「</span><span><span class="audio-card-question">？</span></span><span class="sentence-quote sentence-quote--close">」</span>
+      </div>
+    {{/IsSentenceCard}}
+    {{^IsSentenceCard}}
+      {{#AltDisplay}}
+        <div class="expression expression--single expression--sentence" id="display">
+          <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+        </div>
+      {{/AltDisplay}}
+      {{^AltDisplay}}
+        <div class="expression expression--single expression--sentence" id="display">
+          <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
+        </div>
+      {{/AltDisplay}}
+    {{/IsSentenceCard}}
+  </div>
+  
+{{#HintNotHidden}}
+  <div class="center-box-1 hint">
+    <div class="center-box-2">
+      <div class="highlight-bold">{{HintNotHidden}}</div>
+    </div>
+  </div>
+{{/HintNotHidden}}
+
+<!-- https://stackoverflow.com/questions/1269589/css-center-block-but-align-contents-to-the-left -->
+<!-- tl;dr wrap anything you want centered + left justified with center-box-1 and center-box-2 -->
+{{#Hint}}
+  <details class="hint" id="hint_details">
+    <summary>Hint</summary>
+    <div class="center-box-1">
+      <div class="center-box-2">
+        <div class="highlight-bold">{{Hint}}</div>
+      </div>
+    </div>
+  </details>
+{{/Hint}}
+{{/IsAudioCard}} 
+
+{{^IsAudioCard}}
 <div class="expression expression-box">
   {{#IsHoverCard}}
     
@@ -634,6 +692,7 @@ function optionsNotFound() {
     </div>
   </details>
 {{/Hint}}
+{{/IsAudioCard}} 
 
 
 <!-- regular display -->
@@ -694,6 +753,15 @@ function optionsNotFound() {
 
 
 {{/PAShowInfo}} 
+
+
+{{#IsAudioCard}}
+  {{#SentenceAudio}}
+    <div>
+      <span id="sentence-audio"> {{SentenceAudio}} </span>
+    </div>
+  {{/SentenceAudio}}
+{{/IsAudioCard}}
 
 
 
@@ -2147,6 +2215,15 @@ function main() {
     }
   }
 
+  /// {{#IsAudioCard}}
+  { // auto-plays sentence audio on the front side of the audio card
+    let audioElem = document.querySelector("#sentence-audio .soundLink, #sentence-audio .replaybutton");
+    if (audioElem) {
+      audioElem.click();
+    }
+  }
+  /// {{/IsAudioCard}}
+
 
   /// 
 
@@ -2167,7 +2244,20 @@ function main() {
     if (getSetting(['modules','sent-utils','enabled',],true)) {
 
       let isAltDisplay = !!'{{#AltDisplay}}FILLED{{/AltDisplay}}';
+
+      /* {{#IsAudioCard}} */
+      /* {{^IsSentenceCard}} */
+      let sent_utils = new JPMNSentUtils(isAltDisplay, true, paIndicator);
+      /* {{/IsSentenceCard}} */
+      /* {{#IsSentenceCard}} */
       let sent_utils = new JPMNSentUtils(isAltDisplay, false, paIndicator);
+      /* {{/IsSentenceCard}} */
+      /* {{/IsAudioCard}} */
+
+      /* {{^IsAudioCard}} */
+      let sent_utils = new JPMNSentUtils(isAltDisplay, false, paIndicator);
+      /* {{/IsAudioCard}} */
+
       sent_utils.run();
 
     }

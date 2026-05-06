@@ -63,5 +63,14 @@ function toggleHighlightWord() {
   }
 }
 
+/// {% call IF("IsAudioCard") %}
+{ // auto-plays sentence audio on the front side of the audio card
+  let audioElem = document.querySelector("#sentence-audio .soundLink, #sentence-audio .replaybutton");
+  if (audioElem) {
+    audioElem.click();
+  }
+}
+/// {% endcall %}
+
 
 /// {% endblock %}
