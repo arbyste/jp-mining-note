@@ -242,13 +242,12 @@ if ({{ utils.opt("modules", "sent-utils", "enabled") }}) {
 
 /// {% set run_cloze_deletion %}
 if ({{ utils.opt("modules", "sent-utils", "enabled") }}) {
-  let isAltDisplay = false;
-  /* {% call IF('AltDisplay') %} */
-    isAltDisplay = false;
-  /* {% endcall %} */
+  let isAltDisplay = !!'{{ utils.any_of_str("AltDisplay") }}';
 
+  /* {% call IFNOT('IsSentenceCard') %} */
   let sent_utils = new JPMNSentUtils(isAltDisplay, true);
   sent_utils.run();
+  /* {% endcall %} */
 
 }
 /// {% endset %}

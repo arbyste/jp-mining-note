@@ -365,7 +365,7 @@ var JPMNOpts = (function (my) {
 
           // Force a field to be always open
           "open": [
-            // `Primary Definition` only affects cloze-deletion cards, as the primary definition field there is
+            // `Primary Definition` only affects audio cards, as the primary definition field there is
             // indeed collapsed by default.
 
             //"Primary Definition",
@@ -380,7 +380,7 @@ var JPMNOpts = (function (my) {
 
           // Ensure that `open-on-new-enabled` is true, for this to work.
           "open-on-new": [
-            // `Primary Definition` only affects cloze-deletion cards, as the primary definition field there is
+            // `Primary Definition` only affects audio cards, as the primary definition field there is
             // indeed collapsed by default.
 
             //"Primary Definition",

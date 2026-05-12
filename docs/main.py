@@ -127,10 +127,10 @@ FIELDS = {
         "binary_field": True,
         "reference": "fieldref.md#selecting-the-pitch-accent",
     },
-    "SeparateClozeDeletionCard": {
+    "IsAudioCard": {
         "auto_fill": False,
         "binary_field": True,
-        "reference": "fieldref.md#cloze-deletion-cards",
+        "reference": "fieldref.md#audio-cards",
     },
     "Hint": {
         "auto_fill": False,

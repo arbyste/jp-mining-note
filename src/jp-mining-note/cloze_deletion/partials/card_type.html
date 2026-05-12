@@ -1,1 +1,6 @@
-Cloze Deletion
+{% call IF("IsSentenceCard") %}
+Audio (Sentence)
+{% endcall %}
+{% call IFNOT("IsSentenceCard") %}
+Audio
+{% endcall %}

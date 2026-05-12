@@ -3,20 +3,32 @@
 {% from "macros/global.html" import T, IF, IFNOT, END with context %}
 {% import "macros/utils.html" as utils with context %}
 
-{% call IF('AltDisplay') %}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
+{% call IF('IsSentenceCard') %}
+  {# Sentence audio variant: hide the entire sentence, show ? #}
+  <div class="expression expression--single expression--sentence" id="display">
     {{ utils.quote_open -}}
-    {{ T('furigana:AltDisplay') }}
+    <span class="audio-card-question">？</span>
     {{- utils.quote_close }}
   </div>
 {% endcall %}
 
-{% call IFNOT('AltDisplay') %}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    {{ utils.quote_open -}}
-    {{ T('Sentence') }}
-    {{- utils.quote_close }}
-  </div>
+{% call IFNOT('IsSentenceCard') %}
+  {# Regular audio card: sentence with bold replaced by [...] via sent-utils #}
+  {% call IF('AltDisplay') %}
+    <div class="expression expression--single expression--sentence" id="display">
+      {{ utils.quote_open -}}
+      {{ T('furigana:AltDisplay') }}
+      {{- utils.quote_close }}
+    </div>
+  {% endcall %}
+
+  {% call IFNOT('AltDisplay') %}
+    <div class="expression expression--single expression--sentence" id="display">
+      {{ utils.quote_open -}}
+      {{ T('Sentence') }}
+      {{- utils.quote_close }}
+    </div>
+  {% endcall %}
 {% endcall %}
 
 {% include "jp-mining-note/partials/hint.html" %}

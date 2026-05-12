@@ -384,7 +384,12 @@ function optionsNotFound() {
     
 
     
-  Cloze Deletion
+  {{#IsSentenceCard}}
+  Audio (Sentence)
+  {{/IsSentenceCard}}
+  {{^IsSentenceCard}}
+  Audio
+  {{/IsSentenceCard}}
 
     </span>
 
@@ -434,7 +439,7 @@ function optionsNotFound() {
 
     
   <!-- DO NOT CHANGE/REMOVE THIS: this is used to record the version when updating the note. -->
-  <div class="card-description-ver">JP Mining Note: Version 0.11.0.6</div>
+  <div class="card-description-ver">JP Mining Note: Version 0.12.0.0</div>
 
 
 </div>
@@ -448,17 +453,27 @@ function optionsNotFound() {
 
 
 
-{{#AltDisplay}}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+{{#IsSentenceCard}}
+  
+  <div class="expression expression--single expression--sentence" id="display">
+    <span class="sentence-quote sentence-quote--open">「</span><span><span class="audio-card-question">？</span></span><span class="sentence-quote sentence-quote--close">」</span>
   </div>
-{{/AltDisplay}}
+{{/IsSentenceCard}}
 
-{{^AltDisplay}}
-  <div class="expression expression--single expression--sentence highlight-bold" id="display">
-    <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
-  </div>
-{{/AltDisplay}}
+{{^IsSentenceCard}}
+  
+  {{#AltDisplay}}
+    <div class="expression expression--single expression--sentence" id="display">
+      <span class="sentence-quote sentence-quote--open">「</span><span>{{furigana:AltDisplay}}</span><span class="sentence-quote sentence-quote--close">」</span>
+    </div>
+  {{/AltDisplay}}
+
+  {{^AltDisplay}}
+    <div class="expression expression--single expression--sentence" id="display">
+      <span class="sentence-quote sentence-quote--open">「</span><span>{{Sentence}}</span><span class="sentence-quote sentence-quote--close">」</span>
+    </div>
+  {{/AltDisplay}}
+{{/IsSentenceCard}}
 
 
 {{#HintNotHidden}}
@@ -633,18 +648,48 @@ function optionsNotFound() {
   </div>
 </div>
 
-<!-- hides primary definition since the definition is not important for this card -->
-{{#PrimaryDefinition}}
-  <details class="glossary-details" id="primary_definition_details">
-    <summary>Primary Definition</summary>
-    <blockquote class="glossary-blockquote highlight-bold" id="primary_definition">
-      <div class="glossary-text glossary-text--primary-definition">
-        {{PrimaryDefinition}}
-      </div>
-    </blockquote>
-</details>
-{{/PrimaryDefinition}}
 
+
+
+
+<blockquote class="glossary-blockquote
+    highlight-bold
+    glossary-blockquote--primary-definition
+    " id="primary_definition">
+
+  
+
+  
+
+
+  <!-- pictures not turned into text -->
+  <div class="glossary-primary-definition-right glossary-primary-definition-right--float" id="primary_definition_picture"><div class="glossary-primary-definition-right-img">{{PrimaryDefinitionPicture}}</div></div>
+
+
+  <div class="glossary-text glossary-text--primary-definition" id="primary_definition_text">
+    {{PrimaryDefinition}}
+    <div style="font-size: 0px"><br></div>
+    <!-- The above is a hack to allow a user to triple-click the definition
+      without selecting everything below the line.
+      This seems to ONLY affect the texthooker page;
+      regular copy/pastes through everything I tried
+      (pyperclip, text editor paste, pasting into Anki, etc)
+      does not suffer from this problem.
+      I figure that adding this shouldn't affect anything
+    -->
+  </div>
+
+  <!-- placed outside of glossary-text so it doesn't get converted automatically -->
+  <div class="glossary-primary-definition-right
+        glossary-primary-definition-right--bottom
+        {{#PrimaryDefinition}}glossary-primary-definition-right--above-text{{/PrimaryDefinition}}
+        " id="primary_definition_picture_bottom">
+    <div class="glossary-primary-definition-right-img">
+      {{PrimaryDefinitionPicture}}
+    </div>
+  </div>
+
+</blockquote>
 
 
 {{#SecondaryDefinition}}
@@ -1286,7 +1331,7 @@ const JPMNKanjiHover = (() => {
     // multi query result, in the format of
     // [kanji 1 (non-new), kanji 1 (new), kanji 2 (non-new), kanji 2 (new), etc.]
     async cardQueries(kanjiArr) {
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
 
       function constructFindCardAction(query) {
         return {
@@ -1828,7 +1873,7 @@ const JPMNAnkiConnectActions = (() => {
       }
       logger.debug("Testing for new card...", 2);
 
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
       //const cid = await this.getDisplayedCardId();
       //if (cid === 0) {
       //  return false;
@@ -1877,7 +1922,7 @@ const JPMNAnkiConnectActions = (() => {
       //  return currentCard.cardId;
       //}
 
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
       const noteName = 'JP Mining Note';
 
       let cachable = true;
@@ -4195,7 +4240,7 @@ const JPMNCheckDuplicateKey = (() => {
       }
 
       const keyText = this.ankiConnectHelper.escapeStr(key);
-      const cardTypeName = 'Cloze Deletion Card';
+      const cardTypeName = 'Audio Card';
       const noteName = 'JP Mining Note';
 
       const query = `"Key:${keyText}" "card:${cardTypeName}" "note:${noteName}"`;
@@ -4436,13 +4481,12 @@ function main() {
     
         
     if (getSetting(['modules','sent-utils','enabled',],true)) {
-      let isAltDisplay = false;
-      /* {{#AltDisplay}} */
-        isAltDisplay = false;
-      /* {{/AltDisplay}} */
+      let isAltDisplay = !!'{{#AltDisplay}}FILLED{{/AltDisplay}}';
 
+      /* {{^IsSentenceCard}} */
       let sent_utils = new JPMNSentUtils(isAltDisplay, true);
       sent_utils.run();
+      /* {{/IsSentenceCard}} */
 
     }
     /// 
