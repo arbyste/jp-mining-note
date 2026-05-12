@@ -1,16 +1,5 @@
 {# impl #}
 
-{% call IF("IsAudioCard") %}
-  {% call IF("IsSentenceCard") %}
-    Audio (Sentence)
-  {% endcall %}
-  {% call IFNOT("IsSentenceCard") %}
-    Audio
-  {% endcall %}
-{% endcall %}
-
-{% call IFNOT("IsAudioCard") %}
-
 {% call IF("IsHoverCard") %}
   Hover ({% call IF("IsSentenceCard") %}Sentence{% endcall %}{% call IFNOT("IsSentenceCard") %}Word{% endcall %})
 {% endcall %}
@@ -71,6 +60,4 @@
   {% endcall %}
 
 {% endcall %} {# IF PAShowInfo #}
-
-{% endcall %} {# IFNOT IsAudioCard #}
 

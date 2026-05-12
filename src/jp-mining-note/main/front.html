@@ -54,15 +54,6 @@
 
 {% endcall %} {# PAShowInfo #}
 
-{# Audio card: show sentence audio player (outside PAShowInfo) #}
-{% call IF("IsAudioCard") %}
-  {% call IF("SentenceAudio") %}
-    <div>
-      <span id="sentence-audio"> {{ T("SentenceAudio") }} </span>
-    </div>
-  {% endcall %}
-{% endcall %}
-
 {% endblock %}
 
 

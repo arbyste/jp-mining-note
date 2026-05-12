@@ -1,36 +1,5 @@
 {# impl #}
 
-{% call IF("IsAudioCard") %}
-  {# Audio card: show sentence with bold replaced by [...], or ? for sentence variant #}
-  <div class="expression expression-box">
-    {% call IF("IsSentenceCard") %}
-      <div class="expression expression--single expression--sentence" id="display">
-        {{ utils.quote_open -}}
-        <span class="audio-card-question">？</span>
-        {{- utils.quote_close }}
-      </div>
-    {% endcall %}
-    {% call IFNOT("IsSentenceCard") %}
-      {% call IF('AltDisplay') %}
-        <div class="expression expression--single expression--sentence" id="display">
-          {{ utils.quote_open -}}
-          {{ T('furigana:AltDisplay') }}
-          {{- utils.quote_close }}
-        </div>
-      {% endcall %}
-      {% call IFNOT('AltDisplay') %}
-        <div class="expression expression--single expression--sentence" id="display">
-          {{ utils.quote_open -}}
-          {{ T('Sentence') }}
-          {{- utils.quote_close }}
-        </div>
-      {% endcall %}
-    {% endcall %}
-  </div>
-  {% include "jp-mining-note/partials/hint.html" %}
-{% endcall %} {# IF IsAudioCard #}
-
-{% call IFNOT("IsAudioCard") %}
 <div class="expression expression-box">
   {% call IF("IsHoverCard") %}
     {% filter indent(4) %}
@@ -78,4 +47,3 @@
 </div> <!-- expression box -->
 
 {% include "jp-mining-note/partials/hint.html" %}
-{% endcall %} {# IFNOT IsAudioCard #}
